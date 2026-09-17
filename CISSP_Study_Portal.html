@@ -1204,7 +1204,7 @@ dialog .dlg-body{padding:16px 18px 20px}
     var sec = currentSec();
     var list = visibleQuestions(sec);
     var n = list.length;
-    var head = state.showGuide ? guideHTML(sec) : '';
+    var head = (state.showGuide && state.index === 0) ? guideHTML(sec) : '';
 
     if(!sec.questions.length){
       return head + '<div class="card pad empty" style="margin-top:14px"><b>No questions here</b>' +
@@ -1672,8 +1672,12 @@ dialog .dlg-body{padding:16px 18px 20px}
   });
   byId('btnGuide').addEventListener('click', function(){
     state.showGuide = !state.showGuide;
-    if(state.view !== 'section') state.view = 'section';
-    render();
+    if(state.showGuide && state.index !== 0){
+      // When enabling the guide, go to the first question so the guide is visible
+      go({index: 0});
+    } else {
+      render();
+    }
   });
   byId('btnPrint').addEventListener('click', function(){ window.print(); });
   byId('btnResume').addEventListener('click', resume);
