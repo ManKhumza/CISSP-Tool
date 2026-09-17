@@ -13,7 +13,7 @@ const JWT_EXPIRES = '30d';
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Database setup (node:sqlite — built into Node 22.5+, no native compile needed)
 const db = new DatabaseSync('cissp_progress.db');
@@ -175,14 +175,14 @@ app.post('/api/progress', authenticateToken, (req, res) => {
   }
 });
 
-// Serve the main app
-app.get('*', (req, res) => {
-  // Serve the main HTML file
-  if (req.path === '/' || req.path === '/index.html') {
-    res.sendFile(path.join(__dirname, 'CISSP_Study_Portal.html'));
-  } else {
-    res.sendFile(path.join(__dirname, 'public', req.path.substring(1)));
-  }
+// Serve the main app shell
+app.get(['/', '/index.html'], (req, res) => {
+  res.sendFile(path.join(__dirname, 'CISSP_Study_Portal.html'));
+});
+
+// The question bank lives at the repo root, next to the HTML shell.
+app.get('/cissp-data.js', (req, res) => {
+  res.type('application/javascript').sendFile(path.join(__dirname, 'cissp-data.js'));
 });
 
 app.listen(PORT, () => {
