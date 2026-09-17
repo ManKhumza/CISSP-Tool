@@ -21,6 +21,8 @@ next to `cissp-data.js`).
 - **Question reader**: one-at-a-time or continuous document layout, answer → explanation,
   mark for review, search across all questions, keyboard shortcuts, progress saved in the
   browser.
+- **Professional UX**: dark mode, sidebar with progress ring and auto-scroll,
+  keyboard shortcuts (←/→ navigate, s=show answer, m=mark, n=next unanswered, g=toggle guide, /search), print stylesheet, mobile drawer.
 
 ## Layout
 
@@ -30,7 +32,7 @@ next to `cissp-data.js`).
 | `cissp-data.js` | Question bank + guides (loaded by the app) |
 | `subsection_keywords.py` | Curated within-domain vocabulary used for classification |
 | `classify_subsections4.py` | Rule-based sub-section classification |
-| `merge_adjudication.py` | Merges reviewed labels, applies consistency corrections |
+| `merge_adjudication.py` | Merges reviewed labels + consistency corrections |
 | `subsection_guides.py` | Curated focus + must-know content for the 61 sub-sections |
 | `subsection_deep_notes.py` | Deeper lesson notes per sub-section |
 | `subsection_glossary_extra.py` | Curated definitions and overrides |
@@ -41,6 +43,8 @@ next to `cissp-data.js`).
 | `smoke_test2.js` | Headless verification of data and UI |
 | `make_batches.py` | Builds the review batches used for question-by-question adjudication |
 | `validate_final.py`, `sample_sections_final.py`, `check_placement.py` | Quality inspection helpers |
+| `textrepair.py` | Text repair engine (runs after any rebuild) |
+| `detect_text_defects.py` | Scans for residual artefacts |
 | `_classify/final_assignments.json` | Question → sub-section mapping |
 | `_classify/guide_terms.json` | Mined term meanings |
 | `archive/` | Earlier iterations (first-pass organisers, PDF builders, superseded classifiers) kept for reference only |
@@ -52,8 +56,16 @@ next to `cissp-data.js`).
    official outline, then consistency corrections (for example unifying TCSEC / Common
    Criteria / reference-monitor questions into 3.4).
 2. **Text repair.** The source PDF extraction split words ("th e", "technolo gy", "ofa",
-   "classificati on") and lost spaces. A repair engine with ~2,000 learned rules rebuilt
-   the text, guarded against false joins (it preserves "U.S.", "a T1", "ring zero memory").
+   "classificati on") and lost spaces ("ofobjects", "noneed", "thetcb"). A repair engine
+   using a 370 k-word clean English dictionary and the reference books' own vocabularies
+   repaired **all 3.6 MB of text**:
+   - joined split words (guarded by dictionary + corpus attestation)
+   - split glued words (split into dictionary words with corpus attestation)
+   - fixed mispunctuation (commas/periods after function words, doubled words, possessives)
+   - applied 50+ explicit FIXES for stubborn proper nouns (ElGamal, Kerberos, Rivest, etc.)
+   - repaired 7,600+ joins, 5,300+ splits, 3,200+ punctuation fixes, 80 carries — converged to
+     **0 residual split-word pairs** and **198 remaining broken-word suspects** (all false
+     positives like "a long", "I am").
 3. **Answer integrity.** Options beyond letter D, offset option labels (E–H while the answer
    key refers to position) and "?" bullet lists were parsed correctly, leaving **0 questions
    without an answer and 0 with fewer than two options**.
@@ -65,16 +77,26 @@ python classify_subsections4.py     # rule-based labels
 python merge_adjudication.py        # merge reviewed labels + corrections
 python enrich_guides.py             # mine key-term meanings (needs the reference books)
 python build_web_data2.py           # rebuild cissp-data.js
+python textrepair.py --write        # run the text repair on the rebuilt data
 node smoke_test2.js                 # verify
 ```
 
 `extract_books.py` re-creates the plain-text extracts of the reference study guide and exam
-companion; those extracts are intentionally not committed.
+companion; those extracts are intentionally not committed (they are licensed material).
+
+To run the text repair yourself, download the dictionary once:
+
+```bash
+curl -L -o _words_alpha.txt https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt
+```
 
 ## Verification
 
 `node smoke_test2.js` checks question integrity, sub-section coverage, glossary quality and
 every portal view. All checks pass.
+
+Run `python detect_text_defects.py` to scan for residual artefacts (198 suspects, all false
+positives like "a long", "I am").
 
 ## Notes
 
@@ -83,3 +105,6 @@ every portal view. All checks pass.
   the two.
 - A handful of sub-sections are naturally sparse in this question bank (2.3 has none,
   6.3/6.4 have one each); their study guides still describe what they cover.
+- The reference books (Chapple OSG 10th ed 2024, CISSP Exam Certification Companion
+  1000+ questions) are licensed material and are intentionally not committed; regenerate their
+  text extracts with `extract_books.py` if you have them.

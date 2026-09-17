@@ -23,6 +23,23 @@ _classify/batches/
 # ---- generated PDFs (large binaries) ----
 *.pdf
 
+# ---- screenshot artifacts ----
+_shots/
+_shot_*.html
+_shot_*.png
+
+# ---- probe / temporary scripts ----
+_*.py
+_*.js
+_words_alpha.txt
+
+# ---- temporary analysis outputs ----
+_text_defects.txt
+_text_repair_log.txt
+_text_unknown.txt
+_text_unknown_review.txt
+_text_unknown_review.txt
+
 # ---- editor / OS noise ----
 .vscode/
 .idea/
