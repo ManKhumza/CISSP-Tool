@@ -1,0 +1,307 @@
+[
+ {
+  "id": "1.1",
+  "title": "Understand, adhere to, and promote professional ethics",
+  "domain": 1
+ },
+ {
+  "id": "1.2",
+  "title": "Understand and apply security concepts",
+  "domain": 1
+ },
+ {
+  "id": "1.3",
+  "title": "Evaluate and apply security governance principles",
+  "domain": 1
+ },
+ {
+  "id": "1.4",
+  "title": "Understand legal, regulatory, and compliance issues",
+  "domain": 1
+ },
+ {
+  "id": "1.5",
+  "title": "Understand requirements for investigation types",
+  "domain": 1
+ },
+ {
+  "id": "1.6",
+  "title": "Develop, document, and implement security policy, standards, procedures, and guidelines",
+  "domain": 1
+ },
+ {
+  "id": "1.7",
+  "title": "Identify, analyze, and prioritize Business Continuity (BC) requirements",
+  "domain": 1
+ },
+ {
+  "id": "1.8",
+  "title": "Contribute to and enforce personnel security policies and procedures",
+  "domain": 1
+ },
+ {
+  "id": "1.9",
+  "title": "Understand and apply risk management concepts",
+  "domain": 1
+ },
+ {
+  "id": "1.10",
+  "title": "Understand and apply threat modeling concepts and methodologies",
+  "domain": 1
+ },
+ {
+  "id": "1.11",
+  "title": "Apply Supply Chain Risk Management (SCRM) concepts",
+  "domain": 1
+ },
+ {
+  "id": "1.12",
+  "title": "Establish and maintain a security awareness, education, and training program",
+  "domain": 1
+ },
+ {
+  "id": "2.1",
+  "title": "Identify and classify information and assets",
+  "domain": 2
+ },
+ {
+  "id": "2.2",
+  "title": "Establish information and asset handling requirements",
+  "domain": 2
+ },
+ {
+  "id": "2.3",
+  "title": "Provision resources securely",
+  "domain": 2
+ },
+ {
+  "id": "2.4",
+  "title": "Manage data lifecycle",
+  "domain": 2
+ },
+ {
+  "id": "2.5",
+  "title": "Ensure appropriate asset retention",
+  "domain": 2
+ },
+ {
+  "id": "2.6",
+  "title": "Determine data security controls and compliance requirements",
+  "domain": 2
+ },
+ {
+  "id": "3.1",
+  "title": "Research, implement and manage engineering processes using secure design principles",
+  "domain": 3
+ },
+ {
+  "id": "3.2",
+  "title": "Understand the fundamental concepts of security models",
+  "domain": 3
+ },
+ {
+  "id": "3.3",
+  "title": "Select controls based upon systems security requirements",
+  "domain": 3
+ },
+ {
+  "id": "3.4",
+  "title": "Understand security capabilities of Information Systems (IS)",
+  "domain": 3
+ },
+ {
+  "id": "3.5",
+  "title": "Assess and mitigate the vulnerabilities of security architectures, designs, and solution elements",
+  "domain": 3
+ },
+ {
+  "id": "3.6",
+  "title": "Select and determine cryptographic solutions",
+  "domain": 3
+ },
+ {
+  "id": "3.7",
+  "title": "Understand methods of cryptanalytic attacks",
+  "domain": 3
+ },
+ {
+  "id": "3.8",
+  "title": "Apply security principles to site and facility design",
+  "domain": 3
+ },
+ {
+  "id": "3.9",
+  "title": "Design site and facility security controls",
+  "domain": 3
+ },
+ {
+  "id": "4.1",
+  "title": "Assess and implement secure design principles in network architectures",
+  "domain": 4
+ },
+ {
+  "id": "4.2",
+  "title": "Secure network components",
+  "domain": 4
+ },
+ {
+  "id": "4.3",
+  "title": "Implement secure communication channels according to design",
+  "domain": 4
+ },
+ {
+  "id": "5.1",
+  "title": "Control physical and logical access to assets",
+  "domain": 5
+ },
+ {
+  "id": "5.2",
+  "title": "Manage identification and authentication of people, devices, and services",
+  "domain": 5
+ },
+ {
+  "id": "5.3",
+  "title": "Federated identity with a third-party service",
+  "domain": 5
+ },
+ {
+  "id": "5.4",
+  "title": "Implement and manage authorization mechanisms",
+  "domain": 5
+ },
+ {
+  "id": "5.5",
+  "title": "Manage the identity and access provisioning lifecycle",
+  "domain": 5
+ },
+ {
+  "id": "5.6",
+  "title": "Implement authentication systems",
+  "domain": 5
+ },
+ {
+  "id": "6.1",
+  "title": "Design and validate assessment, test, and audit strategies",
+  "domain": 6
+ },
+ {
+  "id": "6.2",
+  "title": "Conduct security control testing",
+  "domain": 6
+ },
+ {
+  "id": "6.3",
+  "title": "Collect security process data",
+  "domain": 6
+ },
+ {
+  "id": "6.4",
+  "title": "Analyze test output and generate report",
+  "domain": 6
+ },
+ {
+  "id": "6.5",
+  "title": "Conduct or facilitate security audits",
+  "domain": 6
+ },
+ {
+  "id": "7.1",
+  "title": "Understand and comply with investigations",
+  "domain": 7
+ },
+ {
+  "id": "7.2",
+  "title": "Conduct logging and monitoring activities",
+  "domain": 7
+ },
+ {
+  "id": "7.3",
+  "title": "Perform Configuration Management (CM)",
+  "domain": 7
+ },
+ {
+  "id": "7.4",
+  "title": "Apply foundational security operations concepts",
+  "domain": 7
+ },
+ {
+  "id": "7.5",
+  "title": "Apply resource protection",
+  "domain": 7
+ },
+ {
+  "id": "7.6",
+  "title": "Conduct incident management",
+  "domain": 7
+ },
+ {
+  "id": "7.7",
+  "title": "Operate and maintain detective and preventative measures",
+  "domain": 7
+ },
+ {
+  "id": "7.8",
+  "title": "Implement and support patch and vulnerability management",
+  "domain": 7
+ },
+ {
+  "id": "7.9",
+  "title": "Understand and participate in change management processes",
+  "domain": 7
+ },
+ {
+  "id": "7.10",
+  "title": "Implement recovery strategies",
+  "domain": 7
+ },
+ {
+  "id": "7.11",
+  "title": "Implement Disaster Recovery (DR) processes",
+  "domain": 7
+ },
+ {
+  "id": "7.12",
+  "title": "Test Disaster Recovery Plans (DRP)",
+  "domain": 7
+ },
+ {
+  "id": "7.13",
+  "title": "Participate in Business Continuity (BC) planning and exercises",
+  "domain": 7
+ },
+ {
+  "id": "7.14",
+  "title": "Implement and manage physical security",
+  "domain": 7
+ },
+ {
+  "id": "7.15",
+  "title": "Address personnel safety and security concerns",
+  "domain": 7
+ },
+ {
+  "id": "8.1",
+  "title": "Understand and integrate security in the Software Development Life Cycle (SDLC)",
+  "domain": 8
+ },
+ {
+  "id": "8.2",
+  "title": "Identify and apply security controls in software development ecosystems",
+  "domain": 8
+ },
+ {
+  "id": "8.3",
+  "title": "Assess the effectiveness of software security",
+  "domain": 8
+ },
+ {
+  "id": "8.4",
+  "title": "Assess security impact of acquired software",
+  "domain": 8
+ },
+ {
+  "id": "8.5",
+  "title": "Define and apply secure coding guidelines and standards",
+  "domain": 8
+ }
+]

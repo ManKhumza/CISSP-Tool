@@ -1,0 +1,2967 @@
+{
+ "mined": {
+  "1.7": [],
+  "1.6": [
+   "strategic",
+   "multi-level",
+   "trends",
+   "drafting",
+   "emerging",
+   "largely",
+   "27000",
+   "isms",
+   "industry trends",
+   "vendor solutions",
+   "supporting guidelines",
+   "policies activities",
+   "government regulations",
+   "emerging threats",
+   "strategic level"
+  ],
+  "5.2": [
+   "password",
+   "biometric",
+   "biometrics",
+   "fingerprint",
+   "two-factor",
+   "retina",
+   "iris",
+   "log-on",
+   "passphrase",
+   "asmart",
+   "geometry",
+   "dynamics",
+   "intervals",
+   "behavioral",
+   "capture",
+   "enrollment",
+   "typing",
+   "traits",
+   "palm",
+   "captures",
+   "claimed",
+   "retinal",
+   "facial",
+   "two-factor authentication",
+   "dynamic password",
+   "asmart card",
+   "smart card",
+   "one-time password",
+   "retina scan",
+   "hand geometry",
+   "static password",
+   "biometric identification",
+   "know something",
+   "each time",
+   "challenge response",
+   "keystroke dynamics",
+   "authentication factor",
+   "password static",
+   "storage requirements",
+   "authentication identification",
+   "time intervals",
+   "different categories",
+   "signature dynamics",
+   "unauthorized people",
+   "specified period",
+   "iris pattern",
+   "password because"
+  ],
+  "7.5": [
+   "raid",
+   "tape",
+   "differential",
+   "incremental",
+   "mirroring",
+   "striping",
+   "array",
+   "archive",
+   "hamming",
+   "inexpensive",
+   "megabyte",
+   "backs",
+   "mirrors",
+   "cluster",
+   "one-for-one",
+   "arrays",
+   "leaves",
+   "raid level",
+   "incremental backup",
+   "full backup",
+   "differential backup",
+   "backup method",
+   "tape backup",
+   "method differential",
+   "last full",
+   "changed since",
+   "method incremental",
+   "method tape",
+   "disks raid",
+   "raid levels",
+   "hardware raid",
+   "raid implementation",
+   "differential backups",
+   "backup methods",
+   "method full",
+   "block level",
+   "hamming code",
+   "asingle server",
+   "performance because",
+   "storage capacity",
+   "modified since",
+   "hard drives"
+  ],
+  "4.2": [
+   "drawback",
+   "dual-homed",
+   "level firewalls",
+   "host firewall",
+   "dual-homed host",
+   "state table"
+  ],
+  "4.1": [
+   "transmission",
+   "ethernet",
+   "cable",
+   "routing",
+   "icmp",
+   "thetcp",
+   "physicallayer",
+   "topology",
+   "rarp",
+   "fiber",
+   "cabling",
+   "twisted",
+   "resolution",
+   "isdn",
+   "tftp",
+   "broadcast",
+   "coaxial",
+   "mbps",
+   "stack",
+   "lans",
+   "ping",
+   "host-to-host",
+   "meters",
+   "optic",
+   "trivial",
+   "unshielded",
+   "switched",
+   "synchronization",
+   "connectionless",
+   "interconnection",
+   "igmp",
+   "transport layer",
+   "link layer",
+   "session layer",
+   "token ring",
+   "layer layer",
+   "file transfer",
+   "twisted pair",
+   "layer transport",
+   "presentation layer",
+   "internet layer",
+   "message protocol",
+   "address resolution",
+   "resolution protocol",
+   "fiber optic",
+   "physical layer",
+   "layer physicallayer",
+   "layer defines",
+   "protocol tftp",
+   "trivial file",
+   "source address",
+   "layer session",
+   "protocol icmp",
+   "protocol rarp",
+   "reverse address",
+   "coaxial cable",
+   "logical link",
+   "destination address",
+   "hardware address",
+   "layer internet"
+  ],
+  "1.2": [
+   "accountability",
+   "triad",
+   "acceptability",
+   "orunintentional",
+   "assures",
+   "integrity confidentiality",
+   "unauthorized disclosure",
+   "confidentiality availability",
+   "accountability availability",
+   "availability refers",
+   "orunintentional modification"
+  ],
+  "2.1": [
+   "classification levels"
+  ],
+  "1.3": [
+   "lacking",
+   "initiatives",
+   "people resources",
+   "numerous initiatives",
+   "adequate people",
+   "lead their"
+  ],
+  "1.9": [
+   "expectancy",
+   "annualized",
+   "aquantitative",
+   "transference",
+   "spend",
+   "balance",
+   "qualitative",
+   "quantify",
+   "loss expectancy",
+   "annualized rate",
+   "single loss",
+   "annualized loss",
+   "exposure factor",
+   "cost benefit",
+   "benefit analysis",
+   "potential threats"
+  ],
+  "6.5": [
+   "trail",
+   "audit trail"
+  ],
+  "1.8": [
+   "discovers",
+   "peer-to-peer",
+   "depart",
+   "full administrator",
+   "receive e-mail",
+   "peer-to-peer program",
+   "depart ment",
+   "e-mail search",
+   "ment discovers"
+  ],
+  "3.3": [
+   "detector",
+   "lated",
+   "reducingoverall",
+   "anonymity",
+   "tonatively",
+   "implantation",
+   "iled",
+   "layered",
+   "reinstated",
+   "simplementation",
+   "obey",
+   "aggressively",
+   "post-incident",
+   "curbing",
+   "adjusting",
+   "controls meeting",
+   "costly secure",
+   "correctly installed",
+   "attacker preventative",
+   "rmful incidents",
+   "actions corrective",
+   "function their",
+   "deterrent preventative",
+   "administrative accounts",
+   "privileges provided",
+   "deliberately orunintentionally",
+   "tracks corrective",
+   "controls need",
+   "perform once",
+   "outages attacks",
+   "demands administrative",
+   "strongly managed",
+   "environment whether",
+   "administrative gaps",
+   "require corrective",
+   "functions lead",
+   "existing environment",
+   "install additionally",
+   "often because",
+   "temporary leave",
+   "earliest point",
+   "rity infrastructure",
+   "many forms",
+   "simplementation compensating",
+   "controls returned",
+   "accurately reinstated",
+   "privilege however",
+   "detector backup",
+   "unauthorized action",
+   "incident signals",
+   "probable repercussions",
+   "support therequired",
+   "technical demands",
+   "take many",
+   "occurring preventative",
+   "manage their",
+   "significant visibility",
+   "isolate certain",
+   "about different",
+   "offer visibility"
+  ],
+  "2.2": [],
+  "8.5": [
+   "query",
+   "arelational",
+   "columns",
+   "schema",
+   "arelation",
+   "insert",
+   "views",
+   "foreign",
+   "relations",
+   "tuple",
+   "tuples",
+   "atomic",
+   "normalization",
+   "query language",
+   "arelational database",
+   "structured query",
+   "each table",
+   "table attributes"
+  ],
+  "8.1": [
+   "phases",
+   "object-oriented",
+   "expert",
+   "sdlc",
+   "maturity",
+   "spiral",
+   "programmers",
+   "premise",
+   "repeatable",
+   "waterfall",
+   "pose",
+   "object-relational",
+   "mature",
+   "optimizing",
+   "industry-wide",
+   "analysts",
+   "compilers",
+   "development life",
+   "cycle sdlc",
+   "capability maturity",
+   "maturity model",
+   "spiral model",
+   "maturity levels",
+   "project initiation",
+   "waterfall model",
+   "every phase",
+   "planning phase",
+   "phase include",
+   "initiation phase",
+   "acceptance phase",
+   "direct function"
+  ],
+  "3.9": [
+   "voltage",
+   "prolonged",
+   "blackout",
+   "surge",
+   "momentary",
+   "spike",
+   "brownout",
+   "extinguisher",
+   "humidity",
+   "volta",
+   "therecommended",
+   "high voltage",
+   "momentary high",
+   "blackout surge",
+   "prolonged power",
+   "surge fault",
+   "prolonged high",
+   "spike blackout",
+   "momentary power",
+   "power loss",
+   "fire extinguisher",
+   "2005 page",
+   "osborne 2005",
+   "complete loss",
+   "humidity range",
+   "voltage momentary",
+   "voltage prolonged"
+  ],
+  "2.4": [
+   "degaussing",
+   "overwriting",
+   "clearing",
+   "purging",
+   "remanence",
+   "destroying",
+   "recoverable",
+   "shredding",
+   "formatting",
+   "erased",
+   "magnetic media",
+   "storage media",
+   "physical destruction",
+   "media intended",
+   "media destruction"
+  ],
+  "1.4": [
+   "trade",
+   "copyright",
+   "civil",
+   "west",
+   "paul",
+   "minnesota",
+   "west publishing",
+   "paul minnesota",
+   "edition west",
+   "minnesota 1983"
+  ],
+  "3.6": [
+   "encryption",
+   "algorithm",
+   "cipher",
+   "keys",
+   "cryptography",
+   "encrypt",
+   "signature",
+   "block",
+   "asymmetric",
+   "cryptographic",
+   "plaintext",
+   "decrypt",
+   "length",
+   "certificates",
+   "algorithms",
+   "hash",
+   "ciphertext",
+   "signatures",
+   "certificate",
+   "ciphers",
+   "symmetric",
+   "symmetrickey",
+   "digest",
+   "elliptic",
+   "curve",
+   "encrypting",
+   "decrypted",
+   "stream",
+   "decryption",
+   "rijndael",
+   "text",
+   "mathematical",
+   "advanced",
+   "public-key",
+   "diffie-hellman",
+   "blocks",
+   "rounds",
+   "substitution",
+   "hashing",
+   "variable",
+   "non-repudiation",
+   "encrypts",
+   "rivest",
+   "therecipient",
+   "cryptosystem",
+   "asymmetrickey",
+   "chaining",
+   "digital signature",
+   "block cipher",
+   "digital signatures",
+   "message digest",
+   "elliptic curve",
+   "encryption algorithm",
+   "encryption standard",
+   "asymmetric encryption",
+   "advanced encryption",
+   "hash function",
+   "digital certificate",
+   "stream cipher",
+   "block size"
+  ],
+  "3.4": [
+   "orange",
+   "tcsec",
+   "rating",
+   "thetcsec",
+   "thetcb",
+   "firmware",
+   "ratings",
+   "divisions",
+   "rainbow",
+   "aluation",
+   "freepracticetests",
+   "orange book",
+   "common criteria",
+   "evaluation criteria",
+   "computing base",
+   "trusted computing",
+   "thetcsec rating",
+   "protection profile",
+   "assurance requirements",
+   "criteria tcsec",
+   "structured protection",
+   "mandatory protection",
+   "channel analysis",
+   "verified design",
+   "hardware firmware",
+   "monitor concept",
+   "discretionary protection",
+   "assurance levels",
+   "evaluation assurance",
+   "assurance level",
+   "administrator roles",
+   "book requires",
+   "criteria itsec",
+   "trusted distribution",
+   "administrator role",
+   "memory space",
+   "page document",
+   "thetcsec levels",
+   "book evaluation",
+   "classification label",
+   "documents tcsec",
+   "next division",
+   "verified protection",
+   "incorporate therequirements",
+   "lowest class",
+   "class offering",
+   "inherit therequirements",
+   "divisions consisting",
+   "highest classification",
+   "areference monitor",
+   "design verification"
+  ],
+  "8.4": [],
+  "3.1": [],
+  "3.2": [
+   "bell-lapadula",
+   "biba",
+   "clark-wilson",
+   "noread",
+   "lattice",
+   "notion",
+   "thereby",
+   "constrained",
+   "eithererror",
+   "wilson",
+   "formalizing",
+   "unconstrained",
+   "well-formed",
+   "datareflect",
+   "cdis",
+   "udis",
+   "non-interference",
+   "confinement",
+   "bell-lapadula model",
+   "biba model",
+   "clark-wilson model",
+   "star property",
+   "integrity model",
+   "lower level",
+   "model states",
+   "model defines",
+   "flow model",
+   "maintain internal",
+   "external consistency",
+   "model biba",
+   "wiki clark-wilson",
+   "cannot write",
+   "cannot read",
+   "property mean",
+   "state machine",
+   "enforcement rules",
+   "wilson model",
+   "malicious intent",
+   "certification rules",
+   "consistent state",
+   "kept valid",
+   "preventing corruption",
+   "defines enforcement",
+   "model clark-wilson",
+   "machine model",
+   "author ized",
+   "unauthorized parties",
+   "parties prevent",
+   "authorized parties",
+   "parties maintain",
+   "design page",
+   "goals prevent",
+   "general preservation",
+   "biba addresses",
+   "integrity verification",
+   "model non-interference",
+   "transition functions",
+   "non-interference model",
+   "rules define",
+   "strong star"
+  ],
+  "6.2": [
+   "penetration",
+   "tester",
+   "black-box",
+   "white-box",
+   "penetration test",
+   "penetration testing",
+   "white-box testing"
+  ],
+  "1.1": [],
+  "4.3": [
+   "ipsec",
+   "payload",
+   "sockets layer",
+   "secure sockets",
+   "transport mode",
+   "tunnel mode"
+  ],
+  "5.6": [],
+  "1.12": [],
+  "5.4": [],
+  "7.1": [],
+  "3.5": [
+   "practitioner",
+   "client-based",
+   "practitioner detects",
+   "client-based attacks",
+   "asecurity practitioner",
+   "detects client-based"
+  ],
+  "3.7": [],
+  "7.9": [],
+  "5.1": [],
+  "7.4": [
+   "rotation",
+   "collusion"
+  ],
+  "7.13": [],
+  "3.8": [],
+  "1.11": [],
+  "2.5": [],
+  "5.3": [
+   "assertion",
+   "markup",
+   "saml",
+   "assertion markup",
+   "markup language",
+   "language saml"
+  ],
+  "7.14": [],
+  "7.7": [
+   "polymorphic",
+   "boot sector"
+  ],
+  "8.3": [
+   "unit testing"
+  ],
+  "7.11": [],
+  "7.6": [],
+  "7.3": [
+   "configuration items"
+  ],
+  "7.2": [],
+  "1.5": [],
+  "7.10": [],
+  "7.8": [],
+  "8.2": []
+ },
+ "moved": [
+  [
+   76,
+   "1",
+   "4",
+   0.0,
+   23.2
+  ],
+  [
+   176,
+   "1",
+   "5",
+   0.0,
+   111.0
+  ],
+  [
+   241,
+   "1",
+   "7",
+   0.0,
+   69.0
+  ],
+  [
+   261,
+   "1",
+   "7",
+   0.0,
+   54.0
+  ],
+  [
+   269,
+   "1",
+   "7",
+   0.0,
+   94.2
+  ],
+  [
+   278,
+   "1",
+   "4",
+   0.0,
+   41.8
+  ],
+  [
+   280,
+   "1",
+   "4",
+   0.0,
+   74.5
+  ],
+  [
+   285,
+   "1",
+   "4",
+   0.0,
+   55.2
+  ],
+  [
+   304,
+   "1",
+   "7",
+   0.0,
+   87.0
+  ],
+  [
+   307,
+   "1",
+   "4",
+   0.0,
+   99.0
+  ],
+  [
+   333,
+   "1",
+   "2",
+   0.0,
+   74.2
+  ],
+  [
+   336,
+   "1",
+   "4",
+   0.0,
+   54.8
+  ],
+  [
+   343,
+   "1",
+   "4",
+   0.0,
+   24.5
+  ],
+  [
+   344,
+   "1",
+   "7",
+   0.0,
+   76.0
+  ],
+  [
+   349,
+   "1",
+   "4",
+   0.0,
+   83.0
+  ],
+  [
+   397,
+   "1",
+   "7",
+   0.0,
+   118.2
+  ],
+  [
+   400,
+   "1",
+   "7",
+   0.0,
+   117.8
+  ],
+  [
+   448,
+   "1",
+   "4",
+   0.0,
+   66.0
+  ],
+  [
+   449,
+   "1",
+   "4",
+   0.0,
+   81.8
+  ],
+  [
+   462,
+   "1",
+   "7",
+   0.0,
+   31.5
+  ],
+  [
+   475,
+   "1",
+   "4",
+   0.0,
+   114.0
+  ],
+  [
+   522,
+   "1",
+   "2",
+   0.0,
+   28.8
+  ],
+  [
+   644,
+   "1",
+   "8",
+   0.0,
+   31.0
+  ],
+  [
+   663,
+   "1",
+   "8",
+   0.0,
+   43.0
+  ],
+  [
+   685,
+   "1",
+   "8",
+   0.0,
+   55.2
+  ],
+  [
+   722,
+   "1",
+   "3",
+   0.0,
+   131.5
+  ],
+  [
+   728,
+   "1",
+   "7",
+   0.0,
+   55.2
+  ],
+  [
+   732,
+   "1",
+   "7",
+   0.0,
+   72.2
+  ],
+  [
+   739,
+   "1",
+   "7",
+   0.0,
+   40.2
+  ],
+  [
+   750,
+   "1",
+   "7",
+   0.0,
+   44.5
+  ],
+  [
+   779,
+   "1",
+   "7",
+   0.0,
+   118.2
+  ],
+  [
+   783,
+   "1",
+   "2",
+   0.0,
+   45.5
+  ],
+  [
+   784,
+   "1",
+   "3",
+   0.0,
+   144.2
+  ],
+  [
+   797,
+   "1",
+   "3",
+   0.0,
+   147.0
+  ],
+  [
+   799,
+   "1",
+   "3",
+   0.0,
+   129.5
+  ],
+  [
+   803,
+   "1",
+   "7",
+   0.0,
+   81.0
+  ],
+  [
+   811,
+   "1",
+   "2",
+   0.0,
+   61.8
+  ],
+  [
+   819,
+   "1",
+   "7",
+   0.0,
+   71.5
+  ],
+  [
+   823,
+   "1",
+   "3",
+   0.0,
+   129.0
+  ],
+  [
+   831,
+   "1",
+   "7",
+   0.0,
+   117.0
+  ],
+  [
+   839,
+   "1",
+   "7",
+   0.0,
+   117.0
+  ],
+  [
+   849,
+   "1",
+   "2",
+   0.0,
+   105.0
+  ],
+  [
+   858,
+   "1",
+   "2",
+   0.0,
+   90.0
+  ],
+  [
+   862,
+   "1",
+   "3",
+   0.0,
+   129.0
+  ],
+  [
+   864,
+   "1",
+   "7",
+   0.0,
+   105.5
+  ],
+  [
+   868,
+   "1",
+   "7",
+   0.0,
+   78.2
+  ],
+  [
+   879,
+   "1",
+   "3",
+   0.0,
+   89.0
+  ],
+  [
+   894,
+   "1",
+   "3",
+   0.0,
+   95.5
+  ],
+  [
+   1018,
+   "1",
+   "3",
+   0.0,
+   98.5
+  ],
+  [
+   1019,
+   "1",
+   "3",
+   0.0,
+   68.8
+  ],
+  [
+   1085,
+   "1",
+   "3",
+   0.0,
+   51.0
+  ],
+  [
+   1112,
+   "1",
+   "8",
+   0.0,
+   22.8
+  ],
+  [
+   1175,
+   "1",
+   "3",
+   0.0,
+   81.0
+  ],
+  [
+   1212,
+   "1",
+   "2",
+   0.0,
+   74.2
+  ],
+  [
+   1284,
+   "1",
+   "2",
+   0.0,
+   39.0
+  ],
+  [
+   1302,
+   "1",
+   "4",
+   0.0,
+   39.0
+  ],
+  [
+   1328,
+   "1",
+   "4",
+   0.0,
+   39.0
+  ],
+  [
+   1341,
+   "1",
+   "7",
+   0.0,
+   82.0
+  ],
+  [
+   1434,
+   "1",
+   "4",
+   0.0,
+   39.0
+  ],
+  [
+   1446,
+   "1",
+   "4",
+   0.0,
+   39.0
+  ],
+  [
+   1463,
+   "1",
+   "7",
+   0.0,
+   45.5
+  ],
+  [
+   1470,
+   "1",
+   "3",
+   0.0,
+   132.0
+  ],
+  [
+   1473,
+   "1",
+   "3",
+   0.0,
+   22.8
+  ],
+  [
+   1493,
+   "1",
+   "2",
+   0.0,
+   22.8
+  ],
+  [
+   1615,
+   "1",
+   "4",
+   0.0,
+   90.0
+  ],
+  [
+   1635,
+   "1",
+   "2",
+   0.0,
+   99.0
+  ],
+  [
+   1682,
+   "1",
+   "5",
+   0.0,
+   28.0
+  ],
+  [
+   1736,
+   "1",
+   "7",
+   0.0,
+   71.2
+  ],
+  [
+   1738,
+   "1",
+   "7",
+   0.0,
+   91.5
+  ],
+  [
+   1764,
+   "1",
+   "4",
+   0.0,
+   107.8
+  ],
+  [
+   1808,
+   "1",
+   "8",
+   0.0,
+   29.8
+  ],
+  [
+   1809,
+   "1",
+   "3",
+   0.0,
+   27.0
+  ],
+  [
+   1814,
+   "1",
+   "3",
+   0.0,
+   66.0
+  ],
+  [
+   1816,
+   "1",
+   "3",
+   0.0,
+   100.0
+  ],
+  [
+   1868,
+   "1",
+   "3",
+   0.0,
+   43.8
+  ],
+  [
+   1873,
+   "1",
+   "5",
+   0.0,
+   22.8
+  ],
+  [
+   1887,
+   "1",
+   "3",
+   0.0,
+   81.0
+  ],
+  [
+   1890,
+   "1",
+   "3",
+   0.0,
+   29.0
+  ],
+  [
+   1895,
+   "1",
+   "3",
+   0.0,
+   62.5
+  ],
+  [
+   1904,
+   "1",
+   "4",
+   0.0,
+   109.2
+  ],
+  [
+   1905,
+   "1",
+   "3",
+   0.0,
+   27.0
+  ],
+  [
+   1916,
+   "1",
+   "7",
+   0.0,
+   29.8
+  ],
+  [
+   1930,
+   "1",
+   "3",
+   0.0,
+   104.8
+  ],
+  [
+   1937,
+   "1",
+   "3",
+   0.0,
+   31.0
+  ],
+  [
+   1971,
+   "1",
+   "8",
+   0.0,
+   36.0
+  ],
+  [
+   1988,
+   "1",
+   "6",
+   0.0,
+   21.0
+  ],
+  [
+   1996,
+   "1",
+   "7",
+   0.0,
+   24.5
+  ],
+  [
+   2081,
+   "1",
+   "8",
+   0.0,
+   39.0
+  ],
+  [
+   2093,
+   "1",
+   "3",
+   0.0,
+   22.8
+  ],
+  [
+   2105,
+   "1",
+   "7",
+   0.0,
+   29.8
+  ],
+  [
+   2148,
+   "1",
+   "8",
+   0.0,
+   46.0
+  ],
+  [
+   2169,
+   "1",
+   "3",
+   0.0,
+   43.8
+  ],
+  [
+   2174,
+   "1",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   2182,
+   "1",
+   "3",
+   0.0,
+   58.8
+  ],
+  [
+   2183,
+   "1",
+   "2",
+   0.0,
+   95.2
+  ],
+  [
+   2212,
+   "1",
+   "3",
+   0.0,
+   107.0
+  ],
+  [
+   2231,
+   "1",
+   "2",
+   0.0,
+   95.2
+  ],
+  [
+   2232,
+   "1",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   2246,
+   "1",
+   "3",
+   0.0,
+   107.0
+  ],
+  [
+   2248,
+   "1",
+   "3",
+   0.0,
+   58.8
+  ],
+  [
+   2249,
+   "1",
+   "3",
+   0.0,
+   43.8
+  ],
+  [
+   2282,
+   "1",
+   "6",
+   0.0,
+   48.0
+  ],
+  [
+   2287,
+   "1",
+   "4",
+   0.0,
+   48.0
+  ],
+  [
+   2298,
+   "1",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   2304,
+   "1",
+   "8",
+   0.0,
+   42.0
+  ],
+  [
+   2305,
+   "1",
+   "3",
+   0.0,
+   23.0
+  ],
+  [
+   2327,
+   "1",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   2340,
+   "1",
+   "7",
+   0.0,
+   36.0
+  ],
+  [
+   2354,
+   "1",
+   "3",
+   0.0,
+   27.0
+  ],
+  [
+   2366,
+   "1",
+   "3",
+   0.0,
+   36.0
+  ],
+  [
+   2515,
+   "1",
+   "7",
+   0.0,
+   23.0
+  ],
+  [
+   2545,
+   "1",
+   "4",
+   0.0,
+   21.0
+  ],
+  [
+   2548,
+   "1",
+   "3",
+   0.0,
+   48.0
+  ],
+  [
+   2573,
+   "1",
+   "7",
+   0.0,
+   27.0
+  ],
+  [
+   2588,
+   "1",
+   "6",
+   0.0,
+   42.0
+  ],
+  [
+   2599,
+   "1",
+   "4",
+   0.0,
+   35.0
+  ],
+  [
+   2613,
+   "1",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   2631,
+   "1",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   2636,
+   "1",
+   "2",
+   0.0,
+   55.0
+  ],
+  [
+   310,
+   "2",
+   "4",
+   0.0,
+   66.2
+  ],
+  [
+   540,
+   "2",
+   "1",
+   0.0,
+   24.5
+  ],
+  [
+   762,
+   "2",
+   "7",
+   0.0,
+   75.0
+  ],
+  [
+   1389,
+   "2",
+   "1",
+   0.0,
+   42.5
+  ],
+  [
+   1442,
+   "2",
+   "1",
+   0.0,
+   42.5
+  ],
+  [
+   1608,
+   "2",
+   "1",
+   0.0,
+   40.0
+  ],
+  [
+   1652,
+   "2",
+   "1",
+   0.0,
+   100.8
+  ],
+  [
+   1882,
+   "2",
+   "3",
+   0.0,
+   128.0
+  ],
+  [
+   1923,
+   "2",
+   "1",
+   0.0,
+   25.8
+  ],
+  [
+   2337,
+   "2",
+   "1",
+   0.0,
+   21.0
+  ],
+  [
+   2512,
+   "2",
+   "1",
+   0.0,
+   191.0
+  ],
+  [
+   2624,
+   "2",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   4,
+   "3",
+   "5",
+   0.0,
+   57.5
+  ],
+  [
+   83,
+   "3",
+   "5",
+   0.0,
+   48.0
+  ],
+  [
+   109,
+   "3",
+   "5",
+   0.0,
+   45.5
+  ],
+  [
+   125,
+   "3",
+   "5",
+   0.0,
+   90.8
+  ],
+  [
+   183,
+   "3",
+   "5",
+   0.0,
+   44.0
+  ],
+  [
+   193,
+   "3",
+   "5",
+   0.0,
+   73.0
+  ],
+  [
+   389,
+   "3",
+   "4",
+   0.0,
+   22.8
+  ],
+  [
+   597,
+   "3",
+   "8",
+   0.0,
+   39.5
+  ],
+  [
+   1600,
+   "3",
+   "5",
+   0.0,
+   36.0
+  ],
+  [
+   1637,
+   "3",
+   "5",
+   0.0,
+   47.8
+  ],
+  [
+   1759,
+   "3",
+   "5",
+   0.0,
+   83.8
+  ],
+  [
+   2083,
+   "3",
+   "8",
+   0.0,
+   44.0
+  ],
+  [
+   2146,
+   "3",
+   "8",
+   0.0,
+   41.2
+  ],
+  [
+   2152,
+   "3",
+   "1",
+   0.0,
+   29.8
+  ],
+  [
+   2363,
+   "3",
+   "2",
+   0.0,
+   21.0
+  ],
+  [
+   2461,
+   "3",
+   "5",
+   0.0,
+   36.0
+  ],
+  [
+   2485,
+   "3",
+   "7",
+   0.0,
+   28.0
+  ],
+  [
+   195,
+   "4",
+   "3",
+   0.0,
+   59.0
+  ],
+  [
+   465,
+   "4",
+   "1",
+   0.0,
+   46.8
+  ],
+  [
+   559,
+   "4",
+   "1",
+   0.0,
+   27.0
+  ],
+  [
+   586,
+   "4",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   594,
+   "4",
+   "3",
+   0.0,
+   22.8
+  ],
+  [
+   713,
+   "4",
+   "1",
+   0.0,
+   28.0
+  ],
+  [
+   877,
+   "4",
+   "3",
+   0.0,
+   50.8
+  ],
+  [
+   1146,
+   "4",
+   "7",
+   0.0,
+   32.8
+  ],
+  [
+   1228,
+   "4",
+   "1",
+   0.0,
+   27.0
+  ],
+  [
+   1291,
+   "4",
+   "1",
+   0.0,
+   22.8
+  ],
+  [
+   1324,
+   "4",
+   "1",
+   0.0,
+   22.8
+  ],
+  [
+   1331,
+   "4",
+   "7",
+   0.0,
+   74.2
+  ],
+  [
+   1380,
+   "4",
+   "3",
+   0.0,
+   36.0
+  ],
+  [
+   1408,
+   "4",
+   "1",
+   0.0,
+   22.8
+  ],
+  [
+   1424,
+   "4",
+   "1",
+   0.0,
+   21.0
+  ],
+  [
+   1554,
+   "4",
+   "7",
+   0.0,
+   42.8
+  ],
+  [
+   1606,
+   "4",
+   "1",
+   0.0,
+   113.0
+  ],
+  [
+   1727,
+   "4",
+   "1",
+   0.0,
+   72.0
+  ],
+  [
+   1863,
+   "4",
+   "1",
+   0.0,
+   73.2
+  ],
+  [
+   2101,
+   "4",
+   "7",
+   0.0,
+   24.8
+  ],
+  [
+   2141,
+   "4",
+   "8",
+   0.0,
+   51.0
+  ],
+  [
+   2271,
+   "4",
+   "6",
+   0.0,
+   21.0
+  ],
+  [
+   2277,
+   "4",
+   "5",
+   0.0,
+   21.0
+  ],
+  [
+   2300,
+   "4",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   2357,
+   "4",
+   "5",
+   0.0,
+   28.0
+  ],
+  [
+   2387,
+   "4",
+   "7",
+   0.0,
+   62.0
+  ],
+  [
+   2430,
+   "4",
+   "1",
+   0.0,
+   111.0
+  ],
+  [
+   2437,
+   "4",
+   "1",
+   0.0,
+   72.0
+  ],
+  [
+   2483,
+   "4",
+   "5",
+   0.0,
+   28.0
+  ],
+  [
+   2506,
+   "4",
+   "3",
+   0.0,
+   181.0
+  ],
+  [
+   2618,
+   "4",
+   "7",
+   0.0,
+   27.0
+  ],
+  [
+   2633,
+   "4",
+   "3",
+   0.0,
+   162.0
+  ],
+  [
+   27,
+   "5",
+   "1",
+   0.0,
+   22.8
+  ],
+  [
+   32,
+   "5",
+   "1",
+   0.0,
+   39.0
+  ],
+  [
+   52,
+   "5",
+   "7",
+   0.0,
+   23.2
+  ],
+  [
+   190,
+   "5",
+   "7",
+   0.0,
+   31.0
+  ],
+  [
+   213,
+   "5",
+   "3",
+   0.0,
+   40.8
+  ],
+  [
+   222,
+   "5",
+   "3",
+   0.0,
+   38.0
+  ],
+  [
+   437,
+   "5",
+   "4",
+   0.0,
+   31.5
+  ],
+  [
+   479,
+   "5",
+   "4",
+   0.0,
+   45.5
+  ],
+  [
+   527,
+   "5",
+   "1",
+   0.0,
+   27.5
+  ],
+  [
+   569,
+   "5",
+   "2",
+   0.0,
+   41.2
+  ],
+  [
+   579,
+   "5",
+   "1",
+   0.0,
+   24.5
+  ],
+  [
+   585,
+   "5",
+   "7",
+   0.0,
+   71.0
+  ],
+  [
+   646,
+   "5",
+   "8",
+   0.0,
+   59.8
+  ],
+  [
+   703,
+   "5",
+   "8",
+   0.0,
+   28.0
+  ],
+  [
+   742,
+   "5",
+   "7",
+   0.0,
+   29.8
+  ],
+  [
+   755,
+   "5",
+   "1",
+   0.0,
+   27.0
+  ],
+  [
+   764,
+   "5",
+   "3",
+   0.0,
+   22.8
+  ],
+  [
+   766,
+   "5",
+   "1",
+   0.0,
+   22.8
+  ],
+  [
+   800,
+   "5",
+   "7",
+   0.0,
+   68.8
+  ],
+  [
+   829,
+   "5",
+   "7",
+   0.0,
+   21.0
+  ],
+  [
+   836,
+   "5",
+   "1",
+   0.0,
+   24.5
+  ],
+  [
+   846,
+   "5",
+   "3",
+   0.0,
+   46.5
+  ],
+  [
+   954,
+   "5",
+   "3",
+   0.0,
+   38.0
+  ],
+  [
+   1117,
+   "5",
+   "3",
+   0.0,
+   25.2
+  ],
+  [
+   1214,
+   "5",
+   "3",
+   0.0,
+   25.2
+  ],
+  [
+   1314,
+   "5",
+   "8",
+   0.0,
+   57.5
+  ],
+  [
+   1329,
+   "5",
+   "7",
+   0.0,
+   43.2
+  ],
+  [
+   1347,
+   "5",
+   "1",
+   0.0,
+   29.2
+  ],
+  [
+   1359,
+   "5",
+   "7",
+   0.0,
+   43.2
+  ],
+  [
+   1415,
+   "5",
+   "7",
+   0.0,
+   37.2
+  ],
+  [
+   1431,
+   "5",
+   "3",
+   0.0,
+   22.8
+  ],
+  [
+   1478,
+   "5",
+   "7",
+   0.0,
+   95.5
+  ],
+  [
+   1482,
+   "5",
+   "3",
+   0.0,
+   42.0
+  ],
+  [
+   1549,
+   "5",
+   "3",
+   0.0,
+   66.0
+  ],
+  [
+   1567,
+   "5",
+   "3",
+   0.0,
+   56.5
+  ],
+  [
+   1623,
+   "5",
+   "1",
+   0.0,
+   43.2
+  ],
+  [
+   1624,
+   "5",
+   "4",
+   0.0,
+   69.8
+  ],
+  [
+   1659,
+   "5",
+   "3",
+   0.0,
+   28.0
+  ],
+  [
+   1660,
+   "5",
+   "4",
+   0.0,
+   56.5
+  ],
+  [
+   1661,
+   "5",
+   "2",
+   0.0,
+   74.0
+  ],
+  [
+   1689,
+   "5",
+   "4",
+   0.0,
+   79.5
+  ],
+  [
+   1770,
+   "5",
+   "7",
+   0.0,
+   27.5
+  ],
+  [
+   1819,
+   "5",
+   "1",
+   0.0,
+   21.0
+  ],
+  [
+   1824,
+   "5",
+   "7",
+   0.0,
+   27.5
+  ],
+  [
+   1845,
+   "5",
+   "3",
+   0.0,
+   27.0
+  ],
+  [
+   1888,
+   "5",
+   "7",
+   0.0,
+   35.8
+  ],
+  [
+   1920,
+   "5",
+   "3",
+   0.0,
+   81.0
+  ],
+  [
+   2019,
+   "5",
+   "7",
+   0.0,
+   35.0
+  ],
+  [
+   2117,
+   "5",
+   "1",
+   0.0,
+   21.0
+  ],
+  [
+   2118,
+   "5",
+   "2",
+   0.0,
+   34.0
+  ],
+  [
+   2198,
+   "5",
+   "1",
+   0.0,
+   36.0
+  ],
+  [
+   2247,
+   "5",
+   "1",
+   0.0,
+   36.0
+  ],
+  [
+   2374,
+   "5",
+   "1",
+   0.0,
+   189.0
+  ],
+  [
+   2402,
+   "5",
+   "7",
+   0.0,
+   39.0
+  ],
+  [
+   2469,
+   "5",
+   "7",
+   0.0,
+   28.0
+  ],
+  [
+   2497,
+   "5",
+   "6",
+   0.0,
+   106.0
+  ],
+  [
+   2520,
+   "5",
+   "2",
+   0.0,
+   42.0
+  ],
+  [
+   2556,
+   "5",
+   "8",
+   0.0,
+   104.0
+  ],
+  [
+   2569,
+   "5",
+   "2",
+   0.0,
+   27.0
+  ],
+  [
+   2629,
+   "5",
+   "1",
+   0.0,
+   213.0
+  ],
+  [
+   587,
+   "6",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   656,
+   "6",
+   "3",
+   0.0,
+   27.5
+  ],
+  [
+   824,
+   "6",
+   "3",
+   0.0,
+   27.0
+  ],
+  [
+   1185,
+   "6",
+   "1",
+   0.0,
+   24.5
+  ],
+  [
+   1204,
+   "6",
+   "3",
+   0.0,
+   27.0
+  ],
+  [
+   1267,
+   "6",
+   "3",
+   0.0,
+   27.5
+  ],
+  [
+   1394,
+   "6",
+   "8",
+   0.0,
+   21.5
+  ],
+  [
+   1753,
+   "6",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   1754,
+   "6",
+   "1",
+   0.0,
+   35.2
+  ],
+  [
+   1859,
+   "6",
+   "3",
+   0.0,
+   31.8
+  ],
+  [
+   2344,
+   "6",
+   "1",
+   0.0,
+   28.0
+  ],
+  [
+   2383,
+   "6",
+   "7",
+   0.0,
+   60.0
+  ],
+  [
+   2472,
+   "6",
+   "3",
+   0.0,
+   23.0
+  ],
+  [
+   2496,
+   "6",
+   "7",
+   0.0,
+   28.0
+  ],
+  [
+   2555,
+   "6",
+   "1",
+   0.0,
+   27.0
+  ],
+  [
+   543,
+   "7",
+   "1",
+   0.0,
+   49.0
+  ],
+  [
+   734,
+   "7",
+   "3",
+   0.0,
+   104.8
+  ],
+  [
+   782,
+   "7",
+   "3",
+   0.0,
+   116.0
+  ],
+  [
+   808,
+   "7",
+   "3",
+   0.0,
+   46.2
+  ],
+  [
+   861,
+   "7",
+   "3",
+   0.0,
+   57.5
+  ],
+  [
+   876,
+   "7",
+   "3",
+   0.0,
+   82.2
+  ],
+  [
+   989,
+   "7",
+   "3",
+   0.0,
+   46.5
+  ],
+  [
+   1109,
+   "7",
+   "8",
+   0.0,
+   22.8
+  ],
+  [
+   1278,
+   "7",
+   "1",
+   0.0,
+   26.5
+  ],
+  [
+   1287,
+   "7",
+   "1",
+   0.0,
+   22.8
+  ],
+  [
+   1387,
+   "7",
+   "1",
+   0.0,
+   23.2
+  ],
+  [
+   1483,
+   "7",
+   "1",
+   0.0,
+   58.2
+  ],
+  [
+   1492,
+   "7",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   1529,
+   "7",
+   "1",
+   0.0,
+   23.2
+  ],
+  [
+   1745,
+   "7",
+   "1",
+   0.0,
+   84.5
+  ],
+  [
+   2016,
+   "7",
+   "8",
+   0.0,
+   36.0
+  ],
+  [
+   2046,
+   "7",
+   "3",
+   0.0,
+   35.0
+  ],
+  [
+   2049,
+   "7",
+   "8",
+   0.0,
+   36.0
+  ],
+  [
+   2092,
+   "7",
+   "2",
+   0.0,
+   21.0
+  ],
+  [
+   2096,
+   "7",
+   "1",
+   0.0,
+   30.5
+  ],
+  [
+   2112,
+   "7",
+   "1",
+   0.0,
+   27.0
+  ],
+  [
+   2119,
+   "7",
+   "2",
+   0.0,
+   28.0
+  ],
+  [
+   2154,
+   "7",
+   "1",
+   0.0,
+   48.2
+  ],
+  [
+   2167,
+   "7",
+   "3",
+   0.0,
+   39.0
+  ],
+  [
+   2172,
+   "7",
+   "3",
+   0.0,
+   90.0
+  ],
+  [
+   2177,
+   "7",
+   "1",
+   0.0,
+   22.8
+  ],
+  [
+   2185,
+   "7",
+   "1",
+   0.0,
+   34.0
+  ],
+  [
+   2189,
+   "7",
+   "1",
+   0.0,
+   33.0
+  ],
+  [
+   2217,
+   "7",
+   "1",
+   0.0,
+   43.8
+  ],
+  [
+   2219,
+   "7",
+   "1",
+   0.0,
+   22.8
+  ],
+  [
+   2224,
+   "7",
+   "3",
+   0.0,
+   90.0
+  ],
+  [
+   2226,
+   "7",
+   "1",
+   0.0,
+   34.0
+  ],
+  [
+   2254,
+   "7",
+   "1",
+   0.0,
+   33.0
+  ],
+  [
+   2260,
+   "7",
+   "1",
+   0.0,
+   43.8
+  ],
+  [
+   2397,
+   "7",
+   "1",
+   0.0,
+   21.0
+  ],
+  [
+   120,
+   "8",
+   "5",
+   0.0,
+   57.0
+  ],
+  [
+   198,
+   "8",
+   "2",
+   0.0,
+   22.8
+  ],
+  [
+   201,
+   "8",
+   "4",
+   0.0,
+   57.8
+  ],
+  [
+   256,
+   "8",
+   "4",
+   0.0,
+   48.0
+  ],
+  [
+   265,
+   "8",
+   "7",
+   0.0,
+   147.0
+  ],
+  [
+   366,
+   "8",
+   "7",
+   0.0,
+   115.5
+  ],
+  [
+   535,
+   "8",
+   "3",
+   0.0,
+   33.0
+  ],
+  [
+   596,
+   "8",
+   "7",
+   0.0,
+   52.0
+  ],
+  [
+   640,
+   "8",
+   "7",
+   0.0,
+   60.5
+  ],
+  [
+   698,
+   "8",
+   "6",
+   0.0,
+   43.8
+  ],
+  [
+   758,
+   "8",
+   "5",
+   0.0,
+   27.0
+  ],
+  [
+   791,
+   "8",
+   "7",
+   0.0,
+   98.2
+  ],
+  [
+   796,
+   "8",
+   "7",
+   0.0,
+   39.0
+  ],
+  [
+   943,
+   "8",
+   "3",
+   0.0,
+   75.2
+  ],
+  [
+   976,
+   "8",
+   "3",
+   0.0,
+   63.0
+  ],
+  [
+   1139,
+   "8",
+   "5",
+   0.0,
+   22.8
+  ],
+  [
+   1176,
+   "8",
+   "7",
+   0.0,
+   22.8
+  ],
+  [
+   1273,
+   "8",
+   "7",
+   0.0,
+   52.0
+  ],
+  [
+   1317,
+   "8",
+   "3",
+   0.0,
+   29.2
+  ],
+  [
+   1379,
+   "8",
+   "3",
+   0.0,
+   53.8
+  ],
+  [
+   1388,
+   "8",
+   "3",
+   0.0,
+   29.2
+  ],
+  [
+   1426,
+   "8",
+   "7",
+   0.0,
+   29.5
+  ],
+  [
+   1559,
+   "8",
+   "7",
+   0.0,
+   110.0
+  ],
+  [
+   1561,
+   "8",
+   "3",
+   0.0,
+   53.8
+  ],
+  [
+   1688,
+   "8",
+   "5",
+   0.0,
+   27.5
+  ],
+  [
+   1693,
+   "8",
+   "7",
+   0.0,
+   99.0
+  ],
+  [
+   1773,
+   "8",
+   "1",
+   0.0,
+   21.0
+  ],
+  [
+   1833,
+   "8",
+   "3",
+   0.0,
+   89.0
+  ],
+  [
+   1928,
+   "8",
+   "1",
+   0.0,
+   21.0
+  ],
+  [
+   1967,
+   "8",
+   "3",
+   0.0,
+   45.2
+  ],
+  [
+   1980,
+   "8",
+   "1",
+   0.0,
+   21.0
+  ],
+  [
+   2060,
+   "8",
+   "1",
+   0.0,
+   41.0
+  ],
+  [
+   2140,
+   "8",
+   "1",
+   0.0,
+   72.2
+  ],
+  [
+   2214,
+   "8",
+   "3",
+   0.0,
+   29.8
+  ],
+  [
+   2230,
+   "8",
+   "3",
+   0.0,
+   29.8
+  ],
+  [
+   2301,
+   "8",
+   "1",
+   0.0,
+   36.0
+  ],
+  [
+   2311,
+   "8",
+   "3",
+   0.0,
+   21.0
+  ],
+  [
+   2462,
+   "8",
+   "4",
+   0.0,
+   21.0
+  ],
+  [
+   2492,
+   "8",
+   "1",
+   0.0,
+   27.0
+  ]
+ ]
+}

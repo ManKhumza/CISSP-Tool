@@ -1,0 +1,35 @@
+CISSP QUESTION ORGANIZATION - ACCURACY EVALUATION REPORT
+============================================================
+
+ISSUES FOUND IN PREVIOUS WORK:
+----------------------------------------
+1. CRITICAL: Domain mapping was based on arbitrary 'Topic' numbers from the
+   original PDF. These do NOT correspond to CISSP 8-domain structure.
+   FIX: Each question is now individually classified using comprehensive
+   keyword analysis across all 8 domains.
+
+2. MINOR: Some questions lack explanations in the source document.
+   1842 out of 2615 questions (70.4%) have no explanation.
+   FIX: These are now clearly marked in the JSON output.
+
+3. MINOR: Answer options were merged in raw text extraction.
+   e.g., 'B. Social EngineeringC. Object reuseD. Wiretaping'
+   FIX: Enhanced parsing splits merged options using regex.
+
+4. MINOR: Spacing artifacts from PDF extraction.
+   e.g., 'th at' instead of 'that'
+   FIX: Comprehensive cleanup function handles known patterns.
+
+
+UPDATED DOMAIN DISTRIBUTION:
+----------------------------------------
+Domain 1: Security and Risk Management: 233 questions (161 missing explanations)
+Domain 2: Asset Security: 23 questions (23 missing explanations)
+Domain 3: Security Architecture and Engineering: 415 questions (250 missing explanations)
+Domain 4: Communication and Network Security: 1372 questions (989 missing explanations)
+Domain 5: Identity and Access Management (IAM): 340 questions (236 missing explanations)
+Domain 6: Security Assessment and Testing: 36 questions (29 missing explanations)
+Domain 7: Security Operations: 109 questions (92 missing explanations)
+Domain 8: Software Development Security: 87 questions (62 missing explanations)
+
+TOTAL: 2615 questions

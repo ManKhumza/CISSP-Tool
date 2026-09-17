@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CISSP Study Portal — Questions by Sub-Section</title>
+<style>
+  :root{
+    --navy:#12405f; --blue:#2e75b6; --blue-l:#eaf2fa; --ink:#1f2933; --ink-2:#4a5568;
+    --ink-3:#7b8794; --line:#dbe3ea; --bg:#f4f7fa; --card:#fff;
+    --ok:#1b7f3b; --ok-bg:#e8f6ec; --bad:#b3261e; --bad-bg:#fdecea;
+    --warn:#b26a00; --warn-bg:#fff5e5; --mark:#7b3fb5; --mark-bg:#f3ecfb;
+    --radius:10px; --shadow:0 1px 3px rgba(16,42,67,.08),0 6px 18px rgba(16,42,67,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  #app{display:flex;min-height:100vh}
+
+  /* ---------- sidebar ---------- */
+  #sidebar{width:310px;flex:0 0 310px;background:var(--navy);color:#dce8f2;
+    display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto}
+  .brand{padding:16px 16px 10px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .brand h1{margin:0;font-size:16px;color:#fff;letter-spacing:.2px}
+  .brand p{margin:4px 0 0;font-size:11px;color:#9dbcd6}
+  .sb-progress{padding:10px 16px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .sb-progress .row{display:flex;justify-content:space-between;font-size:11px;color:#9dbcd6;margin-bottom:5px}
+  .sb-bar{height:7px;background:rgba(255,255,255,.15);border-radius:99px;overflow:hidden}
+  .sb-bar>i{display:block;height:100%;background:linear-gradient(90deg,#57b894,#8fd6b4);width:0}
+  .sb-actions{display:flex;gap:8px;padding:9px 16px}
+  .sb-actions button{flex:1;font-size:11px;padding:6px 8px;border-radius:7px;cursor:pointer;
+    border:1px solid rgba(255,255,255,.25);background:transparent;color:#dce8f2}
+  .sb-actions button:hover{background:rgba(255,255,255,.1)}
+  nav{flex:1;padding:6px 0 24px}
+  .nav-h{padding:11px 16px 5px;font-size:10px;letter-spacing:.9px;text-transform:uppercase;color:#7fa3c0}
+  .dom{display:flex;align-items:center;gap:8px;width:100%;border:0;background:transparent;color:#dce8f2;
+    padding:9px 12px 9px 16px;cursor:pointer;text-align:left;border-left:3px solid transparent}
+  .dom:hover{background:rgba(255,255,255,.07)}
+  .dom.active{background:rgba(255,255,255,.14);border-left-color:#7fc4e8}
+  .dom .caret{flex:0 0 10px;font-size:9px;color:#9dbcd6;transition:transform .15s}
+  .dom.open .caret{transform:rotate(90deg)}
+  .dom .lab{flex:1;min-width:0}
+  .dom .t{display:block;font-size:12.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .dom .m{display:block;font-size:10.5px;color:#9dbcd6;margin-top:2px}
+  .subs{display:none;padding:2px 0 6px}
+  .dom.open+.subs{display:block}
+  .sub{display:flex;gap:8px;align-items:baseline;width:100%;border:0;background:transparent;color:#c9dcec;
+    padding:6px 14px 6px 30px;cursor:pointer;text-align:left;font-size:11.5px;border-left:3px solid transparent}
+  .sub:hover{background:rgba(255,255,255,.07)}
+  .sub.active{background:rgba(255,255,255,.16);border-left-color:#7fc4e8;color:#fff}
+  .sub .sid{flex:0 0 38px;color:#8fd6b4;font-weight:700;font-size:10.5px}
+  .sub .st{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .sub .sc{flex:0 0 auto;font-size:10px;color:#9dbcd6;background:rgba(255,255,255,.1);
+    border-radius:99px;padding:1px 6px}
+
+  /* ---------- main ---------- */
+  #main{flex:1;min-width:0;display:flex;flex-direction:column}
+  #topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);padding:9px 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  #search{flex:1 1 240px;min-width:170px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;
+    font-size:13.5px;background:#fff;color:var(--ink)}
+  #search:focus{outline:2px solid var(--blue);border-color:var(--blue)}
+  .seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+  .seg button{border:0;background:transparent;padding:8px 11px;font-size:12.5px;cursor:pointer;color:var(--ink-2)}
+  .seg button.on{background:var(--blue);color:#fff}
+  .tb-btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px 11px;font-size:12.5px;
+    cursor:pointer;color:var(--ink-2)}
+  .tb-btn:hover{border-color:var(--blue);color:var(--blue)}
+  #content{padding:20px;max-width:1010px;width:100%;margin:0 auto}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .pad{padding:19px 21px}
+  h2.sec{margin:0 0 4px;font-size:21px;color:var(--navy)}
+  h3.sub{margin:20px 0 7px;font-size:14.5px;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:5px}
+  .muted{color:var(--ink-3);font-size:13px}
+  .pill{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:99px;background:var(--blue-l);
+    color:var(--navy);margin:0 6px 4px 0}
+  .pill.w{background:#eef7f0;color:var(--ok)}
+  .pill.g{background:#f2f4f7;color:var(--ink-2)}
+  .grid{display:grid;gap:11px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px}
+  .stat b{display:block;font-size:21px;color:var(--navy)}
+  .stat span{font-size:12px;color:var(--ink-3)}
+  ul.tight{margin:5px 0 0 18px;padding:0}
+  ul.tight li{margin:5px 0}
+  a{color:var(--blue)}
+
+  /* study guide */
+  .guide{background:linear-gradient(180deg,#f7fbff,#fff);border:1px solid #d6e6f5;border-left:4px solid var(--blue)}
+  .guide h3{margin:0 0 6px;font-size:16.5px;color:var(--navy)}
+  .guide .desc{font-size:13.5px;color:var(--ink-2);margin:0 0 10px}
+  .guide .kn{margin:6px 0 0 20px;padding:0;font-size:13.5px;color:var(--ink-2)}
+  .guide .kn li{margin:6px 0}
+  .guide .deep{margin:7px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+  .guide .deep li{padding:10px 12px;background:#fff;border:1px solid #dfeaf4;border-radius:8px;
+    font-size:13.5px;color:var(--ink-2)}
+  .terms{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .term{font-size:11px;background:#eef4fa;border:1px solid #d6e6f5;color:var(--navy);
+    border-radius:99px;padding:2px 9px}
+  .guide details summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--navy);margin:10px 0 2px}
+  .guide h4.gh{margin:14px 0 6px;font-size:12.5px;text-transform:uppercase;letter-spacing:.6px;color:#7b8794}
+  .guide h4.gh .ghc{background:#eef4fa;color:var(--navy);border-radius:99px;padding:1px 8px;
+                    font-size:11px;letter-spacing:0;margin-left:4px}
+  .guide ul.deep{margin:6px 0 0 20px;padding:0;font-size:13.5px;color:var(--ink-2)}
+  .guide ul.deep li{margin:6px 0}
+  .glossary{margin-top:4px;border-top:1px solid #e3eef8}
+  .gitem{display:grid;grid-template-columns:190px 1fr;gap:12px;padding:8px 0;border-bottom:1px dashed #e8f0f7}
+  .gitem .gt{font-weight:700;color:var(--navy);font-size:13px;line-height:1.4}
+  .gitem .gd{font-size:13px;color:var(--ink-2);line-height:1.55}
+  .gtag{display:inline-block;margin-left:6px;font-size:9.5px;font-weight:600;letter-spacing:.4px;
+        text-transform:uppercase;background:#f2f4f7;color:var(--ink-3);border-radius:99px;padding:1px 6px}
+  .gitem .gsrc{font-size:10.5px;font-weight:600;color:var(--ink-3);margin-top:2px}
+  @media (max-width:760px){ .gitem{grid-template-columns:1fr;gap:3px} }
+
+  /* section cards on domain overview */
+  .seclist{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:10px}
+  .seccard{border:1px solid var(--line);border-radius:9px;background:#fff;padding:12px 14px;cursor:pointer;text-align:left}
+  .seccard:hover{border-color:var(--blue);background:#f8fbff}
+  .seccard .sid{font-weight:700;color:var(--blue);font-size:12px}
+  .seccard .st{font-size:13.5px;color:var(--ink);display:block;margin:2px 0 6px}
+  .seccard .sm{font-size:11.5px;color:var(--ink-3)}
+  .seccard .bar{height:5px;background:#eef2f6;border-radius:99px;margin-top:8px;overflow:hidden}
+  .seccard .bar>i{display:block;height:100%;background:#8fd6b4;width:0}
+
+  /* question */
+  .qwrap{margin-top:16px}
+  .qhead{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:9px}
+  .qhead .num{font-weight:700;color:var(--navy);font-size:15px}
+  .tag{font-size:11px;padding:2px 8px;border-radius:99px;background:#eef2f6;color:var(--ink-2)}
+  .tag.mark{background:var(--mark-bg);color:var(--mark)}
+  .qtext{font-size:16px;line-height:1.55;margin:6px 0 13px;white-space:pre-wrap}
+  .opts{display:flex;flex-direction:column;gap:8px;margin:0 0 13px}
+  .opt{display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;background:#fff;
+    border:1px solid var(--line);border-radius:9px;padding:11px 13px;cursor:pointer;font-size:14.5px;
+    line-height:1.5;color:var(--ink)}
+  .opt:hover{border-color:var(--blue);background:#f8fbff}
+  .opt .lt{flex:0 0 24px;height:24px;border-radius:50%;background:#eef2f6;color:var(--navy);
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12.5px}
+  .opt.picked{border-color:var(--blue);background:var(--blue-l)}
+  .opt.correct{border-color:#8fd0a4;background:var(--ok-bg)}
+  .opt.correct .lt{background:#cfeeda;color:var(--ok)}
+  .opt.wrong{border-color:#eeb3ae;background:var(--bad-bg)}
+  .opt.wrong .lt{background:#f8d6d3;color:var(--bad)}
+  .opt[disabled]{cursor:default}
+  .opt[disabled]:hover{border-color:var(--line);background:#fff}
+  .opt.correct[disabled]:hover{background:var(--ok-bg);border-color:#8fd0a4}
+  .opt.wrong[disabled]:hover{background:var(--bad-bg);border-color:#eeb3ae}
+  .feedback{border-radius:9px;padding:11px 13px;margin:9px 0 0;font-size:14px}
+  .feedback.ok{background:var(--ok-bg);border:1px solid #bfe3cb;color:#155c2c}
+  .feedback.no{background:var(--bad-bg);border:1px solid #f0c2bd;color:#8c211a}
+  .feedback .ans{font-weight:700}
+  .expl{margin-top:11px;border-top:1px dashed var(--line);padding-top:10px}
+  .expl h4{margin:0 0 5px;font-size:12.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--ink-3)}
+  .expl .body{font-size:14px;color:var(--ink-2);white-space:pre-wrap}
+  .noexpl{font-size:13px;color:var(--warn);background:var(--warn-bg);border:1px solid #f0d9b5;
+    border-radius:8px;padding:9px 11px;margin-top:9px}
+  .navbar{display:flex;align-items:center;gap:9px;justify-content:space-between;margin-top:16px;flex-wrap:wrap}
+  .navbar .btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 14px;font-size:13.5px;
+    cursor:pointer;color:var(--navy);font-weight:600}
+  .navbar .btn:hover{border-color:var(--blue);background:var(--blue-l)}
+  .navbar .btn[disabled]{opacity:.45;cursor:not-allowed}
+  .jump{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-3)}
+  .jump input{width:74px;padding:6px 8px;border:1px solid var(--line);border-radius:7px;font-size:13px}
+  .readall .q{margin:0 0 18px;padding:13px 15px;border:1px solid var(--line);border-radius:9px;background:#fff}
+  .readall .qn{font-weight:700;color:var(--navy)}
+  .readall .qt{font-size:15px;margin:6px 0 8px;white-space:pre-wrap}
+  .readall .ol{margin:0 0 7px 4px;padding:0;list-style:none}
+  .readall .ol li{margin:3px 0;font-size:14px}
+  .readall .an{font-weight:700;color:var(--ok);font-size:14px;margin:6px 0 4px}
+  .readall .ex{font-size:13.5px;color:var(--ink-2);white-space:pre-wrap}
+  .results{list-style:none;margin:13px 0 0;padding:0}
+  .results li{border:1px solid var(--line);border-radius:9px;background:#fff;margin-bottom:8px;padding:10px 12px;cursor:pointer}
+  .results li:hover{border-color:var(--blue);background:#f8fbff}
+  .results .rn{font-size:11.5px;color:var(--ink-3);margin-bottom:3px}
+  .results .rt{font-size:14px}
+  mark{background:#fff2a8;padding:0 2px}
+  .empty{padding:28px;text-align:center;color:var(--ink-3)}
+  .toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;
+    padding:9px 16px;border-radius:99px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50}
+  .toast.show{opacity:1}
+  .kbd{font:11px/1 ui-monospace,Menlo,Consolas,monospace;background:#eef2f6;border:1px solid var(--line);
+    border-bottom-width:2px;border-radius:5px;padding:2px 5px;color:var(--ink-2)}
+  @media (max-width:900px){
+    #app{flex-direction:column}
+    #sidebar{width:100%;flex:none;height:auto;position:static}
+    #content{padding:13px}
+  }
+  @media print{
+    #sidebar,#topbar,.navbar,.sb-actions{display:none!important}
+    #content{max-width:none;padding:0}
+    .card,.seccard{box-shadow:none}
+    .readall .q{break-inside:avoid}
+    body{background:#fff}
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <div class="brand">
+      <h1>CISSP Study Portal</h1>
+      <p id="brandSub">Loading…</p>
+    </div>
+    <div class="sb-progress">
+      <div class="row"><span>Overall progress</span><span id="pctText">0%</span></div>
+      <div class="sb-bar"><i id="pctBar"></i></div>
+      <div class="row" style="margin-top:7px"><span id="answeredText">0 answered</span><span id="marksText">0 marked</span></div>
+    </div>
+    <div class="sb-actions">
+      <button id="btnResume">Resume</button>
+      <button id="btnReset">Reset</button>
+    </div>
+    <nav id="domainNav"></nav>
+  </aside>
+
+  <main id="main">
+    <header id="topbar">
+      <input id="search" type="search" placeholder="Search all questions…  ( / )" autocomplete="off">
+      <div class="seg">
+        <button data-layout="one" class="on">One at a time</button>
+        <button data-layout="all">Read as document</button>
+      </div>
+      <button class="tb-btn" id="btnGuide">Study guide</button>
+      <button class="tb-btn" id="btnPrint">Print</button>
+    </header>
+    <div id="content"></div>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="cissp-data.js" charset="utf-8"></script>
+<script>
+"use strict";
+(function(){
+  var DATA = window.CISSP_DATA;
+  if(!DATA){ document.getElementById('content').innerHTML =
+    '<div class="empty">Could not load <code>cissp-data.js</code>. Keep it beside this page.</div>'; return; }
+
+  var KEY = 'cissp-portal-v1';
+  var progress = load();
+  var state = { view:'home', domainId:1, sectionId:null, index:0, layout:'one', query:'',
+                showGuide:true, glossQuery:'' };
+
+  /* ------------- models ------------- */
+  function normSection(d, s){
+    return { id:s.id, title:s.title, count:s.count, guide:s.guide, questions:s.questions,
+             domainId:d.id, domainName:d.name, virtual:false };
+  }
+  function generalSection(d){
+    if(!d.general || !d.general.count) return null;
+    return { id:'general', title:'Other topics in this domain', count:d.general.count,
+             guide:{ focus:'Questions in this domain that could not be confidently attributed to a single '+
+                            'official sub-section. They are still worth reviewing — read the explanations.',
+                     mustKnow:[], keyTerms:[] },
+             questions:d.general.questions, domainId:d.id, domainName:d.name, virtual:true };
+  }
+  var DOMAINS = {};
+  DATA.domains.forEach(function(d){
+    var secs = d.sections.map(function(s){ return normSection(d, s); });
+    var g = generalSection(d);
+    if(g) secs.push(g);
+    DOMAINS[d.id] = { d:d, sections:secs };
+  });
+  function dom(id){ return DOMAINS[id] || DOMAINS[DATA.domains[0].id]; }
+  function section(domId, sid){
+    var list = dom(domId).sections;
+    for(var i=0;i<list.length;i++) if(list[i].id === sid) return list[i];
+    return list[0];
+  }
+  var ALL = [];
+  DATA.domains.forEach(function(d){
+    d.sections.forEach(function(s){
+      s.questions.forEach(function(q){ ALL.push({ d:d, s:s, q:q }); });
+    });
+    if(d.general) d.general.questions.forEach(function(q){
+      ALL.push({ d:d, s:{id:'general', title:'Other topics'}, q:q });
+    });
+  });
+  var INDEX = {};
+  ALL.forEach(function(it, i){ INDEX[it.q.n] = i; });
+
+  /* ------------- progress ------------- */
+  function load(){
+    try{ var raw = localStorage.getItem(KEY); if(raw) return normalize(JSON.parse(raw)); }catch(e){}
+    return { answers:{}, marks:{}, sections:{} };
+  }
+  function normalize(p){ p = p||{}; p.answers=p.answers||{}; p.marks=p.marks||{}; p.sections=p.sections||{}; return p; }
+  var memOnly = false;
+  function save(){ if(memOnly) return; try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){ memOnly = true; } }
+
+  function stats(qs){
+    var a=0,m=0;
+    qs.forEach(function(q){ if(progress.answers[q.n]) a++; if(progress.marks[q.n]) m++; });
+    return { answered:a, marks:m, total:qs.length };
+  }
+  function overall(){
+    var a=0,m=0,t=0;
+    DATA.domains.forEach(function(d){
+      var qs=[]; d.sections.forEach(function(s){ qs=qs.concat(s.questions); });
+      if(d.general) qs=qs.concat(d.general.questions);
+      var st=stats(qs); a+=st.answered; m+=st.marks; t+=st.total;
+    });
+    return { answered:a, marks:m, total:t };
+  }
+
+  /* ------------- helpers ------------- */
+  function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function byId(i){ return document.getElementById(i); }
+  function toast(msg){ var t=byId('toast'); t.textContent=msg; t.classList.add('show');
+    clearTimeout(toast._t); toast._t=setTimeout(function(){t.classList.remove('show');},1500); }
+  function pct(a,b){ return b ? Math.round(a/b*100) : 0; }
+  function markAnswered(qn, picked, correct){
+    progress.answers[qn] = { picked:picked, correct:correct, ts:Date.now() };
+    save(); refreshSidebar();
+  }
+
+  /* ------------- sidebar ------------- */
+  function buildSidebar(){
+    var h = '<div class="nav-h">Overview</div>' +
+      '<button class="dom" data-home="1"><span class="caret" style="visibility:hidden">▶</span>' +
+      '<span class="lab"><span class="t">Exam overview &amp; study plan</span>' +
+      '<span class="m">Strategy, weights and tips</span></span></button>';
+    DATA.domains.forEach(function(d){
+      h += '<button class="dom" data-dom="'+d.id+'"><span class="caret">▶</span><span class="lab">' +
+        '<span class="t">Domain '+d.id+': '+esc(d.name)+'</span>' +
+        '<span class="m">'+d.weight+' · '+d.count+' questions · '+d.sections.length+' sub-sections</span>' +
+        '</span></button><div class="subs" data-subs="'+d.id+'">';
+      d.sections.forEach(function(s){
+        h += '<button class="sub" data-sec="'+s.id+'" data-dom="'+d.id+'">' +
+          '<span class="sid">'+s.id+'</span><span class="st" title="'+esc(s.title)+'">'+esc(s.title)+'</span>' +
+          '<span class="sc" data-scc="'+d.id+'-'+s.id+'">'+s.count+'</span></button>';
+      });
+      if(d.general && d.general.count){
+        h += '<button class="sub" data-sec="general" data-dom="'+d.id+'">' +
+          '<span class="sid" style="color:#c9a86a">—</span><span class="st">Other topics</span>' +
+          '<span class="sc">'+d.general.count+'</span></button>';
+      }
+      h += '</div>';
+    });
+    h += '<div class="nav-h">Revision</div>' +
+      '<button class="dom" data-gloss="1"><span class="caret" style="visibility:hidden">▶</span>' +
+      '<span class="lab"><span class="t">Key terms &amp; meanings (A–Z)</span>' +
+      '<span class="m" id="glossCount">All defined terms</span></span></button>';
+    byId('domainNav').innerHTML = h;
+    byId('domainNav').addEventListener('click', function(e){
+      var b = e.target.closest('button'); if(!b) return;
+      if(b.dataset.home){ go({view:'home'}); return; }
+      if(b.dataset.gloss){ go({view:'glossary'}); return; }
+      if(b.dataset.sec){ go({view:'section', domainId:parseInt(b.dataset.dom,10),
+                             sectionId:b.dataset.sec, index:0, showGuide:true}); return; }
+      if(b.dataset.dom){
+        var did = parseInt(b.dataset.dom,10);
+        openDomain(did);
+        go({view:'domain', domainId:did});
+      }
+    });
+  }
+  function openDomain(id){
+    document.querySelectorAll('.dom').forEach(function(el){
+      var on = parseInt(el.dataset.dom,10) === id;
+      el.classList.toggle('open', on || el.classList.contains('open') && !on ? false : on);
+    });
+    var subs = document.querySelector('[data-subs="'+id+'"]');
+    if(subs) subs.style.display = 'block';
+  }
+  function refreshSidebar(){
+    var o = overall();
+    byId('pctText').textContent = pct(o.answered, o.total) + '%';
+    byId('pctBar').style.width = pct(o.answered, o.total) + '%';
+    byId('answeredText').textContent = o.answered.toLocaleString() + ' answered';
+    byId('marksText').textContent = o.marks.toLocaleString() + ' marked';
+    byId('brandSub').textContent = DATA.meta.total.toLocaleString() + ' questions · ' +
+      DATA.meta.subsections + ' sub-sections';
+    var gc = byId('glossCount');
+    if(gc) gc.textContent = glossaryAll().length.toLocaleString() + ' defined terms';
+    DATA.domains.forEach(function(d){
+      d.sections.forEach(function(s){
+        var el = document.querySelector('[data-scc="'+d.id+'-'+s.id+'"]');
+        if(!el) return;
+        var st = stats(s.questions);
+        el.textContent = st.total + (st.answered ? ' · ' + st.answered + '✓' : '');
+      });
+    });
+    document.querySelectorAll('.dom').forEach(function(el){
+      el.classList.toggle('active', state.view !== 'home' && parseInt(el.dataset.dom,10) === state.domainId);
+    });
+    document.querySelectorAll('.sub').forEach(function(el){
+      el.classList.toggle('active', state.view === 'section' &&
+        parseInt(el.dataset.dom,10) === state.domainId && el.dataset.sec === state.sectionId);
+    });
+  }
+
+  /* ------------- navigation ------------- */
+  function go(patch){ Object.keys(patch).forEach(function(k){ state[k]=patch[k]; }); render();
+    window.scrollTo({top:0,behavior:'smooth'}); }
+  function openQuestion(qn){
+    var it = ALL[INDEX[qn]]; if(!it) return;
+    var sid = it.s.id; var idx = 0;
+    for(var i=0;i<it.s.questions.length;i++) if(it.s.questions[i].n === qn) idx = i;
+    go({ view:'section', domainId:it.d.id, sectionId:sid, index:idx, showGuide:false });
+  }
+
+  /* ------------- render ------------- */
+  function render(){
+    refreshSidebar();
+    var c = byId('content');
+    if(state.view === 'home') c.innerHTML = viewHome();
+    else if(state.view === 'search') c.innerHTML = viewSearch();
+    else if(state.view === 'domain') c.innerHTML = viewDomain();
+    else if(state.view === 'glossary') c.innerHTML = viewGlossary();
+    else c.innerHTML = (state.layout === 'all') ? viewReadAll() : viewSection();
+    wire();
+  }
+
+  /* ------------- global A-Z glossary ------------- */
+  var GLOSSARY_ALL = null;
+  function glossaryAll(){
+    if(GLOSSARY_ALL) return GLOSSARY_ALL;
+    var out = [];
+    DATA.domains.forEach(function(d){
+      d.sections.forEach(function(s){
+        (s.guide.glossary||[]).forEach(function(x){
+          out.push({t:x.t, d:x.d, k:x.k, sid:s.id, title:s.title, dom:d.id});
+        });
+      });
+    });
+    out.sort(function(a,b){ return a.t.toLowerCase() < b.t.toLowerCase() ? -1 : 1; });
+    GLOSSARY_ALL = out;
+    return out;
+  }
+
+  function viewGlossary(){
+    var all = glossaryAll();
+    var q = (state.glossQuery||'').trim().toLowerCase();
+    var rows = q ? all.filter(function(x){
+        return x.t.toLowerCase().indexOf(q) >= 0 || x.d.toLowerCase().indexOf(q) >= 0;
+      }) : all;
+    var groups = {}, order = [];
+    rows.forEach(function(x){
+      var L = x.t[0].toUpperCase().replace(/[^A-Z]/, '#');
+      if(!groups[L]){ groups[L] = []; order.push(L); }
+      groups[L].push(x);
+    });
+    order.sort();
+    var body = order.map(function(L){
+      return '<h3 class="sub" style="margin-top:16px">'+L+'</h3>' +
+        groups[L].map(function(x){
+          var tag = x.k === 'ctx' ? ' <span class="gtag">context</span>' : '';
+          return '<div class="gitem"><div class="gt">'+esc(x.t)+tag+
+            '<div class="gsrc">'+esc(x.sid)+'</div></div>' +
+            '<div class="gd">'+esc(x.d)+
+            ' <button class="tb-btn jumpsec" data-gsec="'+x.sid+'" data-gdom="'+x.dom+
+            '" style="font-size:11px;padding:2px 7px;margin-left:6px">study '+esc(x.sid)+'</button></div></div>';
+        }).join('');
+    }).join('');
+    return '<div class="card pad"><h2 class="sec">Key terms &amp; meanings</h2>' +
+      '<p class="muted">'+all.length.toLocaleString()+' terms defined across the 61 sub-sections, ' +
+      'mined from the ISC2 study guide, the exam companion and this question bank\'s explanations. ' +
+      'Words marked <span class="gtag">context</span> are explained by the sentence that uses them.</p>' +
+      '<input id="glossFilter" type="search" placeholder="Filter terms…" value="'+esc(state.glossQuery||'')+
+      '" style="margin-top:10px;width:100%;max-width:420px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;font-size:13.5px">' +
+      '<p class="muted" style="margin-top:8px">'+rows.length.toLocaleString()+' shown</p></div>' +
+      (rows.length ? '<div class="card pad" style="margin-top:14px">'+body+'</div>'
+                   : '<div class="empty">No terms match that filter.</div>');
+  }
+
+  function viewHome(){
+    var sg = DATA.studyGuide, o = overall();
+    var rows = DATA.domains.map(function(d){
+      var qs=[]; d.sections.forEach(function(s){ qs=qs.concat(s.questions); });
+      if(d.general) qs=qs.concat(d.general.questions);
+      var st = stats(qs);
+      return '<tr><td><b>Domain '+d.id+'</b><br><span class="muted">'+esc(d.name)+'</span></td>' +
+        '<td style="text-align:center">'+d.weight+'</td>' +
+        '<td style="text-align:center">'+d.sections.length+'</td>' +
+        '<td style="text-align:center">'+d.count+'</td>' +
+        '<td style="text-align:center">'+st.answered+'</td>' +
+        '<td><button class="tb-btn" data-open="'+d.id+'">Open</button></td></tr>';
+    }).join('');
+    return '<div class="card pad"><h2 class="sec">'+esc(DATA.meta.title)+'</h2>' +
+      '<p class="muted">'+DATA.meta.total.toLocaleString()+' questions organised into the '+
+        DATA.meta.subsections+' sub-sections of the official ISC2 CISSP exam outline ('+
+        esc(DATA.meta.outlineEffective)+'). Each sub-section has its own study guide and contains '+
+        'only the questions that belong to it. Progress is saved in this browser.</p>' +
+      '<p class="muted">'+esc(DATA.meta.note)+'</p>' +
+      '<div class="grid" style="margin-top:13px">' +
+        '<div class="stat"><b>'+DATA.meta.total.toLocaleString()+'</b><span>Total questions</span></div>' +
+        '<div class="stat"><b>'+DATA.meta.subsections+'</b><span>Sub-sections with study guides</span></div>' +
+        '<div class="stat"><b>'+DATA.meta.assigned.toLocaleString()+'</b><span>Filed under a sub-section</span></div>' +
+        '<div class="stat"><b>'+o.answered.toLocaleString()+'</b><span>Answered by you</span></div>' +
+      '</div></div>' +
+      '<div class="card pad" style="margin-top:15px"><h3 class="sub" style="margin-top:0">Domains &amp; sub-sections</h3>' +
+      '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:13.5px">' +
+      '<thead><tr style="text-align:left;color:#7b8794;font-size:12px">' +
+      '<th style="padding:6px 4px">Domain</th><th>Weight</th><th>Sub-sections</th><th>Questions</th>' +
+      '<th>Answered</th><th></th></tr></thead><tbody>'+rows+'</tbody></table></div>' +
+      '<p class="muted" style="margin-top:10px">Expand a domain in the sidebar to jump straight to a sub-section.</p></div>' +
+      '<div class="card pad" style="margin-top:15px"><h3 class="sub" style="margin-top:0">Study strategy</h3>' +
+      '<ul class="tight">'+sg.strategy.map(function(s){return '<li>'+esc(s)+'</li>';}).join('')+'</ul>' +
+      '<h3 class="sub">Where to spend your time</h3><div class="grid">' +
+      '<div class="stat"><b style="font-size:15px">High weight</b><span>'+esc(sg.priority['High weight'].join(' · '))+'</span></div>' +
+      '<div class="stat"><b style="font-size:15px">Medium weight</b><span>'+esc(sg.priority['Medium weight'].join(' · '))+'</span></div></div>' +
+      '<h3 class="sub">Exam technique</h3><ul class="tight">'+sg.tips.map(function(s){return '<li>'+esc(s)+'</li>';}).join('')+'</ul>' +
+      '<h3 class="sub">On exam day</h3><ul class="tight">'+sg.examDay.map(function(s){return '<li>'+esc(s)+'</li>';}).join('')+'</ul>' +
+      '<h3 class="sub">Recommended resources</h3><ul class="tight">'+sg.resources.map(function(s){return '<li>'+esc(s)+'</li>';}).join('')+'</ul>' +
+      '</div>';
+  }
+
+  function guideHTML(sec){
+    if(!sec.guide) return '';
+    var g = sec.guide;
+    var st = stats(sec.questions);
+    var kn = (g.mustKnow||[]).map(function(k){ return '<li>'+esc(k)+'</li>'; }).join('');
+    var deep = (g.deepNotes||[]).map(function(k){ return '<li>'+esc(k)+'</li>'; }).join('');
+    var gl = (g.glossary||[]);
+    var gloss = gl.map(function(x){
+      var tag = x.k === 'ctx' ? '<span class="gtag" title="meaning in context from the study material">context</span>' : '';
+      return '<div class="gitem"><div class="gt">'+esc(x.t)+tag+'</div>' +
+             '<div class="gd">'+esc(x.d)+'</div></div>';
+    }).join('');
+    var bare = (g.bareTerms||[]).map(function(t){ return '<span class="term">'+esc(t)+'</span>'; }).join('');
+    return '<div class="card pad guide">' +
+      '<h3>'+ (sec.virtual ? 'Other topics' : sec.id + ' — ' + esc(sec.title)) +'</h3>' +
+      (sec.virtual ? '' : '<div style="margin-bottom:7px">' +
+        '<span class="pill">Domain '+sec.domainId+'</span>' +
+        '<span class="pill g">'+sec.count+' questions</span>' +
+        '<span class="pill w">'+st.answered+' answered</span>' +
+        (gl.length ? '<span class="pill">'+gl.length+' key terms</span>' : '') +
+        (st.marks ? '<span class="pill">'+st.marks+' marked</span>' : '') + '</div>') +
+      '<p class="desc">'+esc(g.focus)+'</p>' +
+      (kn ? '<h4 class="gh">Must know</h4><ul class="kn">'+kn+'</ul>' : '') +
+      (deep ? '<h4 class="gh">Deeper lesson notes</h4><ul class="deep">'+deep+'</ul>' : '') +
+      (gloss ? '<h4 class="gh">Key terms &amp; meanings <span class="ghc">'+gl.length+'</span></h4>' +
+               '<div class="glossary">'+gloss+'</div>' : '') +
+      (bare ? '<details style="margin-top:10px"><summary>Also know these terms ('+
+               (g.bareTerms||[]).length+')</summary><div class="terms">'+bare+'</div></details>' : '') +
+      '</div>';
+  }
+
+  function viewDomain(){
+    var dd = dom(state.domainId), d = dd.d;
+    var qs=[]; dd.sections.forEach(function(s){ qs=qs.concat(s.questions); });
+    var st = stats(qs);
+    var cards = dd.sections.map(function(s){
+      var sst = stats(s.questions);
+      var vt = s.virtual ? '<span class="pill g">other</span>' : '';
+      return '<button class="seccard" data-opensec="'+s.id+'">' +
+        '<span class="sid">'+(s.virtual ? '—' : s.id)+'</span> '+vt+
+        '<span class="st">'+esc(s.title)+'</span>' +
+        '<span class="sm">'+s.count+' questions · '+sst.answered+' answered'+
+          (sst.marks ? ' · '+sst.marks+' marked' : '')+'</span>' +
+        '<span class="bar"><i style="width:'+pct(sst.answered,sst.total)+'%"></i></span></button>';
+    }).join('');
+    return '<div class="card pad"><h2 class="sec">Domain '+d.id+': '+esc(d.name)+'</h2>' +
+      '<div style="margin:8px 0"><span class="pill w">Exam weight '+d.weight+'</span>' +
+      '<span class="pill">'+d.count+' questions</span>' +
+      '<span class="pill">'+d.sections.length+' sub-sections</span>' +
+      '<span class="pill">'+st.answered+' answered</span></div>' +
+      '<p class="muted">'+esc(d.description)+'</p>' +
+      '<details style="margin-top:8px"><summary style="cursor:pointer;font-weight:600;color:#12405f">' +
+        'Key topics to revise in this domain</summary><ul class="tight">' +
+        d.keyTopics.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('') + '</ul></details>' +
+      '<h3 class="sub">Sub-sections — click to study only its questions</h3>' +
+      '<div class="seclist">'+cards+'</div>' +
+      '<div style="margin-top:14px"><button class="tb-btn" data-openall="1">Read all '+d.count+
+        ' questions in this domain (document view)</button></div></div>';
+  }
+
+  function currentSec(){ return section(state.domainId, state.sectionId || dom(state.domainId).sections[0].id); }
+
+  function optionsHTML(q, reveal, picked){
+    if(!q.o || !q.o.length) return '<div class="noexpl">No answer options could be extracted for this question.</div>';
+    return '<div class="opts">' + q.o.map(function(o){
+      var cls='opt';
+      if(reveal){ if(o[0]===q.a) cls+=' correct'; else if(picked && o[0]===picked) cls+=' wrong'; }
+      else if(picked && o[0]===picked){ cls+=' picked'; }
+      return '<button class="'+cls+'" data-opt="'+o[0]+'"'+(reveal?' disabled':'')+'>' +
+             '<span class="lt">'+o[0]+'</span><span>'+esc(o[1])+'</span></button>';
+    }).join('') + '</div>';
+  }
+  function explanationHTML(q){
+    if(q.e) return '<div class="expl"><h4>Explanation</h4><div class="body">'+esc(q.e)+'</div></div>';
+    return '<div class="noexpl">No explanation was included for this question in the source material. ' +
+           'Answer: <b>'+esc(q.a||'—')+'</b>.</div>';
+  }
+  function feedbackHTML(q, picked){
+    if(!picked) return '';
+    var ok = picked === q.a;
+    return '<div class="feedback '+(ok?'ok':'no')+'">' + (ok ? 'Correct.' : 'Not quite — that is not the best answer.') +
+      ' <span class="ans">Correct answer: '+esc(q.a||'—')+'</span>' +
+      (ok ? '' : ' (you chose '+esc(picked)+')') + '</div>';
+  }
+
+  function viewSection(){
+    var sec = currentSec();
+    var n = sec.questions.length;
+    if(!n) return guideHTML(sec) + '<div class="card pad empty" style="margin-top:14px">' +
+      'No questions are filed under this sub-section in this bank.</div>';
+    if(state.index >= n) state.index = n-1;
+    if(state.index < 0) state.index = 0;
+    var q = sec.questions[state.index];
+    var rec = progress.answers[q.n];
+    var reveal = !!(rec && rec.picked) || !!progress.marks[q.n + '_reveal'];
+    var picked = rec ? rec.picked : null;
+    var marked = !!progress.marks[q.n];
+    var head = state.showGuide ? guideHTML(sec) : '';
+    return head +
+    '<div class="card pad qwrap">' +
+      '<div class="qhead"><span class="num">Question '+q.n+'</span>' +
+        '<span class="tag">'+(sec.virtual?'Other topics':sec.id)+'</span>' +
+        '<span class="tag">Domain '+sec.domainId+'</span>' +
+        (marked ? '<span class="tag mark">Marked</span>' : '') +
+        '<span style="flex:1"></span><span class="muted">'+(state.index+1)+' of '+n+'</span></div>' +
+      '<div class="qtext">'+esc(q.q)+'</div>' +
+      optionsHTML(q, reveal, picked) +
+      (reveal ? feedbackHTML(q, picked) + explanationHTML(q) : '') +
+      '<div class="navbar"><div style="display:flex;gap:8px">' +
+        '<button class="btn" id="btnPrev"'+(state.index===0?' disabled':'')+'>&larr; Previous</button>' +
+        '<button class="btn" id="btnNext"'+(state.index===n-1?' disabled':'')+'>Next &rarr;</button></div>' +
+        '<div style="display:flex;gap:8px">' +
+        (reveal ? '' : '<button class="btn" id="btnReveal">Show answer</button>') +
+        '<button class="btn" id="btnMark">'+(marked?'Unmark':'Mark for review')+'</button></div>' +
+        '<div class="jump">Go to Q <input id="jumpInput" type="number" min="1" max="'+n+'">' +
+        '<button class="btn" id="btnJump">Go</button></div></div>' +
+      '<p class="muted" style="margin-top:9px"><span class="kbd">&larr;</span> <span class="kbd">&rarr;</span> navigate · ' +
+        '<span class="kbd">1</span>–<span class="kbd">5</span> answer · <span class="kbd">s</span> show · ' +
+        '<span class="kbd">m</span> mark · <span class="kbd">g</span> guide</p>' +
+    '</div>';
+  }
+
+  function viewReadAll(){
+    var sec = currentSec();
+    var blocks = sec.questions.map(function(q){
+      var opts = (q.o||[]).map(function(o){ return '<li><b>'+o[0]+'.</b> '+esc(o[1])+'</li>'; }).join('');
+      return '<div class="q"><div class="qn">Question '+q.n+'</div>' +
+        '<div class="qt">'+esc(q.q)+'</div><ul class="ol">'+opts+'</ul>' +
+        '<div class="an">Answer: '+esc(q.a||'—')+'</div>' +
+        (q.e ? '<div class="ex">'+esc(q.e)+'</div>' : '<div class="noexpl">No explanation in the source material.</div>') +
+        '</div>';
+    }).join('');
+    return guideHTML(sec) +
+      '<div class="card pad" style="margin-top:14px"><h3 class="sub" style="margin-top:0">'+
+      (sec.virtual?'Other topics':sec.id+' — '+esc(sec.title))+' · document view</h3>' +
+      '<p class="muted">All '+sec.questions.length+' questions in this sub-section with options, answers and explanations.</p></div>' +
+      '<div class="readall" style="margin-top:14px">'+blocks+'</div>';
+  }
+
+  function viewSearch(){
+    var q = state.query.trim().toLowerCase();
+    if(q.length < 2) return '<div class="card pad"><h2 class="sec">Search</h2><p class="muted">Type at least two characters.</p></div>';
+    var hits = [];
+    for(var i=0;i<ALL.length && hits.length<400;i++){
+      var it = ALL[i];
+      var t = it.q.q.toLowerCase(), e = (it.q.e||'').toLowerCase();
+      if(t.indexOf(q) >= 0 || e.indexOf(q) >= 0) hits.push(it);
+    }
+    var list = hits.map(function(it){
+      var txt = it.q.q, pos = txt.toLowerCase().indexOf(q), snip = txt;
+      if(pos > 70) snip = '…' + txt.slice(pos-60);
+      snip = esc(snip.slice(0,220));
+      var re = new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig');
+      snip = snip.replace(re,'<mark>$1</mark>');
+      return '<li data-q="'+it.q.n+'"><div class="rn">Question '+it.q.n+' · Domain '+it.d.id+
+        ' · '+(it.s.id==='general'?'Other topics':it.s.id)+' — '+esc(it.s.title)+'</div>' +
+        '<div class="rt">'+snip+'</div></li>';
+    }).join('');
+    return '<div class="card pad"><h2 class="sec">Search results</h2><p class="muted">'+hits.length+
+      (hits.length===400?'+':'')+' match'+(hits.length===1?'':'es')+' for “'+esc(state.query)+
+      '”. Click to open.</p></div>' +
+      (hits.length ? '<ul class="results">'+list+'</ul>' : '<div class="empty">No questions matched.</div>');
+  }
+
+  /* ------------- wiring ------------- */
+  function wire(){
+    var c = byId('content');
+    c.querySelectorAll('[data-open]').forEach(function(b){
+      b.onclick = function(){ var id=parseInt(b.dataset.open,10); openDomain(id); go({view:'domain',domainId:id}); };
+    });
+    // global glossary: filter + jump-to-section
+    var gf = byId('glossFilter');
+    if(gf){
+      gf.oninput = function(){ state.glossQuery = gf.value; render(); var n = byId('glossFilter');
+        if(n){ n.focus(); n.setSelectionRange(n.value.length, n.value.length); } };
+    }
+    c.querySelectorAll('[data-gsec]').forEach(function(b){
+      b.onclick = function(){
+        var did = parseInt(b.dataset.gdom,10);
+        openDomain(did);
+        go({view:'section', domainId:did, sectionId:b.dataset.gsec, index:0, showGuide:true});
+      };
+    });
+    c.querySelectorAll('[data-opensec]').forEach(function(b){
+      b.onclick = function(){ go({view:'section', domainId:state.domainId, sectionId:b.dataset.opensec, index:0, showGuide:true}); };
+    });
+    c.querySelectorAll('[data-openall]').forEach(function(b){
+      b.onclick = function(){
+        state.layout='all';
+        document.querySelectorAll('.seg button').forEach(function(x){ x.classList.toggle('on', x.dataset.layout==='all'); });
+        var first = dom(state.domainId).sections[0].id;
+        go({view:'section', sectionId:first, index:0});
+      };
+    });
+    c.querySelectorAll('.results li').forEach(function(li){
+      li.onclick = function(){ openQuestion(parseInt(li.dataset.q,10)); };
+    });
+    if(state.view === 'section'){
+      var sec = currentSec();
+      var q = sec.questions[state.index];
+      if(q){
+        c.querySelectorAll('.opt').forEach(function(b){
+          b.onclick = function(){
+            if(b.disabled) return;
+            var p = b.dataset.opt;
+            markAnswered(q.n, p, p === q.a);
+            render();
+          };
+        });
+      }
+      var bp=byId('btnPrev'), bn=byId('btnNext');
+      if(bp) bp.onclick=function(){ go({index:state.index-1}); };
+      if(bn) bn.onclick=function(){ go({index:state.index+1}); };
+      var br=byId('btnReveal');
+      if(br) br.onclick=function(){ progress.marks[q.n+'_reveal']=true; save(); render(); };
+      var bm=byId('btnMark');
+      if(bm) bm.onclick=function(){
+        if(progress.marks[q.n]) delete progress.marks[q.n]; else progress.marks[q.n]=true;
+        save(); render(); toast(progress.marks[q.n]?'Marked for review':'Mark removed');
+      };
+      var bj=byId('btnJump');
+      if(bj) bj.onclick=function(){
+        var v=parseInt(byId('jumpInput').value,10);
+        if(!isNaN(v)) go({index:Math.min(Math.max(v,1),sec.questions.length)-1});
+      };
+      var ji=byId('jumpInput');
+      if(ji) ji.onkeydown=function(e){ if(e.key==='Enter') bj.click(); };
+    }
+  }
+
+  /* ------------- top bar ------------- */
+  byId('search').addEventListener('input', function(e){
+    var v=e.target.value;
+    if(v.trim().length>=2){ state.query=v; state.view='search'; render(); }
+    else if(state.view==='search'){ go({view:'section'}); }
+  });
+  byId('search').addEventListener('keydown', function(e){
+    if(e.key==='Escape'){ e.target.value=''; go({view:'section'}); }
+  });
+  document.querySelectorAll('.seg button').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('.seg button').forEach(function(x){ x.classList.remove('on'); });
+      b.classList.add('on');
+      state.layout=b.dataset.layout;
+      if(state.view!=='section') state.view = state.view==='search' ? 'search' : 'section';
+      render();
+    });
+  });
+  byId('btnGuide').onclick=function(){
+    state.showGuide=!state.showGuide;
+    if(state.view!=='section') state.view='section';
+    render();
+  };
+  byId('btnPrint').onclick=function(){ window.print(); };
+  byId('btnResume').onclick=function(){
+    var best=null;
+    ALL.forEach(function(it){
+      var r=progress.answers[it.q.n];
+      if(r && (!best || r.ts>best.ts)) best={ts:r.ts,it:it};
+    });
+    if(best) openQuestion(best.it.q.n);
+    else { var id=DATA.domains[0].id; openDomain(id); go({view:'domain', domainId:id}); }
+  };
+  byId('btnReset').onclick=function(){
+    if(!confirm('Clear all saved answers, marks and checklist ticks?')) return;
+    progress={answers:{},marks:{},sections:{}}; save(); render(); toast('Progress cleared');
+  };
+
+  /* ------------- keyboard ------------- */
+  document.addEventListener('keydown', function(e){
+    var tag=(e.target.tagName||'').toLowerCase();
+    if(tag==='input'||tag==='textarea') return;
+    if(e.key==='/'){ e.preventDefault(); byId('search').focus(); return; }
+    if(state.view!=='section'||state.layout!=='one') return;
+    var sec=currentSec(), q=sec.questions[state.index]; if(!q) return;
+    if(e.key==='ArrowRight'){ if(state.index<sec.questions.length-1) go({index:state.index+1}); }
+    else if(e.key==='ArrowLeft'){ if(state.index>0) go({index:state.index-1}); }
+    else if(e.key==='s'||e.key==='S'){ progress.marks[q.n+'_reveal']=true; save(); render(); }
+    else if(e.key==='m'||e.key==='M'){
+      if(progress.marks[q.n]) delete progress.marks[q.n]; else progress.marks[q.n]=true;
+      save(); render(); toast(progress.marks[q.n]?'Marked for review':'Mark removed');
+    }
+    else if(e.key==='g'||e.key==='G'){ state.showGuide=!state.showGuide; render(); }
+    else if(/^[1-5]$/.test(e.key)){
+      var L=String.fromCharCode(64+parseInt(e.key,10));
+      if((q.o||[]).some(function(o){return o[0]===L;})){ markAnswered(q.n,L,L===q.a); render(); }
+    }
+  });
+
+  /* ------------- boot ------------- */
+  buildSidebar();
+  state.sectionId = dom(DATA.domains[0].id).sections[0].id;
+  refreshSidebar();
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+SUB-SECTION CLASSIFICATION (v4: within-domain + conservative repair)
+========================================================================================
+assigned to a sub-section : 2154/2615 (82.4%)
+general bucket            : 461 (17.6%)
+questions moved domain    : 329
+
+DOM     OLD   NEW    GEN   NAME
+1       546   339    155   Security and Risk Management
+2        66    56     20   Asset Security
+3       434   488     25   Security Architecture and Engineering
+4       477   408     68   Communication and Network Security
+5       533   393    100   Identity and Access Management (IAM)
+6        91    65     17   Security Assessment and Testing
+7       212   204     39   Security Operations
+8       256   201     37   Software Development Security
+
+--- Domain 1: Security and Risk Management ---
+  1.1          1   Understand, adhere to, and promote professional ethics
+  1.2         66   Understand and apply security concepts
+  1.3         21   Evaluate and apply security governance principles
+  1.4         46   Understand legal, regulatory, and compliance issues
+  1.5          9   Understand requirements for investigation types
+  1.6         88   Develop, document, and implement security policy, standards, p
+  1.7         11   Identify, analyze, and prioritize Business Continuity (BC) req
+  1.8         29   Contribute to and enforce personnel security policies and proc
+  1.9         53   Understand and apply risk management concepts
+  1.10         0   Understand and apply threat modeling concepts and methodologie
+  1.11         4   Apply Supply Chain Risk Management (SCRM) concepts
+  1.12        11   Establish and maintain a security awareness, education, and tr
+  general    155
+--- Domain 2: Asset Security ---
+  2.1         30   Identify and classify information and assets
+  2.2          1   Establish information and asset handling requirements
+  2.3          1   Provision resources securely
+  2.4         22   Manage data lifecycle
+  2.5          2   Ensure appropriate asset retention
+  2.6          0   Determine data security controls and compliance requirements
+  general     20
+--- Domain 3: Security Architecture and Engineering ---
+  3.1          6   Research, implement and manage engineering processes using sec
+  3.2         69   Understand the fundamental concepts of security models
+  3.3         16   Select controls based upon systems security requirements
+  3.4         84   Understand security capabilities of Information Systems (IS)
+  3.5         14   Assess and mitigate the vulnerabilities of security architectu
+  3.6        240   Select and determine cryptographic solutions
+  3.7          6   Understand methods of cryptanalytic attacks
+  3.8          4   Apply security principles to site and facility design
+  3.9         49   Design site and facility security controls
+  general     25
+--- Domain 4: Communication and Network Security ---
+  4.1        247   Assess and implement secure design principles in network archi
+  4.2         92   Secure network components
+  4.3         69   Implement secure communication channels according to design
+  general     68
+--- Domain 5: Identity and Access Management (IAM) ---
+  5.1        105   Control physical and logical access to assets
+  5.2        202   Manage identification and authentication of people, devices, a
+  5.3          7   Federated identity with a third-party service
+  5.4         28   Implement and manage authorization mechanisms
+  5.5          0   Manage the identity and access provisioning lifecycle
+  5.6         51   Implement authentication systems
+  general    100
+--- Domain 6: Security Assessment and Testing ---
+  6.1          0   Design and validate assessment, test, and audit strategies
+  6.2         28   Conduct security control testing
+  6.3          1   Collect security process data
+  6.4          2   Analyze test output and generate report
+  6.5         34   Conduct or facilitate security audits
+  general     17
+--- Domain 7: Security Operations ---
+  7.1         10   Understand and comply with investigations
+  7.2          1   Conduct logging and monitoring activities
+  7.3         13   Perform Configuration Management (CM)
+  7.4         13   Apply foundational security operations concepts
+  7.5         85   Apply resource protection
+  7.6         11   Conduct incident management
+  7.7         12   Operate and maintain detective and preventative measures
+  7.8          4   Implement and support patch and vulnerability management
+  7.9          5   Understand and participate in change management processes
+  7.10         3   Implement recovery strategies
+  7.11        24   Implement Disaster Recovery (DR) processes
+  7.12         1   Test Disaster Recovery Plans (DRP)
+  7.13         8   Participate in Business Continuity (BC) planning and exercises
+  7.14        10   Implement and manage physical security
+  7.15         4   Address personnel safety and security concerns
+  general     39
+--- Domain 8: Software Development Security ---
+  8.1         85   Understand and integrate security in the Software Development 
+  8.2          6   Identify and apply security controls in software development e
+  8.3          9   Assess the effectiveness of software security
+  8.4          9   Assess security impact of acquired software
+  8.5         92   Define and apply secure coding guidelines and standards
+  general     37
+
+--- sample of moved questions (80 of 329) ---
+  Q76: D1 -> D4 (in 0.0 vs global 23.2) What is the primary goal of setting up a honeypot?
+  Q176: D1 -> D5 (in 0.0 vs global 111.0) What is called a password that is the same for each log-on session?
+  Q241: D1 -> D7 (in 0.0 vs global 69.0) Which of the following stripes the data and the parity inform at ion at the block level across 
+  Q261: D1 -> D7 (in 0.0 vs global 54.0) Which of the following defines when RAID separates the da ta into multiple units and stores it 
+  Q269: D1 -> D7 (in 0.0 vs global 94.2) RAID Level 1 mirrors the data from one disk or set of disks us ing which of the following techn
+  Q278: D1 -> D4 (in 0.0 vs global 41.8) An intranet provides more security and control than which of the following:
+  Q280: D1 -> D4 (in 0.0 vs global 74.5) Which of the following is a drawback of fiber optic cables?
+  Q285: D1 -> D4 (in 0.0 vs global 55.2) Which of the following cable types is limited in length to 185 meters?
+  Q304: D1 -> D7 (in 0.0 vs global 87.0) If any server in the cluster crashes, processing continues transparently, however, the cluster 
+  Q307: D1 -> D4 (in 0.0 vs global 99.0) Which ISO/OSI layer establishes thecommunications link between individual devices over a physic
+  Q333: D1 -> D2 (in 0.0 vs global 74.2) You have been tasked to develop an effective information classification program. Which one of t
+  Q336: D1 -> D4 (in 0.0 vs global 54.8) Which of the following LAN devices only operates at the physicallayer of the OSI/ISO model?
+  Q343: D1 -> D4 (in 0.0 vs global 24.5) How many b its compose an IPv6 address?
+  Q344: D1 -> D7 (in 0.0 vs global 76.0) What is the process that RAID Le vel 0 us es as it creates one large disk by us ing several dis
+  Q349: D1 -> D4 (in 0.0 vs global 83.0) What is the maximum length of cable that can be used for a twisted-pair, Category 5 10Base-T ca
+  Q397: D1 -> D7 (in 0.0 vs global 118.2) Which RAID Level often implements a one-for-one disk to disk ratio?
+  Q400: D1 -> D7 (in 0.0 vs global 117.8) Which of the following are additional terms used to de scribe knowledge-based IDS and behavior-
+  Q448: D1 -> D4 (in 0.0 vs global 66.0) Why does fiber optic communication technology have significant security advantage over other tr
+  Q449: D1 -> D4 (in 0.0 vs global 81.8) Why are coaxial cables called "coaxial"?
+  Q462: D1 -> D7 (in 0.0 vs global 31.5) Which of the following best describes signature-based detection?
+  Q475: D1 -> D4 (in 0.0 vs global 114.0) Which cable technology refers to the CAT3 and CAT5 categories?
+  Q522: D1 -> D2 (in 0.0 vs global 28.8) Whose role is it to assign classification level to information?
+  Q644: D1 -> D8 (in 0.0 vs global 31.0) Which of the following can be defined as the set of allowable values that an attribute can take
+  Q663: D1 -> D8 (in 0.0 vs global 43.0) In what way could Java appl ets pose a security threat?
+  Q685: D1 -> D8 (in 0.0 vs global 55.2) The object-relational and object-oriented models are better suited to managing complex data suc
+  Q722: D1 -> D3 (in 0.0 vs global 131.5) A momentary power outage is a:
+  Q728: D1 -> D7 (in 0.0 vs global 55.2) RAID levels 3 and 5 run:
+  Q732: D1 -> D7 (in 0.0 vs global 72.2) Which of the following is used to create parity information?
+  Q739: D1 -> D7 (in 0.0 vs global 40.2) Aserver cluster looks like a:
+  Q750: D1 -> D7 (in 0.0 vs global 44.5) The main issue with Level 1 of RAID is which of the following?
+  Q779: D1 -> D7 (in 0.0 vs global 118.2) Which RAID implementation is commonly called mirroring?
+  Q783: D1 -> D2 (in 0.0 vs global 45.5) Which of the following is NOT a proper component of Media Viability Controls?
+  Q784: D1 -> D3 (in 0.0 vs global 144.2) A prolonged high voltage is a:
+  Q797: D1 -> D3 (in 0.0 vs global 147.0) A momentary high voltage is a:
+  Q799: D1 -> D3 (in 0.0 vs global 129.5) A prolonged power supply that is belownormal voltage is a:
+  Q803: D1 -> D7 (in 0.0 vs global 81.0) Which of the following RAID levels is not used in practice and was quickly superseded by the mo
+  Q811: D1 -> D2 (in 0.0 vs global 61.8) At which temperature does damage start occurring to magnetic media?
+  Q819: D1 -> D7 (in 0.0 vs global 71.5) A hardware RAID implementation is usually:
+  Q823: D1 -> D3 (in 0.0 vs global 129.0) The ideal operating humidity range is defined as 40 percent to 60 percent. Low humidity (less t
+  Q831: D1 -> D7 (in 0.0 vs global 117.0) RAID level 10 is created by combining which of the following?
+  Q839: D1 -> D7 (in 0.0 vs global 117.0) RAID Level 1 is commonly called which of the following?
+  Q849: D1 -> D2 (in 0.0 vs global 105.0) An electrical device (AC or DC) which can generate coerci ve magnetic force for the purpose of 
+  Q858: D1 -> D2 (in 0.0 vs global 90.0) Which of the following is NOT a media viability control used to protect the viability of data s
+  Q862: D1 -> D3 (in 0.0 vs global 129.0) The ideal operating humidity range is defined as 40 percent to 60 percent. High humidity (great
+  Q864: D1 -> D7 (in 0.0 vs global 105.5) The main issue with RAID Level 1 is that the one-for-one ratio is:
+  Q868: D1 -> D7 (in 0.0 vs global 78.2) The only difference between RAID 3 and RAID 4 is that level 3 isimplemented at the by te le vel
+  Q879: D1 -> D3 (in 0.0 vs global 89.0) What can be defined as a momentary low voltage?
+  Q894: D1 -> D3 (in 0.0 vs global 95.5) The secure Hash Algorithm (SHA-1) creates:
+  Q1018: D1 -> D3 (in 0.0 vs global 98.5) What size is an MD5 message digest (hash)?
+  Q1019: D1 -> D3 (in 0.0 vs global 68.8) Who vouches for the binding between the data items in a digital certificate?
+  Q1085: D1 -> D3 (in 0.0 vs global 51.0) Which of the following places the Orange Book classifications in order from most secure to leas
+  Q1112: D1 -> D8 (in 0.0 vs global 22.8) What Cloud Deployment model consist of a cloud infrastructure provisioned for exclusive use by 
+  Q1175: D1 -> D3 (in 0.0 vs global 81.0) Which of the following classes is defined in theTCSEC (Orange Book) as discretionary protection
+  Q1212: D1 -> D2 (in 0.0 vs global 74.2) You have been tasked to develop an effective information classification program. Which one of t
+  Q1284: D1 -> D2 (in 0.0 vs global 39.0) According to private sector data classification levels, how would salary levels and medical inf
+  Q1302: D1 -> D4 (in 0.0 vs global 39.0) The top speed of ISDN BRI is 256 KBS.(True/False)
+  Q1328: D1 -> D4 (in 0.0 vs global 39.0) Which of the following best describes ISDN BRI(Choose two)
+  Q1341: D1 -> D7 (in 0.0 vs global 82.0) With RAID Level 5 the spare dr ives that replace the failed drives are usually hot swappable, m
+  Q1434: D1 -> D4 (in 0.0 vs global 39.0) The top speed of ISDN BRI is 256 KBS.(True/False)
+  Q1446: D1 -> D4 (in 0.0 vs global 39.0) Which of the following best describes ISDN BRI(Choose two)
+  Q1463: D1 -> D7 (in 0.0 vs global 45.5) Aserver cluster looks like a?
+  Q1470: D1 -> D3 (in 0.0 vs global 132.0) A prolonged high voltage is?
+  Q1473: D1 -> D3 (in 0.0 vs global 22.8) Which of the following are NOT a countermeasure to traffic analysis?
+  Q1493: D1 -> D2 (in 0.0 vs global 22.8) Which type of attack would a competitive intelligence attack best classify as?
+  Q1615: D1 -> D4 (in 0.0 vs global 90.0) Which choice below BEST describes coaxial cable?
+  Q1635: D1 -> D2 (in 0.0 vs global 99.0) Which choice MOST accurately describes the difference between the role of a data owner versus t
+  Q1682: D1 -> D5 (in 0.0 vs global 28.0) The definition of CHAP is:
+  Q1736: D1 -> D7 (in 0.0 vs global 71.2) RAID refers to the:
+  Q1738: D1 -> D7 (in 0.0 vs global 91.5) What is a server cluster?
+  Q1764: D1 -> D4 (in 0.0 vs global 107.8) Which is NOT a property of Fiber Optic cabling?
+  Q1808: D1 -> D8 (in 0.0 vs global 29.8) Us ing pre-numbered forms to initiate a transaction is an example of what type of control?
+  Q1809: D1 -> D3 (in 0.0 vs global 27.0) Which of the following choices describes the four phases of the National Information Assurance 
+  Q1814: D1 -> D3 (in 0.0 vs global 66.0) For a given hash function H, to prevent substitution of a message M1 for a message M2, it is ne
+  Q1816: D1 -> D3 (in 0.0 vs global 100.0) In Part 3 of the Common Criteria, Security Assurance Requirements, seven predefined Packages of
+  Q1868: D1 -> D3 (in 0.0 vs global 43.8) In steganography,
+  Q1873: D1 -> D5 (in 0.0 vs global 22.8) Context-dependent control us es which of the following to make decisions?
+  Q1887: D1 -> D3 (in 0.0 vs global 81.0) In a hybrid cryptographic system, usually:
+  Q1890: D1 -> D3 (in 0.0 vs global 29.0) In a ring protection system, where is the security kernel usually located?
+  Q1895: D1 -> D3 (in 0.0 vs global 62.5) What does the Bell-LaPadula model NOT allow?
+  Q1904: D1 -> D4 (in 0.0 vs global 109.2) Which choice below is NOT an element of a fiber optic cable?

@@ -1,0 +1,84 @@
+FINAL SUB-SECTION ASSIGNMENT
+==================================================================================
+assigned to a sub-section : 2615/2615 (100.0%)
+other/general             : 0
+LLM-adjudicated labels    : 807
+rule overrides            : 0
+
+--- Domain 1: Security and Risk Management ---
+  1.1          7   Understand, adhere to, and promote professional ethics
+  1.2        100   Understand and apply security concepts
+  1.3         28   Evaluate and apply security governance principles
+  1.4         76   Understand legal, regulatory, and compliance issues
+  1.5         15   Understand requirements for investigation types
+  1.6         84   Develop, document, and implement security policy, standards, p
+  1.7         20   Identify, analyze, and prioritize Business Continuity (BC) req
+  1.8         30   Contribute to and enforce personnel security policies and proc
+  1.9         67   Understand and apply risk management concepts
+  1.10         2   Understand and apply threat modeling concepts and methodologie
+  1.11         2   Apply Supply Chain Risk Management (SCRM) concepts
+  1.12        11   Establish and maintain a security awareness, education, and tr
+  other        0
+--- Domain 2: Asset Security ---
+  2.1         34   Identify and classify information and assets
+  2.2          7   Establish information and asset handling requirements
+  2.3          0   Provision resources securely
+  2.4         33   Manage data lifecycle
+  2.5          4   Ensure appropriate asset retention
+  2.6          5   Determine data security controls and compliance requirements
+  other        0
+--- Domain 3: Security Architecture and Engineering ---
+  3.1         14   Research, implement and manage engineering processes using sec
+  3.2         75   Understand the fundamental concepts of security models
+  3.3         34   Select controls based upon systems security requirements
+  3.4        171   Understand security capabilities of Information Systems (IS)
+  3.5         23   Assess and mitigate the vulnerabilities of security architectu
+  3.6        254   Select and determine cryptographic solutions
+  3.7          8   Understand methods of cryptanalytic attacks
+  3.8          8   Apply security principles to site and facility design
+  3.9         85   Design site and facility security controls
+  other        0
+--- Domain 4: Communication and Network Security ---
+  4.1        274   Assess and implement secure design principles in network archi
+  4.2        105   Secure network components
+  4.3         81   Implement secure communication channels according to design
+  other        0
+--- Domain 5: Identity and Access Management (IAM) ---
+  5.1         98   Control physical and logical access to assets
+  5.2        171   Manage identification and authentication of people, devices, a
+  5.3          7   Federated identity with a third-party service
+  5.4         40   Implement and manage authorization mechanisms
+  5.5          6   Manage the identity and access provisioning lifecycle
+  5.6         52   Implement authentication systems
+  other        0
+--- Domain 6: Security Assessment and Testing ---
+  6.1          7   Design and validate assessment, test, and audit strategies
+  6.2         29   Conduct security control testing
+  6.3          1   Collect security process data
+  6.4          1   Analyze test output and generate report
+  6.5         29   Conduct or facilitate security audits
+  other        0
+--- Domain 7: Security Operations ---
+  7.1         15   Understand and comply with investigations
+  7.2         14   Conduct logging and monitoring activities
+  7.3         20   Perform Configuration Management (CM)
+  7.4         32   Apply foundational security operations concepts
+  7.5         87   Apply resource protection
+  7.6         11   Conduct incident management
+  7.7         20   Operate and maintain detective and preventative measures
+  7.8          5   Implement and support patch and vulnerability management
+  7.9          6   Understand and participate in change management processes
+  7.10         5   Implement recovery strategies
+  7.11        29   Implement Disaster Recovery (DR) processes
+  7.12         2   Test Disaster Recovery Plans (DRP)
+  7.13        12   Participate in Business Continuity (BC) planning and exercises
+  7.14        18   Implement and manage physical security
+  7.15         3   Address personnel safety and security concerns
+  other        0
+--- Domain 8: Software Development Security ---
+  8.1         99   Understand and integrate security in the Software Development 
+  8.2         17   Identify and apply security controls in software development e
+  8.3         18   Assess the effectiveness of software security
+  8.4          9   Assess security impact of acquired software
+  8.5         95   Define and apply secure coding guidelines and standards
+  other        0

@@ -1,0 +1,114 @@
+CISSP EXAM QUICK REFERENCE GUIDE
+================================
+
+This guide provides a quick reference for the 2,615 CISSP exam questions organized by domain.
+
+DOMAIN DISTRIBUTION SUMMARY:
+----------------------------
+Domain 1: Security and Risk Management          - 351 questions (13.4%)
+Domain 2: Asset Security                        - 100 questions (3.8%)
+Domain 3: Security Architecture and Engineering - 389 questions (14.9%)
+Domain 4: Communication and Network Security    - 439 questions (16.8%)
+Domain 5: Identity and Access Management (IAM)  - 200 questions (7.7%)
+Domain 6: Security Assessment and Testing       - 651 questions (24.9%)
+Domain 7: Security Operations                   - 365 questions (14.0%)
+Domain 8: Software Development Security         - 120 questions (4.6%)
+
+TOTAL: 2,615 questions
+
+CISSP EXAM DOMAIN WEIGHTS:
+--------------------------
+Domain 1: Security and Risk Management          - 15%
+Domain 2: Asset Security                        - 10%
+Domain 3: Security Architecture and Engineering - 13%
+Domain 4: Communication and Network Security    - 13%
+Domain 5: Identity and Access Management (IAM)  - 13%
+Domain 6: Security Assessment and Testing       - 12%
+Domain 7: Security Operations                   - 13%
+Domain 8: Software Development Security         - 11%
+
+STUDY STRATEGY RECOMMENDATIONS:
+-------------------------------
+1. HIGH PRIORITY DOMAINS (Higher exam weight):
+   - Domain 1: Security and Risk Management (15%)
+   - Domain 3: Security Architecture and Engineering (13%)
+   - Domain 4: Communication and Network Security (13%)
+   - Domain 5: Identity and Access Management (IAM) (13%)
+   - Domain 7: Security Operations (13%)
+
+2. MEDIUM PRIORITY DOMAINS:
+   - Domain 6: Security Assessment and Testing (12%)
+   - Domain 8: Software Development Security (11%)
+   - Domain 2: Asset Security (10%)
+
+3. STUDY APPROACH:
+   - Start with Domain 1 as it forms the foundation
+   - Focus on understanding concepts, not memorizing answers
+   - Practice questions from all domains regularly
+   - Review explanations for both correct and incorrect answers
+   - Take full-length practice exams under timed conditions
+
+QUESTION NUMBERING:
+-------------------
+Questions are numbered sequentially from 1 to 2,615.
+Each question is tagged with its original topic number (1-15).
+The topics map to domains as follows:
+- Topics 1, 3: Domain 1 (Security and Risk Management)
+- Topics 13, 14: Domain 2 (Asset Security)
+- Topics 6, 7, 8: Domain 3 (Security Architecture and Engineering)
+- Topics 2, 10: Domain 4 (Communication and Network Security)
+- Topic 11: Domain 5 (Identity and Access Management)
+- Topics 9, 15: Domain 6 (Security Assessment and Testing)
+- Topics 5, 12: Domain 7 (Security Operations)
+- Topic 4: Domain 8 (Software Development Security)
+
+KEY STUDY AREAS BY DOMAIN:
+---------------------------
+Domain 1: Risk management, security governance, compliance, legal issues, ethics, BCP/DR
+Domain 2: Data classification, ownership, privacy, retention, protection
+Domain 3: Cryptography, security models, secure design, physical security
+Domain 4: Network protocols, firewalls, IDS/IPS, VPN, wireless security, network attacks
+Domain 5: Authentication methods, access control models, identity management, biometrics
+Domain 6: Vulnerability assessments, penetration testing, security audits, metrics
+Domain 7: Incident response, forensics, disaster recovery, business continuity
+Domain 8: SDLC security, application security, database security, web security
+
+TIPS FOR SUCCESS:
+-----------------
+1. Understand the "why" behind each answer
+2. Focus on security principles and concepts
+3. Learn to identify the BEST answer among multiple correct options
+4. Practice time management (1 minute per question)
+5. Review the CISSP CBK (Common Body of Knowledge) regularly
+6. Use multiple study resources (books, practice exams, videos)
+7. Join study groups or forums for discussion
+8. Schedule regular study sessions and stick to them
+9. Take care of your health during exam preparation
+10. Stay calm and confident during the exam
+
+RECOMMENDED STUDY RESOURCES:
+----------------------------
+1. Official (ISC)² CISSP Study Guide
+2. CISSP All-in-One Exam Guide by Shon Harris
+3. CISSP Practice Exams by Shon Harris
+4. Official (ISC)² CISSP Practice Tests
+5. CISSP for Dummies
+6. Online practice exam platforms
+7. CISSP study groups and forums
+
+EXAM DAY TIPS:
+--------------
+1. Get a good night's sleep before the exam
+2. Eat a healthy breakfast
+3. Arrive early to the testing center
+4. Bring required identification
+5. Read each question carefully
+6. Eliminate obviously wrong answers first
+7. Don't spend too much time on any one question
+8. Review your answers if time permits
+9. Stay calm and focused throughout the exam
+
+Remember: The CISSP exam tests your ability to think like a security professional.
+Focus on understanding security principles and applying them to real-world scenarios.
+
+Good luck with your CISSP exam preparation!

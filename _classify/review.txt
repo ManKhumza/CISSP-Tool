@@ -1,0 +1,1501 @@
+
+########################################################################################
+# DOMAIN 1: Security and Risk Management
+########################################################################################
+
+===== 1.1  Understand, adhere to, and promote professional ethics   [1 questions] =====
+  Q1490 [s32.0 m32.0] Which of the following statements pertaining to the (ISC)2 Code of Ethics is incorrect?
+        <- code of ethics, ethics, code of ethics, isc2 code of ethics, ethics
+
+===== 1.2  Understand and apply security concepts   [66 questions] =====
+  Q177 [s5.2 m5.2] Which of the following term best describes a we akness that could potentially be exploited?
+        <- confidentiality, integrity, availability
+  Q250 [s22.8 m22.8] A group of independent servers, which are managed as asingle system, that provides higher availability, easier manageability, and 
+        <- availability, availability
+  Q302 [s36.8 m25.5] The Telecommunications Security Domain of information security is also concerned with the prevention and detection of the misuse o
+        <- confidentiality, integrity, availability, authenticity, confidentiality
+  Q309 [s22.8 m22.8] Which of the following off ers confidentiality to an e-mail message?
+        <- confidentiality, confidentiality
+  Q485 [s84.5 m84.5] Who of the following is responsible for ensuring that proper controls are in place to address integrity, confidentiality, and avai
+        <- confidentiality, integrity, availability, integrity confidentiality, confidentiality
+  Q1588 [s21.0 m21.0] Which choice is NOT an accurate description of C.I.A.?
+        <- confidentiality, integrity, availability
+  Q1654 [s95.8 m95.8] Controlling access to information systems and associated networks is necessary for the preservation of their confidentiality, inte
+        <- confidentiality, integrity, availability, orunintentional, orunintentional modification
+  Q1655 [s47.8 m47.8] The goalsof integrity do NOT include:
+        <- integrity, accountability, accountability, orunintentional, orunintentional modification
+  Q1665 [s30.0 m30.0] Which choice below represents an application or system demonstrating a need for a high level of confidentiality protection and con
+        <- confidentiality, confidentiality, integrity, availability, orunintentional
+  Q1875 [s31.5 m31.5] The Clark-Wilson Integrity Model (d. Clark, d. Wilson, A Comparison of Commercial and Military Computer Security Policies, Proceed
+        <- integrity, least privilege, confidentiality, integrity
+  Q766 [s22.8 m0.0] What is the main objective of proper separation of duties?
+        <- separation of duties, separation of duties
+  Q836 [s24.5 m1.8] It is a violation of the "separation of duties" principle when which of the following individuals access the software on systemsim
+        <- separation of duties, integrity, separation of duties
+  Q2198 [s36.0 m36.0] Which of the following is NOT a goal of the Kennedy-Kassebaum Health Insurance Portability and Accountability Act (HIPA
+        <- accountability, accountability
+  Q2247 [s36.0 m36.0] Which of the following is NOT a goal of the Kennedy-Kassebaum Health Insurance Portability and Accountability Act (HIPA
+        <- accountability, accountability
+  Q1980 [s21.0 m9.8] The discipline of identifying the co mponents of a continually evolving system for the purposes of controll ing changes to those c
+        <- integrity
+
+===== 1.3  Evaluate and apply security governance principles   [21 questions] =====
+  Q481 [s24.5 m24.5] Who is ultimately responsible for the security of com puter based information systems within an organization?
+        <- ultimately responsible, senior management, security program
+  Q516 [s21.0 m21.0] Who is responsible for providing reports to the senior management on the effectiveness of the security controls?
+        <- senior management
+  Q518 [s10.5 m10.5] Which must bear the primary responsibility for determining the level of protection needed for information systems resources?
+        <- senior management, senior management, security program
+  Q573 [s7.0 m7.0] Who should DECIDE how a company should approach security and what security measures should be implemented?
+        <- senior management
+  Q592 [s22.8 m22.8] In an organization, an Information Technology security function should:
+        <- security function, security function
+  Q1691 [s8.8 m5.2] Who h as the final responsibility for the preservation of the organization's information?
+        <- senior management, senior management
+  Q1729 [s14.0 m14.0] Which choice below is an accurate statement about standards?
+        <- senior management, security program
+  Q2335 [s126.0 m126.0] Refer to the information below to answer the question. An organization h as hired an information security officer to lead their se
+        <- security program, lacking, initiatives, people resources, numerous initiatives
+  Q2460 [s7.0 m0.0] What is the GREATEST challenge to identifying data leaks?
+        <- senior management
+  Q2474 [s11.0 m2.0] Contingency plan exercises are intended to do which of the following?
+        <- roles and responsibilities, roles, responsibilities
+  Q2527 [s21.0 m21.0] What is the MOST critical factor to ac hieve the goalsof a security program?
+        <- security program
+  Q2543 [s132.0 m132.0] Refer to the information below to answer the question. An organization h as hired an information security officer to lead their se
+        <- security program, lacking, initiatives, people resources, numerous initiatives
+  Q540 [s24.5 m7.0] Which approach to a security program ensures people responsible for protecting the company's assets are DRIVING the program?
+        <- security program, senior management, security program
+  Q1424 [s21.0 m21.0] In an organization, an Information Technology security function should:
+        <- security function
+  Q2430 [s111.0 m102.0] Refer to the information below to answer the question. An organization h as hired an information security officer to lead their se
+        <- security program, lacking, initiatives, people resources, numerous initiatives
+
+===== 1.4  Understand legal, regulatory, and compliance issues   [46 questions] =====
+  Q530 [s31.0 m18.0] Which Security and Audit Framework h as been adopted by some organizations working towards Sarbanes—Oxley Section 404 compliance?
+        <- sarbanes oxley, compliance, hipaa, sarbanes oxley, compliance
+  Q576 [s28.5 m11.0] Which of the following would NOT violate the Due Diligence concept?
+        <- due diligence, negligence, liability, due care, due diligence
+  Q616 [s44.2 m40.2] Which of the following phases of a software development life cycle normally addresses Due Care and Due Diligence?
+        <- due care, due diligence, due diligence, legal
+  Q869 [s47.8 m47.8] When attempting to establish Liability, which of the following would be describe as performing the ongoing maintenance necessary t
+        <- liability, due care, due diligence, liability, negligence
+  Q1122 [s9.2 m9.2] Which of the following establishes the minimal national standards for certifying and accrediting national security systems?
+        <- hipaa, hipaa, privacy
+  Q2197 [s34.0 m34.0] Which of the following is NOT a definition or characteristic of Due Care?
+        <- due care, law, due care, west, paul
+  Q2205 [s12.2 m12.2] The U.S. Uniform Computer Informati on Transactions Act (UCIT
+        <- licensing, copyright, licensing, copyright, law
+  Q2223 [s34.0 m34.0] Which of the following is NOT a definition or characteristic of Due Care?
+        <- due care, law, due care, west, paul
+  Q2263 [s5.2 m5.2] The U.S. Uniform Computer Informati on Transactions Act (UCIT
+        <- copyright, licensing, copyright, law
+  Q2518 [s36.0 m36.0] Copyright provides protection for which of the following?
+        <- copyright, copyright
+  Q2254 [s33.0 m26.0] In order for evidence to be admissible in a court of law, it must be relevant, legally permissible, reliable, properly identified,
+        <- admissible, law, court
+  Q2260 [s43.8 m43.8] Under Civil Law, the victim is NOT entitled to which of the following types of damages?
+        <- civil law, civil, law, civil, law
+  Q2060 [s41.0 m41.0] Liability of senior organizational officials relative to the protection of the organizations information systems is prosecutable u
+        <- liability, civil law, liability, civil, law
+  Q2140 [s72.2 m43.2] In 1996, the World Intellectual Property Organization (WIPO) sponsored a treaty under which participating co untries would standar
+        <- copyright, intellectual property, copyright, licensing, copyright
+  Q2301 [s36.0 m21.0] The World Trade Organization's (W TO) agreement on Trade-Re lated Aspects of Intellectual Property Rights (TRIPS) requires authors
+        <- intellectual property, trade
+
+===== 1.5  Understand requirements for investigation types   [9 questions] =====
+  Q1367 [s7.0 m7.0] Under “Named Perils” form of Property insurance
+        <- burden of proof
+  Q2127 [s8.8 m1.8] Responsibility for handling computer crimes in the United States is assigned to:
+        <- investigation, investigation
+  Q2209 [s11.2 m11.2] In the context of legal proceedings and trial practice, discovery refers to:
+        <- investigation, evidence, investigation, evidence
+  Q2255 [s11.2 m11.2] In the context of legal proceedings and trial practice, discovery refers to:
+        <- investigation, evidence, investigation, evidence
+  Q1387 [s23.2 m23.2] What are the basic questions that must be asked at the beginning of any investigation?(Choose all that apply)
+        <- investigation, investigation, investigator
+  Q1529 [s23.2 m23.2] What are the basic questions that must be asked at the beginning of any investigation?(Choose all that apply)
+        <- investigation, investigation, investigator
+  Q2096 [s30.5 m25.5] Which of the following are com puter investigation issues? S
+        <- investigation, investigation, evidence, evidence
+  Q2185 [s34.0 m34.0] Because of the nature of information that is stored on the computer, the investigation and prosecution of com puter criminal cases
+        <- investigation, investigation, evidence, investigation, criminal investigation
+  Q2226 [s34.0 m34.0] Because of the nature of information that is stored on the computer, the investigation and prosecution of com puter criminal cases
+        <- investigation, investigation, evidence, investigation, criminal investigation
+
+===== 1.6  Develop, document, and implement security policy, standards, procedures, and guidelines   [88 questions] =====
+  Q61 [s57.0 m57.0] What is the name of the first mathematical model of a multi-level security policy used to define the concept of a secure state, th
+        <- policy, security policy, multi-level
+  Q126 [s54.2 m54.2] The Computer Security Policy Model the Orange Book is based on is which of the following?
+        <- policy, security policy, standard, policy, standard
+  Q165 [s45.5 m45.5] Which of the following is used to monitor network traffic or to monitor host audit logs in real time to determine violations of sy
+        <- policy, security policy, policy, security policy
+  Q217 [s45.5 m45.5] The control measures that are intended tore veal the violations of security policy us ing software and hardware are associated wit
+        <- policy, security policy, policy, security policy
+  Q230 [s45.5 m30.5] What ensures that the control mechanisms correctly implement the security policy for the entire life cycle of an information syste
+        <- policy, security policy, policy, security policy
+  Q1472 [s52.5 m52.5] The Computer Security Policy Model the Orange Book is based on is which of the following?
+        <- policy, security policy, standard, policy, security policy
+  Q1501 [s61.8 m61.8] Which of the following are necessary components of a Multi-Level Security Policy?
+        <- policy, security policy, multi-level, policy, security policy
+  Q1548 [s45.5 m38.5] An effective information security policy should not have which of the following characteristics?
+        <- policy, security policy, policy, security policy
+  Q1553 [s47.0 m47.0] What two things below are associated with security policy?(Choose Two)
+        <- policy, security policy, strategic
+  Q1560 [s43.8 m43.8] Which of the following department managers would be best suited to oversee the de velopment of an information security policy?
+        <- policy, security policy, policy
+  Q2117 [s21.0 m12.2] Which choices below are emergency management procedure directly related to financial decision making? Select three.
+        <- procedure
+  Q2344 [s28.0 m19.0] How does an organization verify that an information system's current hardware and software match the standard system configuration
+        <- standard, baseline
+  Q1483 [s58.2 m58.2] Which of the following questions should any user not be able to answer regarding their organization information security policy?
+        <- policy, security policy, policy, security policy, policy
+  Q2397 [s21.0 m7.0] Which of the following is critical for establishing an initial baseline for software components in the operation and maintenance o
+        <- baseline
+  Q1773 [s21.0 m21.0] The standard process to certify and accredit
+        <- standard
+
+===== 1.7  Identify, analyze, and prioritize Business Continuity (BC) requirements   [11 questions] =====
+  Q34 [s22.8 m5.0] Business Impact Analysis (BI
+        <- business impact analysis, business impact analysis
+  Q1355 [s22.8 m22.8] Which one of the following is identified by a business impact analysis?(Choose three)
+        <- business impact analysis, business impact analysis
+  Q1443 [s46.0 m46.0] Which of the following steps should be performed first in a business impact analysis (BIA)?
+        <- bia, business impact analysis, bia, business impact analysis, downtime
+  Q1555 [s48.8 m39.8] Business continuity plan development depends most on?
+        <- business continuity, bia, business impact analysis, continuity, bcp
+  Q2020 [s25.0 m18.0] What is the purpose of the Business Impact Assessment (BIA)?
+        <- bia, business continuity, continuity planning, continuity
+  Q2045 [s25.2 m14.0] Which of the following is NOT one of the primary goalsof a BIA?
+        <- bia, downtime, bia, bcp
+  Q2365 [s27.0 m27.0] Which of the following is the BEST approach to take in order to effectively incorporate the concepts of business continuity into t
+        <- business continuity, continuity
+  Q2400 [s9.0 m9.0] Retaining system logs for six months or longer can be valuable for what activities?
+        <- business continuity, continuity
+  Q2531 [s33.0 m33.0] Which of the following is the best practice for testing a Business Continuity Plan (BCP)?
+        <- business continuity, continuity, bcp
+  Q1278 [s26.5 m26.5] A Business Impact Analysis (BI
+        <- business impact analysis, outage, bia, business impact analysis
+  Q2154 [s48.2 m48.2] Which choice below most accurate ly describes a business impact analysis (BIA)?
+        <- bia, business impact analysis, bia, continuity planning, business impact analysis
+
+===== 1.8  Contribute to and enforce personnel security policies and procedures   [29 questions] =====
+  Q512 [s20.0 m14.8] Which of the following would best cl assify as a management control?
+        <- personnel, personnel security, personnel, personnel, personnel security
+  Q528 [s11.2 m11.2] Which of the following is responsible for MOST of the security issues?
+        <- personnel, personnel, personnel, personnel
+  Q570 [s8.8 m8.8] Which of the following is a fraud detection method whereby employees are moved from position to position?
+        <- job rotation, job rotation
+  Q788 [s14.0 m10.5] Which of the following controls re lated to physical secu rity is not an administrative control?
+        <- personnel, personnel, employee, personnel, employee
+  Q1187 [s54.0 m54.0] Which of the following is most concerned with personnel security?
+        <- personnel, personnel security, personnel, human resources, personnel
+  Q2285 [s9.0 m9.0] Which of the following h as the GREATEST impact on an organization's security posture?
+        <- employee, employee
+  Q2295 [s9.0 m9.0] An organization h as hired a security services firm to conduct a penetration test. Which of the following will the organization pr
+        <- employee, employee
+  Q2557 [s27.0 m6.0] An organization publishes and periodically updates its employee policies in a file on their intranet. Which of the following is a 
+        <- employee, employee
+  Q2601 [s27.0 m27.0] Which security action should be taken FIRST when co mputer personnel are terminated from their jobs?
+        <- personnel, personnel
+  Q2512 [s191.0 m170.0] Refer to the information below to answer the question. A new employee is given a laptop computer with full administrator access. T
+        <- employee, discovers, peer-to-peer, depart, full administrator
+  Q2374 [s189.0 m168.0] Refer to the information below to answer the question. A new employee is given a laptop computer with full administrator access. T
+        <- employee, discovers, peer-to-peer, depart, full administrator
+  Q2629 [s213.0 m192.0] Refer to the information below to answer the question. A new employee is given a laptop computer with full administrator access. T
+        <- employee, discovers, peer-to-peer, depart, full administrator
+  Q2112 [s27.0 m12.0] Which statement is true regarding company/employee relations during and after a disaster?
+        <- employee, employee
+  Q1928 [s21.0 m14.0] The termination of selected, non-critical processing when a hardware or software failure occurs and is detected is referred to as:
+        <- termination
+  Q2492 [s27.0 m27.0] Which of the following MUST system and database administrators be aware of and apply when configuring systems used for storing per
+        <- employee, employee
+
+===== 1.9  Understand and apply risk management concepts   [53 questions] =====
+  Q482 [s43.5 m43.5] What does "residual risk" mean?
+        <- residual risk, risk assessment, risk, risk, threat
+  Q484 [s29.5 m29.5] What can be described as a measure of the magnitude of loss or impact on the value of an asset?
+        <- exposure factor, impact, exposure factor, probability, threat
+  Q489 [s33.5 m20.8] The Widget company decided to take their company public and while they were in the pr ocess of doing so had an external auditor co
+        <- risk analysis, risk, risk
+  Q493 [s125.2 m125.2] How is Annualized Loss Expectancy (ALE) derived from a threat?
+        <- annualized loss expectancy, expectancy, annualized, loss expectancy, annualized loss
+  Q496 [s130.5 m130.5] What is the highest amount a company should spend annually on countermeasures for protecting an asset valued at $1,000,000 from a 
+        <- exposure factor, annualized rate of occurrence, annualized, spend, annualized rate
+  Q595 [s42.8 m42.8] Which of the following is the best reason for the use of an automated risk analysis tool?
+        <- risk analysis, risk analysis, risk, risk, risk assessment
+  Q1199 [s176.5 m134.5] Sam is the security Manager of an financial institute. Senior management h as requested he pe rforms a risk analysis on all critic
+        <- risk analysis, risk mitigation, cost benefit analysis, cost benefit, benefit analysis
+  Q1219 [s62.5 m62.5] Which of the following risk handling technique involves the practice of being proactive so that the risk in question is not realiz
+        <- risk mitigation, risk transfer, risk avoidance, risk acceptance, risk
+  Q1220 [s56.5 m56.5] John is the product manager for an information system. His product h as undergone under security review by an IS auditor. John h a
+        <- risk mitigation, risk transfer, risk avoidance, risk acceptance, risk
+  Q1223 [s62.5 m62.5] Which of the following risk handling technique involves the practice of passing on the risk to anotherentity, such as an insurance
+        <- risk mitigation, risk transfer, risk avoidance, risk acceptance, risk
+  Q1652 [s100.8 m100.8] Which formula accurately represents an Annualized Loss Expectancy (ALE) calculation?
+        <- annualized loss expectancy, expectancy, annualized, loss expectancy, annualized loss
+  Q2437 [s72.0 m39.0] A risk assessment report recommends upgr ading all perimeter firewalls to mitigate a particular finding. Which of the following BE
+        <- risk assessment, residual risk, inherent risk, annualized loss expectancy, risk
+  Q527 [s27.5 m15.8] Regarding risk reduction, which of the following answers is BEST defined by the proce ss of giving only just enough access to info
+        <- risk reduction, risk, risk
+  Q1754 [s35.2 m26.5] Which choice below most accurate ly reflects the goalsof risk mitigation?
+        <- risk mitigation, risk, risk, risk analysis, risk mitigation
+  Q2555 [s27.0 m27.0] Which of the following types of security testing is the MOST effective in providing a be tter indication of the everyday security 
+        <- risk assessment, risk
+
+===== 1.10  Understand and apply threat modeling concepts and methodologies   [0 questions] =====
+
+===== 1.11  Apply Supply Chain Risk Management (SCRM) concepts   [4 questions] =====
+  Q1587 [s11.2 m2.5] Which choice below is NOT an example of the appropriate external distribution of classified information?
+        <- procurement, contract, procurement, contract
+  Q2326 [s33.0 m33.0] An internal Service Level Agreement (SLA ) covering security is signed by senior managers and is in place. When should compliance 
+        <- service level agreement, sla
+  Q2372 [s9.0 m9.0] Two companies wish to share electronic inventory and purchase orders in a supplie r and client relationship. What is the BEST secu
+        <- service level agreement, sla
+  Q2638 [s28.0 m28.0] During the procurement of a new information system, it was determined that some of the security requirements were not addressed in
+        <- procurement, procurement
+
+===== 1.12  Establish and maintain a security awareness, education, and training program   [11 questions] =====
+  Q1721 [s27.0 m18.0] Which choice would be an example of a cost-effective way to enhance security awareness in an organization?
+        <- security awareness, awareness
+  Q1766 [s48.0 m48.0] Apurpose of a security awareness program is to improve:
+        <- security awareness, awareness program, awareness
+  Q2159 [s11.2 m0.0] Which choice below would NOT be considered a benefit of employing incident-handling capability?
+        <- security training, training, security training, training
+  Q2379 [s48.0 m27.0] Which of the following MUST be done when promoting a security awareness program to senior management?
+        <- security awareness, awareness program, awareness
+  Q2517 [s48.0 m41.0] The PRIMARY purpose of a security awareness program is to
+        <- security awareness, awareness program, awareness
+  Q2552 [s25.0 m18.0] Which of the following is the BEST mitigation from phishing attacks?
+        <- security awareness, awareness training, security awareness training, awareness, training
+  Q713 [s28.0 m24.2] Which of the following attack could be avoided by creating more security awareness in the organization and provide adequate securi
+        <- security awareness, awareness, awareness, training
+  Q1606 [s113.0 m113.0] Which statement below most accurately describes the difference between security awareness, security training, and security educati
+        <- security awareness, security training, security education, security awareness, security training
+  Q1727 [s72.0 m62.8] Which statement below is NOT true about security awareness, training, and educational programs?
+        <- security awareness, awareness training, security education, awareness, training
+  Q543 [s49.0 m49.0] One purpose of a security awareness program is to modify:
+        <- security awareness, awareness program, awareness, awareness, training
+  Q1745 [s84.5 m77.5] Which choice below is NOT a generally accepted benefit of security awareness, training, and education?
+        <- security awareness, awareness training, awareness program, training program, awareness
+
+----- general (155) -----
+  Q78 Which type of control is concerned with avoiding occurrences of risks?
+  Q144 Which type of control is concerned with restoring controls?
+  Q163 The controls that usually require a human to evaluate the input from sensors or cameras to determine if areal threat exists are as
+  Q276 Which of the following devices enables more than one signal to be sent out simultaneously over one physical circuit?
+  Q277 In the UTP category rating, the tighter the wind:
+  Q329 Which of the following Common Data Network Services is used to print documents to a shared printer ora print queue/spooler?
+  Q346 Which of the following is immune to the effects of electro magnetic interference (EMI) and therefore h as a much longer effective 
+  Q396 Which of the following Common Data Network Services is used to share data files and subdirectories on file servers?
+  Q427 Communications devices must operate:
+  Q508 Who is responsible for initiating correct ive measures and capabilities used when there are security violations?
+  Q525 What can best be defined as high-level statements, beliefs, goals and objectives?
+  Q542 Controls are implemented to:
+  Q550 What is called the probability that a threat to an information system will materialize?
+  Q552 Which of the following is given the responsibility of the maintenance and protection of the data?
+  Q598 Which of the following BEST explains why computerized information systems frequently fail to meet the needs of us ers?
+  Q610 Which of the following is best defined as a circumstance in which a collection of information items is required to be classified a
+  Q710 What is one disadvantage of content- dependent protection of information?
+  Q725 Which of the following is currently the most recommended water system for a computer room?
+  Q740 A prolonged complete loss of electric power is a:
+  Q759 Which of the following statements pertaining to secu re information processing facilities is incorrect?
+
+########################################################################################
+# DOMAIN 2: Asset Security
+########################################################################################
+
+===== 2.1  Identify and classify information and assets   [30 questions] =====
+  Q333 [s74.2 m74.2] You have been tasked to develop an effective information classification program. Which one of the following steps should be perfor
+        <- classification, information classification, classification, custodian, data custodian
+  Q522 [s28.8 m20.0] Whose role is it to assign classification level to information?
+        <- classification, owner, classification, information owner, data owner
+  Q1212 [s74.2 m74.2] You have been tasked to develop an effective information classification program. Which one of the following steps should be perfor
+        <- classification, information classification, classification, custodian, data custodian
+  Q1284 [s39.0 m39.0] According to private sector data classification levels, how would salary levels and medical information be classified?
+        <- classification, classification levels, classification, classification levels
+  Q1493 [s22.8 m22.8] Which type of attack would a competitive intelligence attack best classify as?
+        <- classify, classify
+  Q2297 [s27.0 m27.0] Which of the following is required to de termine classification and ownership?
+        <- classification, ownership
+  Q2299 [s21.0 m21.0] Which of the following is a critical factor for im plementing a successful data classification program?
+        <- classification
+  Q2321 [s9.0 m9.0] For privacy protected data, which of the following roles h as the highest authority for establishing dissemination rules for the d
+        <- data owner, owner
+  Q2364 [s49.0 m49.0] What is the ultimate objective of information classification?
+        <- classification, information classification, classification
+  Q2407 [s44.0 m44.0] Which of the following is the PRIMARY benefit of a formalized information classification program?
+        <- classification, information classification, asset
+  Q2639 [s23.0 m23.0] In a financial institution, who h as the responsibility for assigning the classification to a piece of information?
+        <- classification, owner
+  Q569 [s41.2 m36.0] According to private sector data classification levels, how would salary levels and medical information be classified?
+        <- classification, classification levels, classification, information classification, top secret
+  Q1661 [s74.0 m74.0] Which choice below BEST describes the difference between the System Owner and the Information Owner?
+        <- information owner, system owner, information owner, system owner, owner
+  Q2118 [s34.0 m4.8] Which term below BEST describes the concept of least privilege?
+        <- least privilege, classification, sensitivity, classification, least privilege
+  Q2520 [s42.0 m9.0] Refer to the information below to answer the question. A large organization us es unique identifiers and requires them at the star
+        <- classification
+
+===== 2.2  Establish information and asset handling requirements   [1 questions] =====
+  Q2569 [s27.0 m4.0] Which of the following roles h as the obligation to ensure that a third party provider is capable of processing and handling data 
+        <- handling, handling
+
+===== 2.3  Provision resources securely   [1 questions] =====
+  Q198 [s22.8 m0.0] Which of the following is NOT part of user provisioning?
+        <- provisioning, provisioning
+
+===== 2.4  Manage data lifecycle   [22 questions] =====
+  Q783 [s45.5 m22.8] Which of the following is NOT a proper component of Media Viability Controls?
+        <- media, media viability, media, media viability
+  Q811 [s61.8 m61.8] At which temperature does damage start occurring to magnetic media?
+        <- media, magnetic media, magnetic media, media, magnetic media
+  Q849 [s105.0 m72.0] An electrical device (AC or DC) which can generate coerci ve magnetic force for the purpose of reducing magnetic flux density to z
+        <- media, magnetic media, magnetic media, storage media, remanence
+  Q858 [s90.0 m50.0] Which of the following is NOT a media viability control used to protect the viability of data storage media?
+        <- media, media viability, storage media, clearing, clearing
+  Q2183 [s95.2 m84.0] Which choice below BEST describes the process of data purging?
+        <- purging, purging, overwriting, destruction, media
+  Q821 [s113.5 m113.5] Which of the following method is recommended by security professional to PERMANENTLY erase sensitive data on magnetic media?
+        <- media, magnetic media, magnetic media, media, magnetic media
+  Q828 [s78.5 m78.5] Which of the following refers to the data left on the media after the media h as been erased?
+        <- media, erased, remanence, remanence, remanence
+  Q1342 [s47.0 m47.0] Which of the following is the most reliable, secure means of removing data from magnetic storage media such as a magnetic tape, or
+        <- media, storage media, degaussing, media, magnetic media
+  Q1912 [s43.5 m43.5] Which of the following is NOT a proper media control?
+        <- media, sanitization, media, storage media, sanitization
+  Q1981 [s6.2 m6.2] The Federal Sentencing Guidelines:
+        <- destroying, destroying
+  Q2370 [s62.0 m62.0] Which of the following is an effective method for avoiding magnetic media dataremanence?
+        <- media, magnetic media, magnetic media, degaussing
+  Q2590 [s21.0 m21.0] What type of encryption is used to protect sensitive data in transit over a network?
+        <- data in transit
+  Q2363 [s21.0 m10.0] What is the BEST first step for determining if the appropriate security controls are in place for protecting data at rest?
+        <- data at rest
+  Q2092 [s21.0 m21.0] Conducting a search without the delay of obtaining a warrant if destruction of evidence seems imminent is possible under:
+        <- destruction
+  Q2119 [s28.0 m28.0] Which statement below is NOT true regarding the relationship of the organization with the media during and after a disaster?
+        <- media, media
+
+===== 2.5  Ensure appropriate asset retention   [2 questions] =====
+  Q2332 [s21.0 m4.0] Regarding asset security and appropriate retention, which of the following INITIAL top three are as are important to focus on?
+        <- retention
+  Q2593 [s49.0 m49.0] An online retail company h as formulated arecord retention schedule for customer transactions. Which of the following is a valid r
+        <- retention, retention schedule, legal hold
+
+===== 2.6  Determine data security controls and compliance requirements   [0 questions] =====
+
+----- general (20) -----
+  Q161 Considerations of privacy, invasiveness, and psychological and physical comfort when us ing the system are important elements for 
+  Q629 When considering an IT System Development Life-cycle, security should be:
+  Q672 Which of the following would provide the BEST stress te sting environment taking under consideration and avoiding possible data ex
+  Q1576 What is an ARO?
+  Q1580 Which of the following is NOT aremote computing technology?
+  Q1711 Which group represents the MOST likely source of an asset loss through inappropriate computer use?
+  Q1830 A 1999 law that addresses privacy issues related to health care, insurance and finance and that will be implemented by the states 
+  Q1964 The Platform for Privacy Preferences (P3P) was developed by the World Wide Web Consortium (W3C) for what purpose?
+  Q1965 The principles of Notice, Choice, Access, Security, and Enforcement refer to which of the following?
+  Q2001 A pen register is a:
+  Q2031 Which one of the following items are true concerning the Platform for Privacy Preferences (P3P) developed by the World Wide Web Co
+  Q2065 The Federal Intelligence Surveillance Act (FIS
+  Q2195 Which of the following is NOT one of the European Union (EU) privacy principles?
+  Q2243 Which of the following is NOT one of the European Union (EU) privacy principles?
+  Q2368 Which of the following controls is the FIRST step in protecting privacy in an information system?
+  Q2409 Which of the following methods protects Personally Identifiable Information (PII) by use of a full replacement of the data element
+  Q2475 Sensitive customer data is going to be added to a database. What is the MOST effective implementation for ensuring data privacy?
+  Q2478 Which of the following is the BEST example of weak management commitment to the protection of security assets and resources?
+  Q2579 Which of the following is the MAIN goal of a dataretention policy?
+  Q2584 Which of the following analyses is performed to protect information assets?
+
+########################################################################################
+# DOMAIN 3: Security Architecture and Engineering
+########################################################################################
+
+===== 3.1  Research, implement and manage engineering processes using secure design principles   [6 questions] =====
+  Q2298 [s21.0 m16.0] Which of the following BEST represents the principle of open design?
+        <- open design
+  Q2327 [s21.0 m21.0] The Hardware Abstraction Layer (HAL) isimplemented in the
+        <- abstraction
+  Q834 [s19.2 m7.2] How should a doorway of a manned facility with automatic locks be configured?
+        <- fail-safe, fail-secure, fail-safe, fail-secure, fail secure
+  Q1137 [s8.8 m0.0] What is used to protect programs from all unauthorized modification or executional interference?
+        <- abstraction, abstraction
+  Q1205 [s8.8 m0.0] What is used to protect programs from all unauthorized modification or executional interference?
+        <- abstraction, abstraction
+  Q1272 [s19.2 m7.2] How should a doorway of a manned facility with automatic locks be configured?
+        <- fail-safe, fail-secure, fail-safe, fail-secure, fail secure
+
+===== 3.2  Understand the fundamental concepts of security models   [69 questions] =====
+  Q1895 [s62.5 m62.5] What does the Bell-LaPadula model NOT allow?
+        <- bell-lapadula, bell-lapadula, bell-lapadula model, model, lower level
+  Q19 [s19.8 m0.5] Who developed one of the first mathematical mode ls of a multilevel-security computer system?
+        <- lipner, wilson, clark-wilson, lipner, clark-wilson
+  Q40 [s67.5 m67.5] In which of the following security models is the subject's clearance compared to the object's classification such that specific ru
+        <- bell-lapadula, biba, take-grant, access matrix, bell-lapadula
+  Q97 [s103.5 m103.5] What does the simple security (ss) property mean in the Bell-LaPadula model?
+        <- bell-lapadula, bell-lapadula, bell-lapadula model, property mean, no write down
+  Q115 [s69.0 m69.0] Which access control model was proposed for enforcing access control in government and military applications?
+        <- bell-lapadula, biba, brewer-nash, model, bell-lapadula
+  Q1159 [s71.5 m16.2] The Orange Book is founded upon which security policy model?
+        <- biba, clark-wilson, bell lapadula, model, biba
+  Q1166 [s67.5 m67.5] In which of the following security models is the subject's clearance compared to the object's classification such that specific ru
+        <- bell-lapadula, biba, take-grant, access matrix, bell-lapadula
+  Q1182 [s69.0 m69.0] What does the Clark-Wilson security model focus on?
+        <- clark-wilson, security model, clark-wilson, model, clark-wilson
+  Q1184 [s69.0 m69.0] What does the Clark-Wilson security model focus on?
+        <- clark-wilson, security model, clark-wilson, model, clark-wilson
+  Q1188 [s99.0 m99.0] What is the main focus of the Bell-LaPadula security model?
+        <- bell-lapadula, security model, bell-lapadula, model, bell-lapadula
+  Q1945 [s117.5 m117.5] In the * (star) property of the Bell-LaPadula model,
+        <- bell-lapadula, star property, bell-lapadula, bell-lapadula model, star property
+  Q2084 [s17.2 m17.2] A distributed object model that h as similarities to the Common Object Request Broker Architecture (CORB
+        <- chinese wall, model, model, chinese wall, model
+  Q2155 [s3.0 m3.0] Which of the following items is NOT a component of a knowledgebased system (KBS)?
+        <- state machine, state machine
+  Q2575 [s72.0 m72.0] Refer to the information below to answer the question. In a Multilevel Security (MLS) system, the following sensitivity labels are
+        <- bell-lapadula, multilevel security, bell-lapadula, cannot write
+  Q2594 [s57.0 m57.0] Refer to the information below to answer the question. In a Multilevel Security (MLS) system, the following sensitivity labels are
+        <- bell-lapadula, multilevel security, bell-lapadula
+
+===== 3.3  Select controls based upon systems security requirements   [16 questions] =====
+  Q1473 [s22.8 m7.8] Which of the following are NOT a countermeasure to traffic analysis?
+        <- countermeasure, countermeasure
+  Q502 [s33.5 m33.5] Which type of security control is also known as "Logical" control?
+        <- logical control, control, control
+  Q805 [s34.2 m23.8] Which of the following is related to physical secur ity and is not considered a technical control?
+        <- technical control, control, control, technical control, administrative control
+  Q848 [s22.8 m14.0] Which of the following are NOT a countermeasure to traffic analysis?
+        <- countermeasure, countermeasure
+  Q1203 [s33.5 m33.5] Which type of security control is also known as "Logical" control?
+        <- logical control, control, control
+  Q586 [s21.0 m14.0] A weakness or lack of a safeguard, which may be exploited by a threat, causing harm to the information systems or networks is call
+        <- safeguard
+  Q594 [s22.8 m14.0] Which of the following would BEST be defined as an absence or weakness of safeguard that could be exploited?
+        <- safeguard, safeguard
+  Q1659 [s28.0 m16.0] Which choice is NOT a good criterion for selecting a safeguard?
+        <- safeguard, safeguard
+  Q587 [s21.0 m12.2] The absence of a safeguard, ora weakness in a system that may possibly be exploited is called a(n)?
+        <- safeguard
+  Q656 [s27.5 m4.8] Sensitivity labels are an example of what application control type?
+        <- control type, control, control
+  Q1267 [s27.5 m4.8] Sensitivity labels are an example of what application control type?
+        <- control type, control, control
+  Q1492 [s21.0 m11.8] Which of the following would be defined as an absence of safeguard that could be exploited?
+        <- safeguard
+  Q535 [s33.0 m5.0] Which of the following is NOT an administrative control?
+        <- administrative control, control, control, technical control, administrative control
+
+===== 3.4  Understand security capabilities of Information Systems (IS)   [84 questions] =====
+  Q1085 [s51.0 m51.0] Which of the following places the Orange Book classifications in order from most secure to least secure?
+        <- orange book, orange, orange book
+  Q1175 [s81.0 m81.0] Which of the following classes is defined in theTCSEC (Orange Book) as discretionary protection?
+        <- orange book, orange, thetcsec, orange book, discretionary protection
+  Q1809 [s27.0 m12.0] Which of the following choices describes the four phases of the National Information Assurance Certification and Accreditation Pro
+        <- certification and accreditation, assurance
+  Q1816 [s100.0 m100.0] In Part 3 of the Common Criteria, Security Assurance Requirements, seven predefined Packages of assurance components that make up 
+        <- common criteria, rating, common criteria, assurance requirements, security target
+  Q1890 [s29.0 m29.0] In a ring protection system, where is the security kernel usually located?
+        <- security kernel, ring, ring
+  Q1178 [s40.2 m10.2] Memory management in TCSEC levels B3 and A1 operating systems may utilize "data hi ding". What does this mean?
+        <- tcsec, tcsec, ring, security kernel, ring
+  Q1181 [s10.8 m10.8] Which International Organization for Standardization standard is commonly re ferred to as the 'common criteria'?
+        <- tcsec, itsec, common criteria, tcsec, common criteria
+  Q1193 [s153.5 m145.2] The Orange Book states that "Hardware and software features shall be provided that can be used to periodically validate the correc
+        <- orange book, trusted computing base, orange, thetcb, firmware
+  Q1195 [s40.2 m10.2] Memory management in TCSEC levels B3 and A1 operating systems may utilize "data hi ding". What does this mean?
+        <- tcsec, tcsec, ring, security kernel, ring
+  Q1211 [s18.8 m2.5] The Reference Validation Mechanism that ensures the author ized access relationships between subjects and objects isimplementing w
+        <- security kernel, reference monitor, security kernel, reference monitor, monitor concept
+  Q1845 [s27.0 m27.0] In the National Information Assurance Certification and Accreditation Process (NIACAP), a type accreditation performs which one of
+        <- certification and accreditation, assurance
+  Q1920 [s81.0 m81.0] Mandatory access controls first appear in the Trusted Computer System Evaluation Criteria (TCSEC) at the rating of:
+        <- tcsec, tcsec, rating, evaluation criteria, criteria tcsec
+  Q2167 [s39.0 m39.0] Which TCSEC security class category below specifies trusted recovery controls?
+        <- tcsec, tcsec, tcsec, tcsec
+  Q1833 [s89.0 m89.0] What are the hardware, firmware, and software elements of aTrusted Computing Base (TCB) that implement the reference monitor conce
+        <- reference monitor, firmware, computing base, hardware firmware, monitor concept
+  Q1967 [s45.2 m45.2] Which one of the following is NOT a component of aCC Protection Profile?
+        <- protection profile, protection profile, target of evaluation, security target, toe
+
+===== 3.5  Assess and mitigate the vulnerabilities of security architectures, designs, and solution elements   [14 questions] =====
+  Q2093 [s22.8 m22.8] If C represents the cost of instituting safeguards in an information system and L is the estimated loss resulting from exploitatio
+        <- vulnerability, vulnerability
+  Q2631 [s21.0 m21.0] When building a data center, site location and construction factors that increase the level of vulnerability to physical threats i
+        <- vulnerability
+  Q2624 [s21.0 m0.0] A mobile device application that restricts the storage of us er information to just that which is needed to accomplish lawful busi
+        <- mobile device
+  Q2473 [s7.0 m7.0] Which one of these risk factors would be the LEAST important consideration in choosing a building site for a new computer facility
+        <- vulnerability
+  Q2300 [s21.0 m0.0] Which of the following command line tools can be used in thereconnaisance phase of a network vulnerability assessment?
+        <- vulnerability
+  Q2506 [s181.0 m174.0] Refer to the information below to answer the question. Asecurity practitioner detects client-based attacks on the or ganization’s 
+        <- client-based, practitioner, client-based, practitioner detects, client-based attacks
+  Q2633 [s162.0 m155.0] Refer to the information below to answer the question. Asecurity practitioner detects client-based attacks on the or ganization’s 
+        <- client-based, practitioner, client-based, practitioner detects, client-based attacks
+  Q213 [s40.8 m21.8] Which answer best describes a computer software attack that takes advantage of a previously unpublished vulnerability?
+        <- vulnerability, vulnerability, attack, exploit, attack
+  Q824 [s27.0 m27.0] The "vulnerability of a facility" to damage or attack may be assessed by all of the following except:
+        <- vulnerability, attack
+  Q1204 [s27.0 m27.0] The "vulnerability of a facility" to damage or attack may be assessed by all of the following except:
+        <- vulnerability, attack
+  Q1753 [s21.0 m12.2] Which choice below is the BEST description of a vulnerability?
+        <- vulnerability
+  Q1859 [s31.8 m4.8] The following concerns usually apply to what type of architecture? Desktop systems can contain sensitive information that may be a
+        <- vulnerability, architecture, distributed, vulnerability, distributed
+  Q2472 [s23.0 m12.0] A vulnerability test on an Information System (IS) is conducted to
+        <- vulnerability, exploit
+  Q2311 [s21.0 m7.0] What component of a web application that stores these ssion state in a cookie can be bypassed by an attacker?
+        <- web application
+
+===== 3.6  Select and determine cryptographic solutions   [240 questions] =====
+  Q894 [s95.5 m95.5] The secure Hash Algorithm (SHA-1) creates:
+        <- sha-1, algorithm, hash, message digest, algorithm
+  Q1018 [s98.5 m98.5] What size is an MD5 message digest (hash)?
+        <- message digest, md5, hash, digest, message digest
+  Q1019 [s68.8 m68.8] Who vouches for the binding between the data items in a digital certificate?
+        <- digital certificate, certificate, digital certificate, registration authority, certificate
+  Q1814 [s66.0 m66.0] For a given hash function H, to prevent substitution of a message M1 for a message M2, it is necessary that:
+        <- hash function, hash, substitution, hash function
+  Q1868 [s43.8 m43.8] In steganography,
+        <- steganography, public key, private key, algorithms, key
+  Q1030 [s129.8 m90.8] Which type of attack is based on the probability of two different messages us ing the same hash function producing a common messag
+        <- hash function, message digest, hash, digest, message digest
+  Q1031 [s99.8 m99.8] You are an information systems security officer at a mi d-sized business and are called upon to investigate a threat conveyed in a
+        <- pki, public key, digital signature, key, signature
+  Q1032 [s170.2 m170.2] In which mode of DES, a block of plaintext and a key will always give the same ciphertext?
+        <- ciphertext, plaintext, des, block, plaintext
+  Q1033 [s166.5 m166.5] Which of the following is not a disadvantage of symmetric cryptography when compared with Asymmetric Ciphers?
+        <- cryptography, symmetric, asymmetric, cryptography, asymmetric
+  Q1034 [s156.5 m156.5] What can be defined as a digital certificate that binds a set of descriptive data items, other than a public key, either directly 
+        <- public key, digital certificate, certificate, public-key, digital certificate
+  Q989 [s46.5 m46.5] Which of the following is not a DES mode of operation?
+        <- des, cipher, cipher, block, chaining
+  Q943 [s75.2 m75.2] Which is NOT a suitable method for distributing certificate revocation information?
+        <- certificate revocation, certificate, crl, ocsp, certificate
+  Q976 [s63.0 m63.0] What level of assurance for a digital certificate verifies a user's name, address, social security number, and other information a
+        <- digital certificate, certificate, digital certificate, certificate, digital certificate
+  Q1379 [s53.8 m31.0] What is a commercial applica tion of steganography that is used to identify pictures or verify their authenticity?
+        <- steganography, digital signature, md5, signature, hash
+  Q1561 [s53.8 m31.0] What is a commercial applica tion of steganography that is used to identify pictures or verify their authenticity?
+        <- steganography, digital signature, md5, signature, hash
+
+===== 3.7  Understand methods of cryptanalytic attacks   [6 questions] =====
+  Q2305 [s23.0 m23.0] ASimple Power Analysis (SP
+        <- power analysis, attack
+  Q2354 [s27.0 m8.0] The BEST method to mitigate the risk of a dictionary attack on a system is to
+        <- dictionary attack, attack
+  Q935 [s31.8 m7.2] Which of the following can best be defined as a cryptanalysis technique in which the analyst tries to determine the key from knowl
+        <- cryptanalysis, cryptanalysis, attack, cryptanalysis, attack
+  Q1828 [s36.2 m31.5] The following compilation represents what facet of cryptanalysis? A 8.2 B 1.5 C 2.8 D 4.3 E 12.7 F 2.2 G 2.0 H 6.1 I 7.0 J 0.2 K 0
+        <- cryptanalysis, frequency analysis, cryptanalysis, cryptanalysis, cryptanalysis
+  Q1317 [s29.2 m10.2] The goal of cryptanalysis is to ____________.
+        <- cryptanalysis, cryptanalysis, cryptanalysis, cryptanalysis
+  Q1388 [s29.2 m10.2] The goal of cryptanalysis is to ____________.
+        <- cryptanalysis, cryptanalysis, cryptanalysis, cryptanalysis
+
+===== 3.8  Apply security principles to site and facility design   [4 questions] =====
+  Q2613 [s21.0 m16.0] In a basic SYN flood attack, what is the attacker attempting to achieve?
+        <- flood
+  Q786 [s46.0 m30.0] Crime Prevention Through Environmental Design (CPTED) is a discipline that:
+        <- cpted, crime prevention through environmental design, cpted, crime prevention through environmental design, facility
+  Q846 [s46.5 m35.5] Within Crime prevention through Environmental Design (CPTED ) the concept of territorial ity is best described as:
+        <- cpted, crime prevention through environmental design, cpted, crime prevention through environmental design, area
+  Q2046 [s35.0 m35.0] Which of the following is NOT considered a natural disaster?
+        <- natural disaster, flood, earthquake
+
+===== 3.9  Design site and facility security controls   [49 questions] =====
+  Q722 [s131.5 m131.5] A momentary power outage is a:
+        <- power outage, momentary, momentary power, blackout, spike
+  Q784 [s144.2 m144.2] A prolonged high voltage is a:
+        <- voltage, voltage, prolonged, high voltage, prolonged high
+  Q797 [s147.0 m147.0] A momentary high voltage is a:
+        <- voltage, voltage, momentary, high voltage, momentary high
+  Q799 [s129.5 m129.5] A prolonged power supply that is belownormal voltage is a:
+        <- voltage, voltage, prolonged, prolonged power, brownout
+  Q823 [s129.0 m129.0] The ideal operating humidity range is defined as 40 percent to 60 percent. Low humidity (less than 40 percent) can produce what ty
+        <- humidity, humidity range, operating humidity, humidity, humidity range
+  Q789 [s52.0 m52.0] Which of the following statements pertaining to fire suppression systems is TRUE?
+        <- fire suppression, halon, fire suppression, fire, extinguisher
+  Q790 [s4.5 m4.5] The most prevalent cause of computer center fires is which of the following?
+        <- fire suppression, fire suppression system, power, fire
+  Q794 [s23.5 m23.5] Which of the following statements pertaining to air conditioning for an informa tion processing facility is correct?
+        <- air conditioning, power, power
+  Q810 [s34.0 m34.0] Which is the last line of defense in a physical security sense?
+        <- physical security, perimeter, physical
+  Q826 [s25.0 m2.8] To mitigate the risk of fire in your new data center, you plan to implementa heat-act ivated fire detector. Your requirement is to
+        <- fire, detector, wall, fire suppression, smoke detector
+  Q876 [s82.2 m82.2] Under what conditions would the use of a Class C fire extinguisher be preferable to a Class A extinguisher?
+        <- fire extinguisher, extinguisher, fire extinguisher, fire, fire
+  Q2172 [s90.0 m90.0] Therecommended optimal relative humidity range for computer operations is:
+        <- humidity, humidity range, humidity, therecommended, humidity range
+  Q2224 [s90.0 m90.0] Therecommended optimal relative humidity range for computer operations is:
+        <- humidity, humidity range, humidity, therecommended, humidity range
+  Q2214 [s29.8 m0.0] Which of the following is NOT considered an acceptable replacement for Halon discharge systems?
+        <- halon, halon, halon
+  Q2230 [s29.8 m0.0] Which of the following is NOT considered an acceptable replacement for Halon discharge systems?
+        <- halon, halon, halon
+
+----- general (25) -----
+  Q100 Which of the following biometrics devices h as the highest Crossover Error Rate (CER)?
+  Q316 Which of the following methods of providing telecommunications continuity involves the use of an alternative media?
+  Q373 What is the framing specification used for transmitting digital signals at 1.544 Mbps on a T1 facility?
+  Q507 The preliminary steps to security planning include all of the following EXCEPT which of the following?
+  Q726 Controls like guards and general steps to maintain building security, securing of server rooms or laptops, the protection of cable
+  Q780 When backing up an applications system's data, which of the following is a key question to be answered first?
+  Q793 Which of the following is not a critical security aspect of Operations Controls?
+  Q843 Which of the following floors would be most appropriate to locate information processing facilities in a 6-stories building?
+  Q855 In a dry pipe system, there is no water standing in the pipe - it is being held back by what type of valve?
+  Q1098 Which of the following is NOT a basic component of security architecture?
+  Q1216 Which of the following is NOT a basic component of security architecture?
+  Q1407 Which trusted facility management concept implies that two operators must review and approve the work of each other?
+  Q1584 In biometrics, a good measure of performance of a system is the:
+  Q1743 How often should an independent review of the security controls be performed, according to OMB Circular A-130?
+  Q1785 Which of the following would NOT be a component of a general enterprise security architecture model for an organization?
+  Q1815 The MULTICS operating system is a classic example of:
+  Q1913 The memory hierarchy in a typical digital computer, in order, is:
+  Q1959 When microcomputers were first developed, the instruction fetch time was much longer than the instruct ion execution time because 
+  Q2011 The basic version of the Construction Cost Model (COCOMO), which proposes quantitative, life-cycle re lationships, performs what f
+  Q2076 What type of security controls operate on the input to a computing system, on the data being processed, and the output of the syst
+
+########################################################################################
+# DOMAIN 4: Communication and Network Security
+########################################################################################
+
+===== 4.1  Assess and implement secure design principles in network architectures   [247 questions] =====
+  Q278 [s41.8 m41.8] An intranet provides more security and control than which of the following:
+        <- intranet, extranet, ethernet, ethernet, intranet
+  Q280 [s74.5 m58.8] Which of the following is a drawback of fiber optic cables?
+        <- fiber optic, fiber, optic, fiber optic, cable
+  Q285 [s55.2 m39.0] Which of the following cable types is limited in length to 185 meters?
+        <- cable, cable, meters, cable, cable
+  Q307 [s99.0 m99.0] Which ISO/OSI layer establishes thecommunications link between individual devices over a physicallink or channel?
+        <- osi, iso/osi, network layer, transport layer, data link layer
+  Q336 [s54.8 m40.8] Which of the following LAN devices only operates at the physicallayer of the OSI/ISO model?
+        <- osi, physicallayer, hub, bridge, osi
+  Q454 [s83.0 m83.0] At which of the OSI/ISO model layer is IP implemented?
+        <- osi, network layer, transport layer, session layer, data link layer
+  Q457 [s144.2 m144.2] Which layer of the DoD TCP/IP model controls the communication flow between hosts?
+        <- tcp, tcp/ip, tcp/ip model, transport layer, application layer
+  Q460 [s73.2 m73.2] An application layer fire wall is also called a:
+        <- application layer, transport layer, session layer, presentation layer, layer
+  Q463 [s45.8 m45.8] You are part of a security staff at a highly profitable ba nk and each day, all traffic on the network is logged for later review.
+        <- tcp, cable, network, cable, network
+  Q464 [s74.5 m74.5] Which of the following protocols operat es at the session layer (layer 5)?
+        <- session layer, session layer, layer layer, layer, igmp
+  Q2582 [s24.0 m24.0] Which one of the following considerations h as the LEA ST impact when considering transmission security?
+        <- transmission, bandwidth, network
+  Q437 [s31.5 m19.5] The DMZ does not normally contain:
+        <- dmz, dns, dmz, dns
+  Q1624 [s69.8 m69.8] What does the protocol RARP do?
+        <- rarp, rarp, protocol rarp, protocol, network
+  Q1660 [s56.5 m56.5] Which UTP cable category is rated for 16 Mbps?
+        <- cable, cable, mbps, token ring, cabling
+  Q1689 [s79.5 m79.5] FDDI us es what type of network topology?
+        <- topology, fddi, topology, mesh, network
+
+===== 4.2  Secure network components   [92 questions] =====
+  Q76 [s23.2 m0.5] What is the primary goal of setting up a honeypot?
+        <- honeypot, honeypot, host
+  Q2545 [s21.0 m21.0] Passive Infrared Sensors (PIR) used in a non-climate controlled environment should
+        <- infrared
+  Q5 [s30.2 m30.2] A host-based IDS is resident on which of the following?
+        <- ids, ids, hids, nids, intrusion detection
+  Q18 [s56.0 m56.0] Attributes that characterize an attack are stored for reference us ing which of the following Intrusion Detection System (IDS)?
+        <- ids, intrusion detection, ids, signature-based
+  Q63 [s8.8 m8.8] Detective/Technical measures:
+        <- intrusion detection, intrusion detection
+  Q978 [s22.8 m17.0] Which of the following off ers secu rity to wireless communications?
+        <- wireless, wireless
+  Q1148 [s3.5 m3.5] Which of the following is best defined as a mode of system termination that automatically leaves system processes and components i
+        <- firewall, switch
+  Q1183 [s48.0 m48.0] What would you call a network security control deployed in line to detects, al erts, and takes action when a possible intrusion is
+        <- ips, hids, nids, intrusion detection, intrusion prevention
+  Q1257 [s3.5 m3.5] The viewing of recorded events after the fact us ing a closed-circuit TV camera is considered a
+        <- firewall, switch
+  Q1297 [s23.5 m17.8] A circuit level gateway is ________ when compared to an application level firewall.
+        <- firewall, drawback, level firewalls
+  Q2484 [s21.0 m21.0] What is the MOST important reason to configure unique user IDs?
+        <- ids
+  Q2547 [s30.0 m15.0] Which of the following provides effective management assurance for a Wireless Local Area Network (WLAN)?
+        <- wireless, vpn concentrator, device
+  Q2615 [s84.0 m84.0] What should be the INITIAL response to Intrusion Detection System/Intrusion Prevention System (IDS/IPS) alerts?
+        <- ids, ips, intrusion detection, intrusion prevention
+  Q201 [s57.8 m1.5] What IDS approach relies on a database of known attacks?
+        <- ids, signature-based, behavior-based, intrusion detection, network-based intrusion
+  Q2462 [s21.0 m10.0] A disadvantage of an application filtering firewall is that it can lead to
+        <- firewall
+
+===== 4.3  Implement secure communication channels according to design   [69 questions] =====
+  Q310 [s66.2 m50.2] Secure Sockets Layer (SSL) is very heavily used for protecting which of the following?
+        <- ssl, sockets layer, secure sockets, secure, ssl
+  Q244 [s118.2 m80.5] Which of the following is NOT true about IPSec Tunnel mode?
+        <- ipsec, tunnel, tunnel mode, ipsec, tunnel mode
+  Q246 [s6.2 m0.5] Proxies works by transferring a copy of each accepted data packet from one network to another, thereby masking the:
+        <- payload, payload
+  Q254 [s30.5 m22.2] SMTP can best be described as:
+        <- smtp, email, https, smtp, imap
+  Q259 [s41.8 m15.2] Which of the following protocols off ers native encryption?
+        <- ipsec, ssl, tls, ssh, ipsec
+  Q1002 [s22.2 m8.2] Which of the following should be used as areplacement for Te lnet for secure remote login over an insecure network?
+        <- ssl, ssh, secure, tunnel, secure
+  Q1007 [s9.0 m9.0] Which of the following is a cryptographic protocol and infrastructure developed to send encrypted credit card numbers over the Int
+        <- secure shell, secure
+  Q1008 [s46.0 m4.0] Which of the following are suitable prot ocols for securing VPN connections at the lower layers of the OSI model?
+        <- ipsec, ssl, tls, ssh, s/mime
+  Q1009 [s52.2 m37.2] Which of the following protocols would BEST mitigate th reats of sniffing attacks on web application traffic?
+        <- ssl, tls, ssh, secure shell, 802.1x
+  Q1012 [s117.0 m101.8] Which of the following protocols that provide integrity and authentication for IPSec, can also provide non-repudiation in IPSec?
+        <- ipsec, ipsec, ssl, secure shell, payload
+  Q2435 [s9.0 m9.0] Refer to the information below to answer the question. Asecurity practitioner detects client-based attacks on the or ganization’s 
+        <- instant messaging, email
+  Q2481 [s68.0 m26.5] After a thorough analysis, it was discovered that a perpetrator compromised a network by gaining access to the network through a S
+        <- ssl, secure socket, ipsec, vpn, secure
+  Q2637 [s21.0 m21.0] What is the PRIMARY goal for us ing Domain Name System Security Extensions (DNSSEC) to sign records?
+        <- dnssec
+  Q479 [s45.5 m45.5] The basic language of modems and dial-up remote access systems is:
+        <- dial-up, remote access, dial-up, remote access
+  Q256 [s48.0 m48.0] A circuit level proxy is ___________________ when compared to an application level proxy.
+        <- circuit level proxy, application level proxy, secure, circuit level proxy, application level proxy
+
+----- general (68) -----
+  Q12 Which of the following tools is less likely to be used by a hacker?
+  Q185 You wish to make use of "port knocking" technologies. How can you BEST explain this?
+  Q206 Controlling access to information systems and associated networks is necessary for the preservation of their:
+  Q345 Which of the following are WELL KNOWN PORTS assigned by the IANA?
+  Q353 Which of the following is an advantage of proxies?
+  Q357 Which of the following is most affected by denial-of-service (DOS) attacks?
+  Q371 Good security is built on which of the following concept?
+  Q379 Thecommunications products and services, which ensure that the various com ponents of a network (such as devices, protocols, and a
+  Q440 Which of the following is an IP address that is private (i.e. reserved for internal networks, and not a valid address to use on th
+  Q452 Which of the following is an IP address that is private (i.e. reserved for internal networks, and not a valid address to use on th
+  Q455 Packet Filtering Firewalls can also enable access for:
+  Q456 Which of the following is not a common weakness of packet filtering firewalls?
+  Q469 You wish to make use of "port knocking" technologies. How can you BEST explain this?
+  Q492 What is called an event or activity that h as the potential to cause harm to the information systems or networks?
+  Q511 Which of the following could be BEST de fined as the likelihood of a threat ag ent taking advantage of a vulnerability?
+  Q619 Which of the following is a CHARACTERISTIC of a decision support system (DSS) in re gards to Threats and Risks Analysis?
+  Q659 Many approaches to Knowledge Discovery in Databases (KDD) are used to identify valid and useful patterns in data. This is an evolv
+  Q681 Which of the following can be defined as the process of rerunning a portion of the test scenario or test plan to ensure that chang
+  Q699 Which of the following attack includes social engineer ing, link manipulation or web site forgery techniques?
+  Q721 Ensuring that printed reports reach proper us ers and that r eceipts are signed before releasing sensitive documents are examples 
+
+########################################################################################
+# DOMAIN 5: Identity and Access Management (IAM)
+########################################################################################
+
+===== 5.1  Control physical and logical access to assets   [105 questions] =====
+  Q2 [s6.0 m6.0] What is an error called that causes a system to be vulnerable because of the environment in which it is installed?
+        <- access, access control, access control mechanism, access
+  Q9 [s27.0 m27.0] Technical controls such as encryption and access control can be built into the operating system, be software applications, or can 
+        <- access control, access
+  Q11 [s33.5 m12.5] In Mandatory Access Control, sensitivity labels attached to object contain what information?
+        <- access control, access, object, object
+  Q14 [s66.2 m20.5] Which access control model is also called Non Discretionary Access Control (NDAC)?
+        <- access control, access control, access, access, access control
+  Q15 [s50.8 m32.2] Which access control model provides upper and lower bounds of access capabilities for a subject?
+        <- access control, access control, access, subject, access
+  Q1221 [s29.8 m29.8] In the context of access control, locks, gates, guards are examples of which of the following?
+        <- access control, access, access control, access, asset
+  Q1236 [s4.5 m4.5] In order to enable us ers to perform tasks and duties without having to go through extra steps it is important that the security c
+        <- access control, access control system, access, subject
+  Q1289 [s27.0 m27.0] Which of the following logical access exposures involves changing data before, or as it is entered into the computer?
+        <- logical access, access
+  Q1332 [s29.2 m17.5] Examples of types of physical access controls include all except which of the following?
+        <- physical access, access, physical access, access
+  Q1343 [s27.0 m27.0] Which aspect of security was the Bell-LaPadula access control model designed to protect?
+        <- access control, access
+  Q2587 [s15.0 m15.0] To protect auditable information, which of the following MUST be configured to only allow read access?
+        <- access control, access, access
+  Q2621 [s27.0 m27.0] Refer to the information below to answer the question. An organization experiencing a negative financial impact is forced toredu c
+        <- logical access, access
+  Q2628 [s48.0 m41.0] Refer to the information below to answer the question. A large organization us es unique identifiers and requires them at the star
+        <- access control, access control, access, subject, access
+  Q758 [s27.0 m16.5] Which of the following logical access exposures INVOLVES CHANGING data before, or as it is entered into the computer?
+        <- logical access, access
+  Q1688 [s27.5 m18.8] Asoftware interface to the operating system that implements access control by limiting the system commands that are available to a
+        <- access control, access, access
+
+===== 5.2  Manage identification and authentication of people, devices, and services   [202 questions] =====
+  Q176 [s111.0 m111.0] What is called a password that is the same for each log-on session?
+        <- password, log-on, password, log-on, password
+  Q4 [s57.5 m10.0] When a biometric system is used, which error type deals with the possibility of GRANTING access to impostors who should be REJECTE
+        <- biometric, biometric, identification, authentication, biometric
+  Q183 [s44.0 m35.5] What is the most critical characteristic of a biometric identifying system?
+        <- biometric, biometric, storage requirements, biometric, biometric
+  Q193 [s73.0 m64.0] In biometrics, "one-to-many" sear ch against database of stored biometric images is done in:
+        <- biometric, biometric, biometrics, identification, authentication
+  Q1600 [s36.0 m15.0] An acceptable biometric throughput rate is:
+        <- biometric, biometric
+  Q933 [s5.2 m5.2] Which of the following is NOT a property of a one-way hash function?
+        <- authentication, fingerprint, fingerprint, identify
+  Q980 [s29.0 m20.2] Which answer BEST describes a secure cryptoprocessor that can be used to store cryptographic keys, passwords or certificates in a 
+        <- passwords, smart card, authentication, smart card
+  Q998 [s3.5 m3.5] Cryptography does not concern itself with which of the following choices?
+        <- authentication, passwords
+  Q1000 [s33.2 m33.2] Which of the following is NOT a known type of Message Authentication Code (MAC)?
+        <- authentication, authentication, authentication, fingerprint, fingerprint
+  Q1048 [s23.2 m23.2] Secure Sockets Layer (SSL) us es a Message Authentication Code (MAC) for what purpose?
+        <- authentication, authentication, identify
+  Q2607 [s109.0 m102.0] A large bank deploys hardware tokens to all customers that use their online banking system. The token generates and displays a six
+        <- password, token, password, authentication, token
+  Q2609 [s36.0 m36.0] What is the MOST effective method for gaining unauthorized access to a file prot ected with a long complex password?
+        <- password, password
+  Q2620 [s28.0 m28.0] Which of the following is an advantage of on-premise Credential Management Systems?
+        <- credential, credential
+  Q2634 [s66.0 m66.0] Multi-Factor Authentication (MF
+        <- authentication, multi-factor, password, token, password
+  Q120 [s57.0 m57.0] The three classic ways of authenticating yourself to the computer security software are: something you know, something you have, a
+        <- something you know, something you have, know something
+
+===== 5.3  Federated identity with a third-party service   [7 questions] =====
+  Q2483 [s28.0 m19.0] An organization is selecting a service provider to assist in the consolidation of multiple computing sites including development, 
+        <- service provider, service provider
+  Q2320 [s132.0 m132.0] Which of the following is a function of Security Assertion Markup Language (SAML)?
+        <- saml, assertion, assertion, markup, saml
+  Q2378 [s153.0 m116.0] Which of the following BEST mitigates areplay attack against a system us ing identity federation and Security Assertion Markup Lan
+        <- federation, saml, assertion, assertion, markup
+  Q2539 [s86.0 m72.0] Which item below is a federated identity standard?
+        <- federated, federated identity, saml, assertion, assertion
+  Q2553 [s172.0 m172.0] What is a common challenge when implementing Security Assertion Markup Language (SAML) for identity integration between on-premise
+        <- saml, assertion, identity provider, assertion, markup
+  Q2630 [s55.0 m34.0] Which of the following problems is not addressed by us ing OAuth (Open Standard to Authorization) 2.0 to integrate a third-party i
+        <- oauth, identity provider, identity provider, third-party identity
+  Q1139 [s22.8 m19.2] In which of the following cloud computing service model are applications hosted by the service provider and made available to the 
+        <- service provider, service provider
+
+===== 5.4  Implement and manage authorization mechanisms   [28 questions] =====
+  Q1873 [s22.8 m22.8] Context-dependent control us es which of the following to make decisions?
+        <- context-dependent, content-dependent
+  Q2277 [s21.0 m12.0] Which of the following questions can be answer ed us ing user and group entitlement reporting?
+        <- entitlement
+  Q20 [s43.5 m5.2] Suppose you area domain administrator and are choosing an employee to carryout backups. Which access control method do you think w
+        <- discretionary access control, mandatory access control, role-based access control, rule-based access control, dac
+  Q28 [s50.2 m12.0] The type of discretionary access control (DAC) that is based on an individual's identity is also called:
+        <- discretionary access control, non-discretionary, discretionary access control, rule-based access control, dac
+  Q62 [s62.8 m4.5] In an organization where there are frequent personnel ch anges, non-discretionary access control us ing Role Based Access Control 
+        <- non-discretionary, discretionary access control, rbac, role, role
+  Q189 [s39.2 m21.0] A central authority determines what subjects can have access to cer tain objects based on the organizational security policy is ca
+        <- non-discretionary, discretionary access control, mandatory access control, rule-based access control, non-discretionary
+  Q211 [s25.5 m8.2] What security model implies a central authority that define rules and sometimes global rules, dictating what subjects can have acc
+        <- non-discretionary, discretionary access control, mandatory access control, non-discretionary, discretionary access control
+  Q225 [s18.5 m6.2] What can be defined as a table of subjects and objects indicating what actions individual subjects can take upon individual object
+        <- capability table, access control list, capability table, access control list, acl
+  Q232 [s45.2 m6.5] Which of the following would be used to implement Mandatory Access Control (MAC)?
+        <- mandatory access control, role-based access control, mac, permission, discretionary access control
+  Q1421 [s21.0 m9.8] What security model is dependant on security labels?
+        <- non-discretionary, discretionary access control, mandatory access control
+  Q1902 [s21.0 m21.0] Content-dependent control makes access decisions based on:
+        <- content-dependent
+  Q2199 [s64.2 m64.2] Individual privacy rights as defined in the HIPAAPrivacy Rule include consent and authorization by the patient for the release of 
+        <- authorization, authorization, permission, rights, authorization
+  Q2256 [s64.2 m64.2] Individual privacy rights as defined in the HIPAAPrivacy Rule include consent and authorization by the patient for the release of 
+        <- authorization, authorization, permission, rights, authorization
+  Q2501 [s21.0 m21.0] The MAIN reason an organization conducts a security authorization process is to
+        <- authorization
+  Q2612 [s7.0 m7.0] The type of authorized interactions a subject can have with an object is
+        <- permission
+
+===== 5.5  Manage the identity and access provisioning lifecycle   [0 questions] =====
+
+===== 5.6  Implement authentication systems   [51 questions] =====
+  Q1682 [s28.0 m21.0] The definition of CHAP is:
+        <- chap, authentication protocol
+  Q83 [s48.0 m0.2] Which of the following would describe a type of biometric error refers to as false rejection rate?
+        <- false rejection, type i error, type ii error, cer, biometric system
+  Q109 [s45.5 m3.5] The throughput rate is the rate at which individuals, once enrolled, can be processed and identified or authenticated by a biometr
+        <- biometric system, throughput rate, biometric system, throughput rate
+  Q125 [s90.8 m87.8] What is called the percentage at which the False Rejection Rate equals the False Acceptance Rate?
+        <- false acceptance, false rejection, false acceptance, false rejection, type i error
+  Q25 [s35.0 m7.8] RADIUS incorporates which of the following services?
+        <- radius, authentication server, radius, chap, pap
+  Q220 [s22.8 m22.8] Single Sign-on (S SO) is characterized by which of the following advantages?
+        <- single sign-on, single sign-on
+  Q223 [s33.2 m24.5] What is Kerberos?
+        <- kerberos, authentication protocol, kerberos, radius, authentication protocol
+  Q231 [s40.2 m26.8] Which of the following statements pertaining to us ing Kerberos without any extension is false?
+        <- kerberos, kerberos, authentication protocol, kerberos, authentication server
+  Q234 [s43.8 m14.0] Which of the following is NOT part of the Kerberos authentication protocol?
+        <- kerberos, authentication protocol, kerberos
+  Q282 [s8.8 m8.8] Which of the following can best eliminate dial-up access through a Remote Access Server as a hacking vector?
+        <- tacacs, tacacs
+  Q1740 [s22.8 m12.2] Us ing symmetrickey cryptography, Kerberos authenticates clients to otherentities on a network and facilitates communications thro
+        <- kerberos, kerberos
+  Q1942 [s21.0 m21.0] The following elements comprise a portion of what services? Digital certification Certification authority Timestamping Lightweight
+        <- ldap
+  Q2309 [s42.0 m2.0] Which of the following is an authentication protocol in which a new random number is gene rated uniquely for each login session?
+        <- authentication protocol, chap, pap, authentication protocol
+  Q2384 [s21.0 m21.0] Why MUST a Kerberos server be well protected from unauthorized access?
+        <- kerberos
+  Q2498 [s21.0 m21.0] Single Sign-On (S SO) is PRIMARILY designed to address which of the following?
+        <- single sign-on
+
+----- general (100) -----
+  Q10 This is a common security issue that is extremely hard to control in large environments. It occurs when a user h as more computer 
+  Q21 Logical or technical controls involve the restriction of access to systems and the protection of information. Which of the followi
+  Q75 An access system that grants us ers only those rights necessary for them to perform their work is operating on which security prin
+  Q79 An attack initiated by an entity that is authorized to access system resources but us es them in away not approved by those who gr
+  Q103 In discretionary access environments, which of the following entities is authorized to grant information access to other people?
+  Q129 How would nonrepudiation be best classified as?
+  Q132 Most access violations are:
+  Q152 You area manager for a large international bank and periodically move employees between positions in your department. What is this
+  Q153 What refers to legitimate us ers accessing networked services that would normally be restricted to them?
+  Q191 What is called the access protection system that limits connections by calling back the number of a previously authorized location
+  Q235 Organizations should consider which of the following first before allowing external access to their LANs via the Internet?
+  Q339 What refers to legitimate us ers accessing networked services that would normally be restricted to them?
+  Q441 The Logical Link Control sub-layer is a part of which of the following?
+  Q487 Which property ensures that only the intended recipient can access the data and nobody else?
+  Q491 Which answer BEST describes information access permissions where, unless the user is specifically given access to certain data the
+  Q503 Related to information security, the prevention of the intentional orunintentional unauthorized disclosure of contents is which of
+  Q504 In discretionary access environments, which of the following entities is authorized to grant information access to other people?
+  Q524 Which term BEST describes a practice used to detect fraud for us ers ora user by forcing them to be away from the workplace for a 
+  Q539 The property of a system ora system resource being accessible and usable upon demand by an authorized system entity, according to 
+  Q554 Making sure that the data is accessible when and where it is needed is which of the following?
+
+########################################################################################
+# DOMAIN 6: Security Assessment and Testing
+########################################################################################
+
+===== 6.1  Design and validate assessment, test, and audit strategies   [0 questions] =====
+
+===== 6.2  Conduct security control testing   [28 questions] =====
+  Q1988 [s21.0 m10.5] Which of the following best defines social engineering?
+        <- social engineering
+  Q2271 [s21.0 m14.0] A network scan found 50% of the systems with one or more critical vulnerabilities. Which of the following represents the BEST acti
+        <- scan
+  Q2497 [s106.0 m97.0] Which of the following is the FIRST action that a system administrator should take when it is reveal ed during a penetration test 
+        <- penetration, penetration test, penetration, penetration test, penetration
+  Q215 [s132.0 m132.0] Which of the following answers best describes the type of penetration testing where the analyst h as full knowledge of the network
+        <- penetration, penetration testing, penetration, penetration testing, penetration
+  Q224 [s41.5 m41.5] A network-based vulnerability assessment is a type of test alsoreferred to as:
+        <- vulnerability assessment, vulnerability assessment, test, scan, vulnerability assessment
+  Q1699 [s22.8 m22.8] In finger scan technology,
+        <- scan, scan
+  Q1749 [s25.8 m25.8] According to NIST, which choice below is not an accepted security selftesting technique?
+        <- war dialing, password cracking, penetration, penetration testing, war dialing
+  Q2054 [s91.5 m91.5] Which of the following would NOT be considered a penetration testing technique?
+        <- penetration, penetration testing, penetration, penetration testing, war dialing
+  Q2329 [s21.0 m21.0] Which of the following is the BEST method to assess the effectiveness of an organization's vulnerability management program?
+        <- scan, vulnerability assessment, vulnerability scan
+  Q2367 [s13.0 m13.0] An engineer in a software company h as created a virus cr eation tool. The tool can gene rate thousands of polymorphic viruses. Th
+        <- scanner, test
+  Q2546 [s104.0 m104.0] Which of the following is the FIRST step of a penetration test plan?
+        <- penetration, penetration test, penetration, penetration test, penetration
+  Q2554 [s21.0 m21.0] What physical characteristic does are tinal scan biometric device measure?
+        <- scan
+  Q2591 [s93.0 m93.0] When planning a penetration test, the tester will be MOST interested in which information?
+        <- penetration, penetration test, penetration, tester, penetration test
+  Q2623 [s78.0 m78.0] The three PRIMARY requirements for a penetration test are
+        <- penetration, penetration test, penetration, penetration test, test
+  Q698 [s43.8 m12.2] Debbie from finance called to tell you that she downloaded and installed a free wallpaper program that sets the wallpaper on her c
+        <- scan, port scan, social engineering
+
+===== 6.3  Collect security process data   [1 questions] =====
+  Q2571 [s21.0 m21.0] Which of the following assessment metrics is BEST used to understand asystem's vulnerability to potential exploits?
+        <- metrics
+
+===== 6.4  Analyze test output and generate report   [2 questions] =====
+  Q2039 [s7.0 m7.0] Which of the following is NOT true regarding software unit testing?
+        <- test output
+  Q2333 [s28.0 m28.0] Which of the following is a limitation of the Common Vulnerability Scoring System (CVSS) as it relates to conducting code review?
+        <- cvss, severity
+
+===== 6.5  Conduct or facilitate security audits   [34 questions] =====
+  Q2282 [s48.0 m48.0] During an audit, the auditor finds evidence of potentially illegal activity. Which of the following is the MOST appropriate action
+        <- auditor, audit, evidence
+  Q2588 [s42.0 m31.0] According to best practice, which of the following groups is the MOST effective in performing an information security compliance a
+        <- audit, compliance audit
+  Q175 [s22.8 m22.8] Controls such as job rotation, the sharing of responsibilities, and reviews of audit records are associated with:
+        <- audit, audit
+  Q544 [s10.5 m10.5] Who should measure the effectiveness of Information System security related controls in an organization?
+        <- auditor, auditor, audit
+  Q736 [s22.8 m22.8] What is the essential difference between a self-audit and an independent audit?
+        <- audit, audit
+  Q2079 [s27.0 m27.0] Which choice below is NOT a security goal of an audit mechanism?
+        <- audit, audit, audit trail, trail, audit trail
+  Q2104 [s102.5 m102.5] Which choice below is the BEST description of an audit trail?
+        <- audit, audit trail, trail, audit trail, audit
+  Q2184 [s78.0 m78.0] What does an audit trail or access log usually NOT record?
+        <- audit, audit trail, trail, audit trail, audit
+  Q2191 [s8.8 m8.8] Which is NOT considered a preventative security measure?
+        <- audit, audit
+  Q2202 [s8.8 m8.8] Which of the following is NOT a form of computer/network surveillance?
+        <- audit, audit
+  Q2394 [s35.0 m35.0] The amount of data that will be collected during an audit is PRIMARILY determined by the
+        <- audit, audit, audit scope
+  Q2415 [s30.0 m21.0] Which of the following is the MOST crucial for a successful audit plan?
+        <- audit, audit, evidence
+  Q2505 [s21.0 m21.0] Which of the following is the BEST reason to review audit logs periodically?
+        <- audit
+  Q2533 [s21.0 m14.0] While investigating a malicious event, only six days of audit logs from the last month were available. What policy should be updat
+        <- audit
+  Q2574 [s21.0 m21.0] An organization is found lack ing the ability to properly es tablish performance indicators for its Web hosting solution during an
+        <- audit
+
+----- general (17) -----
+  Q99 Which of the following reviews system and event logs to de tect attacks on the host and determine if the attack was successful?
+  Q490 Within therealm of IT security, which of the following combinations best defines risk?
+  Q580 What can be defined as an event that could cause harm to the information systems?
+  Q841 What mechanism automatically causes an alarm originating in a data center to be transmitted over the local municipal fire or polic
+  Q842 Which of the following ensures that a TCB is designed, developed, and maintained with formally controlled standards that enforces 
+  Q1163 Which of the following are required for Life-Cycle Assurance?
+  Q1215 Which of the following are required for Life-Cycle Assurance?
+  Q1262 Which of the following ensures that a TCB is designed, developed, and maintained with formally controlled standards that enforces 
+  Q1295 When should a post-mortem review meeting be held after an intrusion h as been properly taken care of?
+  Q1326 Within therealm of IT security, which of the following combinations best defines risk?
+  Q1396 Which of the following is not an Orange Book-defined life cycle assurance requirement?
+  Q1599 Which choice below is NOT an example of appropriate security management practice?
+  Q2122 Which one of the following are recommended practices regarding electronic monitoring of employees email? Select three.
+  Q2144 The process of analyzing large data sets in a data warehouse to find non-obvious patterns is called:
+  Q2432 Which of the following MOST influe nces the design of the organization's electronic monitoring policies?
+  Q2566 The stringency of an Information Technology (IT) security assessment will be determined by the
+  Q2600 A thorough review of an organization's aud it logs finds that a disgruntled network administrator h as intercepted emails meant fo
+
+########################################################################################
+# DOMAIN 7: Security Operations
+########################################################################################
+
+===== 7.1  Understand and comply with investigations   [10 questions] =====
+  Q1996 [s24.5 m24.5] What is enticement?
+        <- enticement, entrapment, enticement
+  Q1315 [s27.0 m27.0] If an employee is suspected of computer crime and evidence need to be collected, which of the following departments must be involv
+        <- computer crime, evidence
+  Q1375 [s27.0 m27.0] If an employee is suspected of computer crime and evidence need to be collected, which of the following departments must be involv
+        <- computer crime, evidence
+  Q1385 [s22.8 m22.8] Good forensics requires the use of a bit level copy?(True/False)
+        <- forensics, forensics
+  Q1439 [s29.5 m29.5] A chain of custody shows who ______ _________ and _________.(Choose three)
+        <- chain of custody, custody, evidence, evidence
+  Q1454 [s29.5 m29.5] A chain of custody shows who ______ _________ and _________.(Choose three)
+        <- chain of custody, custody, evidence, evidence
+  Q1464 [s22.8 m22.8] Good forensics requires the use of a bit level copy?(True/False)
+        <- forensics, forensics
+  Q1849 [s7.0 m0.0] Why is security an issue when a system is booted into single-user mode?
+        <- forensics
+  Q2361 [s27.0 m27.0] Which of the following is ensured when hash ing files during chain of custody handling?
+        <- chain of custody, custody
+  Q2619 [s21.0 m12.0] How can a forensic specialist exclude from examination a large percentage of operating system files residing on a copy of the targ
+        <- forensic
+
+===== 7.2  Conduct logging and monitoring activities   [1 questions] =====
+  Q2496 [s28.0 m9.0] What does secure authentica tion with logging provide?
+        <- logging, logging
+
+===== 7.3  Perform Configuration Management (CM)   [13 questions] =====
+  Q2618 [s27.0 m13.0] Which one of the following is a common risk with network configuration management?
+        <- configuration management, configuration
+  Q523 [s29.2 m29.2] The major objective of system configuration management is which of the following?
+        <- configuration management, configuration, configuration management, configuration
+  Q745 [s31.2 m31.2] Configuration Management controls what?
+        <- configuration management, configuration, configuration, configuration management, configuration
+  Q1160 [s31.2 m31.2] Configuration Management controls what?
+        <- configuration management, configuration, configuration, configuration management, configuration
+  Q1410 [s31.2 m31.2] Which of the following falls under the categories of configuration management?(Choose three)
+        <- configuration management, configuration, configuration, configuration management, configuration
+  Q1865 [s29.2 m29.2] Configuration management control best refers to:
+        <- configuration management, configuration, configuration management, configuration
+  Q1989 [s52.0 m52.0] Which choice does NOT describe an element of configuration management?
+        <- configuration management, configuration management, configuration item, configuration, configuration items
+  Q2029 [s41.2 m41.2] Which of the following is NOT a component of configuration management?
+        <- configuration management, configuration audit, configuration, configuration, configuration management
+  Q2055 [s11.2 m11.2] What is searching for data correlations in the data warehouse called?
+        <- configuration management, configuration, configuration management, configuration
+  Q2056 [s37.5 m27.0] In configuration management, what is a software library?
+        <- configuration management, configuration, configuration items, configuration, configuration management
+  Q2132 [s56.2 m56.2] In configuration management, a configuration item is:
+        <- configuration management, configuration item, configuration, configuration item, configuration
+  Q2392 [s38.0 m38.0] Which of the following describes the BEST configuration management practice?
+        <- configuration management, baseline configuration, configuration, baseline, configuration
+  Q2456 [s27.0 m20.0] Which of the following are required components for implementing software configuration management systems?
+        <- configuration management, configuration
+
+===== 7.4  Apply foundational security operations concepts   [13 questions] =====
+  Q52 [s23.2 m0.5] Which of the following exemplifies proper separation of duties?
+        <- separation of duties, separation of duties, fraud
+  Q190 [s31.0 m6.5] Ensuring least privilege does not require:
+        <- least privilege, privilege, least privilege, separation of duties, privilege
+  Q585 [s71.0 m60.5] Which of the following is best practice to employ in order to reduce the risk of collusion?
+        <- collusion, collusion, least privilege, job rotation, rotation
+  Q742 [s29.8 m7.0] Which of the following rules is least likely to support the concept of least privilege?
+        <- least privilege, privilege, least privilege, privilege, account
+  Q800 [s68.8 m45.5] Which of the following is used to interrupt the opportunity to use or perform collusion to subvert operation for fraudulent purpos
+        <- collusion, collusion, need-to-know, least privilege, rotation
+  Q1329 [s43.2 m20.5] Job rotation is important because:
+        <- job rotation, rotation, fraud, least privilege, job rotation
+  Q1359 [s43.2 m20.5] Job rotation is important because:
+        <- job rotation, rotation, fraud, least privilege, job rotation
+  Q1415 [s37.2 m14.5] Why should organizations enforce separation of duties?
+        <- separation of duties, collusion, collusion, fraud, separation of duties
+  Q1770 [s27.5 m3.0] Which of the following is the best example of need-to-know?
+        <- need-to-know, need-to-know, job rotation, separation of duties, rotation
+  Q1824 [s27.5 m3.0] Separation of duties embodies what principle?
+        <- separation of duties, need-to-know, job rotation, separation of duties, rotation
+  Q1888 [s35.8 m9.5] Which of the following is an example of least privilege?
+        <- least privilege, privilege, need-to-know, least privilege, job rotation
+  Q2019 [s35.0 m1.8] Which statement below is the BEST definition of need-to-know?
+        <- need-to-know, need-to-know, need-to-know, least privilege, separation of duties
+  Q2402 [s39.0 m18.0] Which of the following is most helpful in applying the principle of LEAST privilege?
+        <- least privilege, job rotation, privilege, rotation
+
+===== 7.5  Apply resource protection   [85 questions] =====
+  Q241 [s69.0 m52.8] Which of the following stripes the data and the parity inform at ion at the block level across all the drives in the set?
+        <- parity, block level, raid, raid level, raid
+  Q261 [s54.0 m54.0] Which of the following defines when RAID separates the da ta into multiple units and stores it on multiple disks?
+        <- raid, raid, striping, striping, raid
+  Q269 [s94.2 m94.2] RAID Level 1 mirrors the data from one disk or set of disks us ing which of the following techniques?
+        <- raid, raid level, raid, mirrors, raid level
+  Q304 [s87.0 m87.0] If any server in the cluster crashes, processing continues transparently, however, the cluster suffers some performance degradatio
+        <- cluster, cluster, cluster, cluster, cluster
+  Q344 [s76.0 m76.0] What is the process that RAID Le vel 0 us es as it creates one large disk by us ing several disks?
+        <- raid, raid, mirroring, striping, clustering
+  Q769 [s153.0 m153.0] Which of the following backup methods makes a complete backup of every file on the server every time it is run?
+        <- backup, backup methods, backup, tape, full backup
+  Q776 [s166.2 m166.2] Which backup method usually resets the archive bit on the files after they have been backed up?
+        <- backup, archive bit, archive, backup method, backup
+  Q781 [s54.8 m54.8] Which of the following is often implemented by a one-for-one disk to disk ratio?
+        <- one-for-one, raid, raid level, raid, raid level
+  Q795 [s9.2 m9.2] Which of the following is NOT an example of an operational control?
+        <- backup, backup, media
+  Q809 [s155.0 m155.0] An incremental backup process
+        <- backup, incremental backup, incremental, incremental backup, backup
+  Q791 [s98.2 m65.2] Ding Ltd. is a firm specialized in intellectual property busine ss. A new video streaming application needs to be installed for th
+        <- storage, high availability, asingle server, hard drives, raid
+  Q796 [s39.0 m39.0] When RAID runs as part of the operating system on the file server, it is an example of a:
+        <- raid, raid, raid, raid
+  Q1176 [s22.8 m22.8] When referring to the Cloud Computing Service models. What would you call a service model where the consumer does not manage or co
+        <- storage, storage
+  Q1559 [s110.0 m110.0] RAID Software can run faster in the operating system because neither use the hardware-level parity drives by?
+        <- raid, parity, raid, mirroring, striping
+  Q1693 [s99.0 m99.0] Which level of RAID is commonly referred to as disk mirroring?
+        <- raid, mirroring, raid, mirroring, raid
+
+===== 7.6  Conduct incident management   [11 questions] =====
+  Q2469 [s28.0 m7.0] Refer to the information below to answer the question. During the investigation of a security incident, it is determined that an u
+        <- incident, incident
+  Q136 [s63.8 m41.0] In the course of responding to and handling an incident, you work on determining the root cause of the incident. In which step are
+        <- incident, containment, triage, recovery, containment
+  Q315 [s63.8 m41.0] In the course of responding to and handling an incident, you work on determining the root cause of the incident. In which step are
+        <- incident, containment, triage, recovery, containment
+  Q409 [s72.5 m72.5] Anotherexample of Computer Incident Response Team (CIRT) activities is:
+        <- incident, incident response, response team, response, incident
+  Q801 [s41.0 m41.0] Notifying the appropriate parties to take act ion in order to determine the extent of theseverity of an incident and toremediate t
+        <- incident, incident, incident response, response, incident
+  Q1731 [s8.8 m8.8] Which choice below is NOT an accurate statement about an organization's incident-handling capability?
+        <- incident, incident
+  Q1938 [s69.8 m69.8] The organization that establishes a collaborative partnership of computer incident response, security and law enforcement professi
+        <- incident, incident response, incident, incident response, response
+  Q2003 [s8.8 m8.8] Which choice below BEST describes a th re at as defined in the Operations Security domain?
+        <- incident, incident
+  Q2161 [s23.2 m17.2] When should security isolation of the incident scene start?
+        <- incident, incident, response
+  Q2463 [s21.0 m21.0] Which one of the following is a fundamental objective in handling an incident?
+        <- incident
+  Q2564 [s9.0 m9.0] In the area of disaster planning and re covery, what strategy entails the presentation of information about the plan?
+        <- escalation, recovery
+
+===== 7.7  Operate and maintain detective and preventative measures   [12 questions] =====
+  Q400 [s117.8 m12.8] Which of the following are additional terms used to de scribe knowledge-based IDS and behavior-based IDS?
+        <- ids, behavior-based, knowledge-based ids, ids, anomaly-based
+  Q462 [s31.5 m7.0] Which of the following best describes signature-based detection?
+        <- signature-based detection, detection, intrusion detection, signature-based detection, detection
+  Q2573 [s27.0 m6.0] Which of the following is a network intrusion detection technique?
+        <- intrusion detection, detection
+  Q501 [s4.5 m1.0] Risk mitigation and risk reduction controls for providing informa tion security are classified within three main categories, which
+        <- virus, intrusion detection, detection, prevention
+  Q667 [s49.0 m33.0] Asystem file that h as been patched numerous times becomes infected with a virus. The anti-virus software warns that disinfecting 
+        <- anti-virus, virus, virus
+  Q691 [s37.0 m37.0] Which of the following virus types changes some of its characteristics as it spreads?
+        <- virus, polymorphic, boot sector, anti-virus, virus
+  Q1265 [s4.5 m1.0] Risk mitigation and risk reduction controls for providing informa tion security are classified within three main categories, which
+        <- virus, intrusion detection, detection, prevention
+  Q1413 [s7.0 m7.0] Which of the following is NOT an attack against operations?
+        <- worm
+  Q1536 [s53.2 m53.2] A polymorphic virus is _____________.
+        <- virus, polymorphic, virus, boot sector, anti-virus
+  Q596 [s52.0 m52.0] In computing what is the name of a non- self-replicating type of malware program containing malicious code that appears to have so
+        <- malware, virus, worm, trojan, malware
+  Q640 [s60.5 m60.5] Which virus category h as the capability of changing its own code, making it harder to detect by anti-virus software?
+        <- anti-virus, virus, trojan, polymorphic, virus
+  Q1273 [s52.0 m52.0] In computing what is the name of a non- self-replicating type of malware program containing malicious code that appears to have so
+        <- malware, virus, worm, trojan, malware
+
+===== 7.8  Implement and support patch and vulnerability management   [4 questions] =====
+  Q2438 [s53.0 m53.0] Which of the following would be the FIRST step to take when implementing a patch management program?
+        <- patch, patch management, patches, remediation, vulnerability
+  Q2493 [s70.0 m70.0] Which of the following is areason to use manual patch installation instead of automated patch management?
+        <- patch, patch management, patches
+  Q2562 [s14.0 m14.0] Which of the following PRIMARILY contributes to security incidents in web-based applications?
+        <- patch, patch management
+  Q2581 [s51.0 m51.0] What is the GREATEST challenge of an agent-based patch management solution?
+        <- patch, patch management, patches, vulnerability
+
+===== 7.9  Understand and participate in change management processes   [5 questions] =====
+  Q2340 [s36.0 m29.0] What should happen when an emergency change to a system must be performed?
+        <- emergency change, change control, change, change
+  Q635 [s11.2 m11.2] Which of the following is an advantage of prototyping?
+        <- change control, change, change control, change
+  Q2551 [s9.0 m9.0] Who must approve modifications to an organization's production in frastructure configuration?
+        <- change control, change
+  Q2583 [s27.0 m27.0] Which of the following is the MOST important element of change management documentation?
+        <- change management, change
+  Q1426 [s29.5 m29.5] Sandra is studying for her CISSP exam. Sandra h as come to you for help and wants to know what the last step in the change control
+        <- change control, change, change, change
+
+===== 7.10  Implement recovery strategies   [3 questions] =====
+  Q2012 [s9.5 m9.5] When is the disaster consider ed to be officially over?
+        <- alternate site, site, site
+  Q2069 [s29.5 m20.8] Which choice below is the MOST accurate description of a warm site?
+        <- warm site, site, site, site
+  Q2157 [s34.8 m13.8] Which of the following would best describe a cold backup site?
+        <- backup site, site, site, hot site, warm site
+
+===== 7.11  Implement Disaster Recovery (DR) processes   [24 questions] =====
+  Q2101 [s24.8 m13.8] Which choice below represents the most important first step in creating a business resumption plan?
+        <- business resumption, recovery, business resumption
+  Q2387 [s62.0 m55.0] What is the MOST important purpose of testing the Disaster Recovery Plan (DRP)?
+        <- disaster recovery, disaster recovery plan, drp, disaster, recovery
+  Q2383 [s60.0 m60.0] At a MINIMUM, a formal review of any Disaster Recovery Plan (DRP) should be conducted
+        <- disaster recovery, disaster recovery plan, drp, disaster, recovery
+  Q1312 [s22.5 m22.5] Which of the following is used to help business units understand the impact of a disruptive event?
+        <- disaster recovery, disaster recovery plan, disaster, recovery, disaster recovery
+  Q1409 [s12.5 m12.5] Which of the following statements pertaining to dealing with the media after a disaster occurred and disturbed the organizations a
+        <- disaster, disaster, disaster recovery, recovery team, disaster
+  Q2120 [s67.8 m40.8] Which choice below is NOT considered an appropriate role for senior management in the business continuity and disaster recovery pr
+        <- disaster recovery, disaster recovery process, disaster recovery, disaster, recovery
+  Q2126 [s35.0 m3.8] What is considered the major disa dvantage to employing a hot site for disaster recovery?
+        <- disaster recovery, disaster, recovery, recovery
+  Q2147 [s111.0 m65.0] What is the difference between a parallel disaster recovery plan test and a full interruption disaster recovery plan test?
+        <- disaster recovery, disaster recovery plan, disaster, recovery, disaster
+  Q2150 [s54.0 m54.0] Which statement below is the most accurate about theresults of the disaster recovery plan test?
+        <- disaster recovery, disaster recovery plan, disaster, recovery
+  Q2151 [s58.5 m51.5] Which of the following is NOT one of the five disaster recovery plan testing types?
+        <- disaster recovery, disaster recovery plan, disaster, recovery, disaster recovery
+  Q2268 [s60.0 m60.0] Disaster Recovery Plan (DRP) training material should be
+        <- disaster recovery, disaster recovery plan, drp, disaster, recovery
+  Q2278 [s42.0 m15.0] In Disaster Recovery (DR) and business continuity training, which BE ST describes a functional drill?
+        <- disaster recovery, emergency response, disaster, recovery, activation
+  Q2382 [s33.0 m3.0] Which of the following Disaster Recovery (D R) sites is the MOST difficult to test?
+        <- disaster recovery, disaster, recovery
+  Q2396 [s41.0 m41.0] Which of the following is TRUE about Disaster Recovery Pl an (DRP) testing?
+        <- disaster recovery, drp, disaster, recovery, disaster
+  Q2535 [s39.0 m19.0] What type of test assesses a Disaster Recovery (DR) plan us ing realistic disaster scenarios while maintaining minimal impact to b
+        <- disaster recovery, disaster, recovery
+
+===== 7.12  Test Disaster Recovery Plans (DRP)   [1 questions] =====
+  Q2454 [s34.0 m1.0] Which of the following disaster recovery test plans will be MOST effective while providing minimal risk?
+        <- disaster recovery test, full interruption, test
+
+===== 7.13  Participate in Business Continuity (BC) planning and exercises   [8 questions] =====
+  Q2074 [s29.2 m29.2] Which choice below most accurately describes a business continuity program?
+        <- business continuity, continuity, business continuity, continuity
+  Q2113 [s22.8 m16.2] Which choice below is the correct definition of a Mutual Aid Agreement?
+        <- mutual aid, mutual aid
+  Q2164 [s22.8 m1.8] What could be a major disadvantage to a mutual aid or reciprocal type of backup service agreement?
+        <- mutual aid, mutual aid
+  Q2294 [s54.0 m13.0] Asecurity professional h as just comp leted their organization's Business Impact Analysis (BIA). Following Business Continuity Pla
+        <- business continuity, continuity plan, bcp, continuity
+  Q2315 [s27.0 m0.0] How can lessons learned from business continuity tr aining and actual recovery incidents BEST be used?
+        <- business continuity, continuity
+  Q2336 [s54.0 m43.0] The goal of a Business Continuity Plan (BCP) training and awareness program is to
+        <- business continuity, continuity plan, bcp, continuity
+  Q2529 [s33.0 m33.0] In Business Continuity Planning (BCP), what is the importance of documenting business processes?
+        <- business continuity, bcp, continuity
+  Q2610 [s56.0 m56.0] A Business Continuity Plan (BCP) is based on
+        <- business continuity, continuity plan, bcp, continuity, bcp
+
+===== 7.14  Implement and manage physical security   [10 questions] =====
+  Q2485 [s28.0 m28.0] By carefully aligning the pins in the lock, which of the following defines the opening of a mechanicallock without the proper key?
+        <- lock, lock
+  Q581 [s9.0 m9.0] Which of the following best defines add-on security?
+        <- physical security, physical
+  Q724 [s4.0 m4.0] Which of the following is NOT a type of motion detector?
+        <- perimeter, barrier, fire
+  Q731 [s33.8 m33.8] Which of the following is a NOT a guideline necessary to enhance security in the critical Heating Ventilation Air Conditioning (HV
+        <- hvac, escort, escort, hvac, physical security
+  Q765 [s25.0 m21.5] Which of the following is not an EP A-approved replacement for Halon?
+        <- halon, halon, fire suppression, fire
+  Q774 [s22.0 m22.0] Devices that supply power when the co mmercial utility power system fails are called which of the following?
+        <- uninterruptible, power, power, power, ups
+  Q840 [s31.2 m31.2] Because ordinary cable introduces a toxic hazard in the event of fire, special cabling is required in a separate area provided for
+        <- hvac, fire, fire, hvac, fire
+  Q865 [s18.5 m15.0] Electrical systems are the lifeblood of computer operations. The continued supply of clean, steady power is required to maintain t
+        <- power, ups, generator, uninterruptible, power
+  Q2188 [s16.0 m16.0] Which type of fire extinguisher below should be used on an electrical fire?
+        <- fire, halon, fire suppression, fire
+  Q2264 [s16.0 m16.0] Which type of fire extinguisher below should be used on an electrical fire?
+        <- fire, halon, fire suppression, fire
+
+===== 7.15  Address personnel safety and security concerns   [4 questions] =====
+  Q1970 [s11.2 m11.2] When should the public and media be informed about a disaster?
+        <- safety, emergency, safety, emergency
+  Q1990 [s14.5 m14.5] Which task below would normally be considered a BCP task, rather than a DRP task?
+        <- safety, life safety, emergency
+  Q2078 [s13.8 m13.8] Which choice below is the first priority in an emergency?
+        <- emergency, emergency, safety, evacuation, life safety
+  Q2111 [s8.8 m8.8] What is the number one priority of disaster response?
+        <- safety, safety
+
+----- general (39) -----
+  Q89 Controls are implemented to:
+  Q562 Which of the following is not a component of a Operations Security "triples"?
+  Q632 What can be defined as: It confirms that us ers’ needs have been met by the supplied solution?
+  Q637 Risk reduction in a system development life-cycle should be applied:
+  Q687 With regard to databases, which of the following h as characteristics of ease of reusing code and analysis and reduced maintenance
+  Q756 Which of the following is not a preventive operational control?
+  Q818 Which of the following is an unintended communication path that is NOT protected by the system's normal security mechanisms?
+  Q822 Which of the following is not a component of a Operations Security "triples"?
+  Q852 In Operations Security trusted paths provide:
+  Q1084 Which of the following is best defined as an administrative declaration by a designated au thority that an information system is a
+  Q1153 Which of the following is a set of data processing elements that increases the performance in a computer by overlapping the steps 
+  Q1157 Which of the following computer design approaches is based on the fact that in ea rlier technologies, the instruction fetch was th
+  Q1207 Which of the following computer design approaches is based on the fact that in ea rlier technologies, the instruction fetch was th
+  Q1293 Which of the following goals is NOT a goal of Problem Management?
+  Q1403 Which of the following tools is less likely to be used by a hacker?
+  Q1419 Which of the following are functions that are comp atible in a properly se gregated environment?
+  Q1428 Most of unplanned downtime of information systems is attributed to which of the following?
+  Q1432 Which of the following should NOT be implemented to protect PBX's?(Choose all that apply)
+  Q1496 A copy of a computer disk would be what type of evidence?
+  Q1528 Which of the following should NOT be implemented to protect PBX's?(Choose all that apply)
+
+########################################################################################
+# DOMAIN 8: Software Development Security
+########################################################################################
+
+===== 8.1  Understand and integrate security in the Software Development Life Cycle (SDLC)   [85 questions] =====
+  Q663 [s43.0 m34.0] In what way could Java appl ets pose a security threat?
+        <- java, pose, java
+  Q685 [s55.2 m55.2] The object-relational and object-oriented models are better suited to managing complex data such as required for which of the foll
+        <- object-oriented, object-oriented, object-relational, object-oriented, object-oriented
+  Q1971 [s36.0 m36.0] In an object-oriented system, polymorphism denotes:
+        <- object-oriented, object-oriented
+  Q2081 [s39.0 m32.8] In an expert system, the process of beginning with a possible solution and us ing the knowledge in the knowledge base to justify t
+        <- expert system, expert, expert system, expert
+  Q2148 [s46.0 m46.0] Which of the following languages is NOT an object-oriented language?
+        <- object-oriented, object-oriented, c++, object-oriented, object-oriented
+  Q712 [s27.0 m27.0] Which of the following is less likely to be included in the change control sub-phase of the maintenance phase of a software produc
+        <- maintenance phase, phase
+  Q1169 [s6.5 m6.5] Why do buffer overflows happen? What is the main cause?
+        <- programming, java, application development, expert
+  Q1197 [s49.8 m49.8] During which phase of an IT system life cycle are security requirements developed?
+        <- system life cycle, phase, life cycle, sdlc, system development life cycle
+  Q1206 [s77.8 m77.8] Why does compiled code pose more of a security risk than interpreted code?
+        <- compiled code, interpreted code, pose, compiled code, interpreted code
+  Q1222 [s79.2 m79.2] At which of the basic phases of the System Development Life Cycle are security requirements formalized?
+        <- system development life cycle, phases, development life, life cycle, sdlc
+  Q2406 [s57.0 m57.0] What do Capability Maturity Models (CMM) se rve as a benchmark for in an organization?
+        <- capability maturity, maturity, capability maturity, cmm
+  Q2422 [s93.0 m93.0] When in the Software Development Life Cycle (SDLC) MUST software security functional requirements be defined?
+        <- sdlc, software development life cycle, sdlc, development life, cycle sdlc
+  Q2439 [s21.0 m14.0] The goal of software assurance in application development is to
+        <- application development
+  Q2541 [s93.0 m93.0] Which of the following actions MUST be ta ken if a vulnerability is discovered during the maintenance stage in a System Developmen
+        <- sdlc, system development life cycle, sdlc, development life, cycle sdlc
+  Q2563 [s88.0 m88.0] When is security personnel involvement in the Systems Development Life Cycle (SDLC) process MOST beneficial?
+        <- sdlc, sdlc, development life, cycle sdlc, development phase
+
+===== 8.2  Identify and apply security controls in software development ecosystems   [6 questions] =====
+  Q287 [s21.0 m21.0] One of these statements about the key elements of a good configuration process is NOT true
+        <- configuration process
+  Q547 [s21.0 m21.0] One of these statements about the key elements of a good configuration process is NOT true
+        <- configuration process
+  Q693 [s8.8 m8.8] Which of the following would be the best reason for separating the test and development environments?
+        <- test environment, test environment
+  Q792 [s7.0 m7.0] Which of the following questions is less li kely to help in assessing controls over hardware and software maintenance?
+        <- version control
+  Q1316 [s10.5 m10.5] Which of the following would be the best reason for separating the test and development environments?
+        <- test environment, development environment, test environment
+  Q2627 [s21.0 m21.0] Software Code signing is used as a method of verifying what security concept?
+        <- code signing
+
+===== 8.3  Assess the effectiveness of software security   [9 questions] =====
+  Q17 [s23.2 m23.2] Which of the following testing method examines in te rnal structure or working of an application?
+        <- regression testing, testing, testing, test, regression testing
+  Q58 [s26.2 m26.2] Which of the following testing method examines the functionality of an application without peering into its internal structure or 
+        <- regression testing, testing, testing, test, regression testing
+  Q606 [s44.0 m44.0] Which of the following statements pertaining to software testing is incorrect?
+        <- software testing, unit testing, testing, unit testing, testing
+  Q652 [s33.8 m15.0] Which of the following statements pertaining to software testing approaches is correct?
+        <- software testing, testing, testing, test, white box testing
+  Q704 [s14.0 m14.0] At what stage of the applications development process should the security department become involved?
+        <- unit testing, unit testing, testing
+  Q1276 [s33.2 m19.2] Which of the following statements pertaining to software testing approaches is correct?
+        <- software testing, testing, testing, test, software testing
+  Q2312 [s15.0 m15.0] What is the MOST effective method of testing custom application code?
+        <- white box testing, testing, testing
+  Q2398 [s21.0 m0.0] When us ing third-party software developers, which of the following is the MOST effective method of providing software development
+        <- quality assurance
+  Q2603 [s15.0 m15.0] What maintenance activity is responsible for defining, implementing, and testing updates to application systems?
+        <- regression testing, testing, testing
+
+===== 8.4  Assess security impact of acquired software   [9 questions] =====
+  Q1112 [s22.8 m22.8] What Cloud Deployment model consist of a cloud infrastructure provisioned for exclusive use by asingle organization comprising mul
+        <- third party, third party
+  Q636 [s8.8 m8.8] The security of a computer application is most effective and economical in which of the following cases?
+        <- off-the-shelf, off-the-shelf
+  Q1364 [s7.0 m7.0] The security of a computer application is most effective and economical in which of the following cases?
+        <- off-the-shelf
+  Q2043 [s21.0 m0.0] An off-the-shelf software package that implements an inference engine, a mechanism for entering knowledge, a user interface, and a
+        <- off-the-shelf
+  Q2286 [s28.0 m21.0] What is one way to mitigate the risk of security flaws in custom software?
+        <- cots, off-the-shelf, commercial off-the-shelf, open source
+  Q2359 [s28.0 m28.0] Refer to the information below to answer the question. A large, multinational organization h as decided to outsource a portion of 
+        <- third party, third party
+  Q2444 [s7.0 m7.0] Refer to the information below to answer the question. A large, multinational organization h as decided to outsource a portion of 
+        <- third party
+  Q2453 [s23.0 m16.0] Refer to the information below to answer the question. A large, multinational organization h as decided to outsource a portion of 
+        <- third party, outsourcing
+  Q2608 [s28.0 m28.0] According to best practice, which of the following is required when implementing third party software in a production environment?
+        <- third party, escrow
+
+===== 8.5  Define and apply secure coding guidelines and standards   [92 questions] =====
+  Q644 [s31.0 m31.0] Which of the following can be defined as the set of allowable values that an attribute can take?
+        <- attribute, arelation, database, attribute, arelation
+  Q1808 [s29.8 m7.2] Us ing pre-numbered forms to initiate a transaction is an example of what type of control?
+        <- transaction, application control, transaction
+  Q2304 [s42.0 m42.0] Asecurity professional is asked to provide a solution that restricts a bank te ller to only perform a savings deposit transaction 
+        <- transaction
+  Q703 [s28.0 m28.0] In an online transaction processing system (OLTP), which of the following actions should be taken when erroneous or invalid transa
+        <- transaction, concurrency, acid, transaction, atomic
+  Q2556 [s104.0 m97.0] The Structured Query Language (SQL) implements Discretionary Access Controls (DAC) us ing
+        <- sql, structured query language, query, query language, structured query
+  Q689 [s48.5 m48.5] Which of the following is not an element of arelational database model?
+        <- arelational, arelational database, database, relations, tuples
+  Q692 [s38.5 m38.5] SQL commands do not include which of the following?
+        <- sql, sql, insert, sql, query
+  Q694 [s126.8 m126.8] The description of the database is called a schema. The schema is defined by which of the following?
+        <- schema, schema, sql, database, schema
+  Q705 [s122.5 m122.5] Which of the following can be defined as a unique identifier in the table that una mbiguously points to an individual tuple or rec
+        <- table, tuple, tuple, primary key, foreign key
+  Q706 [s15.8 m15.8] Which of the following is one of the oldest and most comm on problem in software development that is still very prevalent today?
+        <- buffer overflow, code injection, buffer overflow
+  Q2443 [s48.0 m48.0] Which of the following actions should be performed when implementing a change to a database schema in a production system?
+        <- schema, schema, database, schema
+  Q2491 [s7.0 m7.0] What technique BEST describes antivirus software that detects viruses by watching anomalous behavior?
+        <- inference
+  Q2504 [s120.0 m120.0] Which of the following is a method used to prevent Structured Query Language (SQL) injection attacks?
+        <- sql, sql injection, structured query language, query, query language
+  Q2523 [s147.0 m147.0] During an investigation of database theft from an organization's web site, it was determined that the Structured Query Language (S
+        <- sql, input validation, sql injection, structured query language, query
+  Q2570 [s21.0 m21.0] Which of the following is the MOST important output from a mobile application threat modeling exercise according to Open Web Appli
+        <- owasp
+
+----- general (37) -----
+  Q53 External consistency ensures that the data stored in the database is:
+  Q372 Domain Name Service is a distributed da tabase system that is used to map:
+  Q494 Within the context of the CBK, which of the following pr ovides a MINIMUM level of security ACCEPTABLE for an environment?
+  Q608 What is the appropriate role of the security analyst in the application system development or acquisition project?
+  Q647 What would you call an attack where an attacker can influence the state of the resource between check and use? This attack can hap
+  Q684 Which of the following is the act of performing tests and evaluations to test asystem's security level to see if it complies with 
+  Q690 Which of the following determines that the product developed meets the projects goals?
+  Q707 Which of the following is often the greatest ch allenge of distributed computing solutions?
+  Q851 Which of the following should be performed by an operator?
+  Q1069 Which of the following was developed by the National Computer Security Center (NCSC) for the US Department of Defense?
+  Q1097 Which of the following is a true statement pertaining to memory addressing?
+  Q1150 Attributable data should be:
+  Q1167 Which of the following describes a technique in which a number of processorunits are employed in asingle computer system to increa
+  Q1323 IF an operating system permits executable objects to be used simultaneously by multiple us ers without arefresh of the objects, wh
+  Q1416 Which of the following is the BEST way to prevent software license violations?
+  Q1450 What is the name of the software that prevents us ers from seeing all items or directories on a com puter and is most commonly fou
+  Q1509 What are two types of system assurance?
+  Q1514 Which of the following can reproduce itself without the help of system applications or resources?
+  Q1533 Why do buffer overflows happen?
+  Q1803 Which of the following is are as on to institute output controls?

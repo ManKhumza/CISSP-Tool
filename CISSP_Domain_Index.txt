@@ -1,0 +1,92 @@
+CISSP DOMAIN INDEX
+==================
+
+Quick reference for all 8 CISSP domains with question counts and line numbers in the main document.
+
+DOMAIN 1: SECURITY AND RISK MANAGEMENT
+--------------------------------------
+Questions: 351
+Exam Weight: 15%
+Document Location: Lines 21-3,450
+Key Topics: Risk management, security governance, compliance, legal issues, ethics, BCP/DR, personnel security
+
+DOMAIN 2: ASSET SECURITY
+------------------------
+Questions: 100
+Exam Weight: 10%
+Document Location: Lines 3,451-4,450
+Key Topics: Data classification, ownership, privacy, retention, protection, handling requirements
+
+DOMAIN 3: SECURITY ARCHITECTURE AND ENGINEERING
+----------------------------------------------
+Questions: 389
+Exam Weight: 13%
+Document Location: Lines 4,451-8,340
+Key Topics: Cryptography, security models, secure design, physical security, vulnerabilities, security controls
+
+DOMAIN 4: COMMUNICATION AND NETWORK SECURITY
+--------------------------------------------
+Questions: 439
+Exam Weight: 13%
+Document Location: Lines 8,341-12,730
+Key Topics: Network protocols, firewalls, IDS/IPS, VPN, wireless security, network attacks, secure communications
+
+DOMAIN 5: IDENTITY AND ACCESS MANAGEMENT (IAM)
+----------------------------------------------
+Questions: 200
+Exam Weight: 13%
+Document Location: Lines 12,731-14,730
+Key Topics: Authentication methods, access control models, identity management, biometrics, single sign-on
+
+DOMAIN 6: SECURITY ASSESSMENT AND TESTING
+-----------------------------------------
+Questions: 651
+Exam Weight: 12%
+Document Location: Lines 14,731-21,241
+Key Topics: Vulnerability assessments, penetration testing, security audits, metrics, monitoring, logging
+
+DOMAIN 7: SECURITY OPERATIONS
+-----------------------------
+Questions: 365
+Exam Weight: 13%
+Document Location: Lines 21,242-24,892
+Key Topics: Incident response, forensics, disaster recovery, business continuity, change management, problem management
+
+DOMAIN 8: SOFTWARE DEVELOPMENT SECURITY
+---------------------------------------
+Questions: 120
+Exam Weight: 11%
+Document Location: Lines 24,893-26,092
+Key Topics: SDLC security, application security, database security, web security, code review, testing
+
+TOTAL QUESTIONS: 2,615
+TOTAL DOMAINS: 8
+TOTAL DOCUMENT LINES: 10,591
+
+STUDY PRIORITY GUIDE:
+---------------------
+HIGH PRIORITY (Focus first):
+- Domain 1: Security and Risk Management (15%)
+- Domain 3: Security Architecture and Engineering (13%)
+- Domain 4: Communication and Network Security (13%)
+- Domain 5: Identity and Access Management (IAM) (13%)
+- Domain 7: Security Operations (13%)
+
+MEDIUM PRIORITY:
+- Domain 6: Security Assessment and Testing (12%)
+- Domain 8: Software Development Security (11%)
+- Domain 2: Asset Security (10%)
+
+QUICK DOMAIN REFERENCE:
+-----------------------
+Domain 1: "Risk & Governance" - Foundation of security
+Domain 2: "Data Protection" - Classification and handling
+Domain 3: "Security Architecture" - Technical controls and design
+Domain 4: "Network Security" - Communication protection
+Domain 5: "Access Control" - Identity and authentication
+Domain 6: "Testing & Assessment" - Validation and monitoring
+Domain 7: "Operations" - Day-to-day security management
+Domain 8: "Software Security" - Application development security
+
+This index provides quick navigation to each domain section in the main organized document.
+Use the line numbers to jump directly to specific domains when studying.
