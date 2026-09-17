@@ -7,6 +7,27 @@ tailored study guide for every one of the 61 sub-sections.
 Open **`CISSP_Study_Portal.html`** in a browser (it works straight from `file://` — keep it
 next to `cissp-data.js`).
 
+For **accounts + progress sync across devices**, run the bundled Express backend instead
+(requires Node 22.5+, which has the built-in `node:sqlite` driver — no native compiler needed):
+
+```bash
+npm install     # express, bcryptjs, jsonwebtoken, cors, dotenv
+npm start       # serves the portal at http://localhost:3000
+```
+
+Create a `.env` next to `server.js` to change the port / JWT secret (a working default is
+provided, but set a real secret in production):
+
+```
+PORT=3000
+JWT_SECRET=your-super-secret-jwt-key-change-in-production
+```
+
+Sign up with an email, and your answer history, marks and per-sub-section progress are
+synced to the local SQLite database (`cissp_progress.db`) every two minutes and on sign-in.
+Progress is also still stored in the browser, so the portal works offline with or without a
+server.
+
 ## What's inside
 
 - **61 sub-sections** across the 8 domains. Click a sub-section and you get only the
@@ -30,6 +51,9 @@ next to `cissp-data.js`).
 |---|---|
 | `CISSP_Study_Portal.html` | The single-page app |
 | `cissp-data.js` | Question bank + guides (loaded by the app) |
+| `server.js` | Express backend: user accounts (JWT) + progress sync (`node:sqlite`) |
+| `public/auth.js` | Client auth + auto-sync module |
+| `package.json`, `.env` | Backend deps and config |
 | `subsection_keywords.py` | Curated within-domain vocabulary used for classification |
 | `classify_subsections4.py` | Rule-based sub-section classification |
 | `merge_adjudication.py` | Merges reviewed labels + consistency corrections |

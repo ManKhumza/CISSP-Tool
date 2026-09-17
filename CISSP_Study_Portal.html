@@ -580,6 +580,7 @@ dialog .dlg-body{padding:16px 18px 20px}
 <div id="toast" role="status" aria-live="polite"></div>
 
 <script src="cissp-data.js" charset="utf-8"></script>
+<script src="/auth.js"></script>
 <script>
 "use strict";
 (function(){
@@ -1773,6 +1774,21 @@ dialog .dlg-body{padding:16px 18px 20px}
   state.sectionId = dom(state.domainId).sections[0].id;
   refreshSidebar();
   render();
+
+  // Expose internals so the auth/progress-sync module can read & write state.
+  window.__portal = {
+    get progress(){ return progress; },
+    set progress(v){ progress = v; },
+    saveProgress: saveProgress,
+    render: render,
+    go: go,
+    refreshSidebar: refreshSidebar
+  };
+
+  // Initialize authentication
+  if (typeof Auth !== 'undefined') {
+    Auth.init();
+  }
 })();
 </script>
 </body>
