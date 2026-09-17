@@ -37,9 +37,13 @@ next to `cissp-data.js`).
 | `defs.py` | Definition extractor (indexes the reference books) |
 | `enrich_guides.py` | Builds the per-sub-section term glossaries |
 | `build_web_data2.py` | Assembles `cissp-data.js` |
+| `extract_pdf.py`, `extract_books.py` | Text extraction from the source question PDF and the reference books |
 | `smoke_test2.js` | Headless verification of data and UI |
+| `make_batches.py` | Builds the review batches used for question-by-question adjudication |
+| `validate_final.py`, `sample_sections_final.py`, `check_placement.py` | Quality inspection helpers |
 | `_classify/final_assignments.json` | Question → sub-section mapping |
 | `_classify/guide_terms.json` | Mined term meanings |
+| `archive/` | Earlier iterations (first-pass organisers, PDF builders, superseded classifiers) kept for reference only |
 
 ## How the questions were organised
 
