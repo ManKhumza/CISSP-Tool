@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
-const DIR = 'C:\\Users\\Khumza\\Documents\\Coding projects\\CISSP';
+const DIR = __dirname;
 const html = fs.readFileSync(path.join(DIR, 'CISSP_Study_Portal.html'), 'utf8');
 const scripts = [...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/g)];
 const appSrc = scripts[scripts.length - 1][1];
@@ -18,21 +18,23 @@ function makeEl(id) {
                  toggle(c,v){ v===undefined ? (this._s.has(c)?this._s.delete(c):this._s.add(c)) : (v?this._s.add(c):this._s.delete(c)) },
                  contains(c){return this._s.has(c)} },
     set innerHTML(v){ this._html = v; }, get innerHTML(){ return this._html; },
-    addEventListener(){}, querySelectorAll(){ return []; }, querySelector(){ return null; },
+    addEventListener(){}, setAttribute(k,v){ this[k]=v; }, getAttribute(k){ return this[k]; },
+    querySelectorAll(){ return []; }, querySelector(){ return null; },
     closest(){ return this; }, appendChild(){}, focus(){}, onclick:null, onkeydown:null };
   return el;
 }
 const ids = ['content','domainNav','pctText','pctBar','answeredText','marksText','brandSub',
              'search','btnGuide','btnPrint','btnResume','btnReset','toast','glossFilter','glossCount',
-             'btnPrev','btnNext','btnReveal','btnMark','btnJump','jumpInput'];
+             'btnPrev','btnNext','btnReveal','btnMark','btnJump','jumpInput','mobileMenu','sidebarClose','sidebarScrim'];
 const els = {}; ids.forEach(i => els[i] = makeEl(i));
 const segButtons = ['one','all'].map(l => { const b = makeEl('seg-'+l); b.dataset.layout = l; return b; });
 const L = { nav:null, search:{}, doc:{} };
 
 const documentStub = {
+  body: makeEl('body'),
   getElementById: id => els[id] || null,
   querySelectorAll: sel => sel.includes('.seg button') ? segButtons : [],
-  querySelector: sel => makeEl('q:'+sel),
+  querySelector: sel => sel === '.sb-bar' ? makeEl('progress') : makeEl('q:'+sel),
   addEventListener: (t,fn) => { L.doc[t]=fn; },
   createElement: () => makeEl('new')
 };
@@ -42,6 +44,7 @@ documentStub.getElementById('domainNav').addEventListener = (t,fn) => { L.nav = 
 const sandbox = { window:{}, document:documentStub, console, setTimeout, clearTimeout,
   Date, Math, JSON, RegExp, parseInt, parseFloat, isNaN, String, Number, Object, Array, Error };
 sandbox.window.scrollTo = () => {}; sandbox.window.print = () => {};
+sandbox.window.matchMedia = () => ({matches:false});
 sandbox.confirm = () => false;
 vm.createContext(sandbox);
 
