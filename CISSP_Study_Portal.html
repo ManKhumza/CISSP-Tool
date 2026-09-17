@@ -377,8 +377,9 @@
     document.querySelectorAll('.seg button').forEach(function(b){
       var on=b.dataset.layout===state.layout; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false');
     });
-    var guideVisible = state.view === 'section' && state.showGuide;
-    byId('btnGuide').textContent = guideVisible ? 'Hide Guide' : 'Study Guide';
+    var guideVisible = state.view === 'section' && state.showGuide &&
+      (state.layout === 'all' || state.index === 0);
+    byId('btnGuide').textContent = guideVisible ? 'Hide Guide' : 'Section Guide';
     byId('btnGuide').setAttribute('aria-pressed', guideVisible ? 'true' : 'false');
     wire();
   }
@@ -573,7 +574,8 @@
     var reveal = !!(rec && rec.picked) || !!progress.marks[q.n + '_reveal'];
     var picked = rec ? rec.picked : null;
     var marked = !!progress.marks[q.n];
-    var head = state.showGuide ? guideHTML(sec) : '';
+    // The guide is the section opener, not repeated beside every question.
+    var head = state.showGuide && state.index === 0 ? guideHTML(sec) : '';
     return head +
     '<div class="card pad qwrap">' +
       '<div class="question-progress" role="progressbar" aria-label="Section progress" aria-valuemin="0" aria-valuemax="'+n+'" aria-valuenow="'+(state.index+1)+'"><i style="width:'+pct(state.index+1,n)+'%"></i></div>' +
@@ -609,7 +611,7 @@
         (q.e ? '<div class="ex">'+esc(q.e)+'</div>' : '<div class="noexpl">No explanation in the source material.</div>') +
         '</div>';
     }).join('');
-    return guideHTML(sec) +
+    return (state.showGuide ? guideHTML(sec) : '') +
       '<div class="card pad" style="margin-top:14px"><h3 class="sub" style="margin-top:0">'+
       (sec.virtual?'Other topics':sec.id+' — '+esc(sec.title))+' · document view</h3>' +
       '<p class="muted">All '+sec.questions.length+' questions in this sub-section with options, answers and explanations.</p></div>' +
@@ -726,11 +728,17 @@
       render();
     });
   });
-  byId('btnGuide').onclick=function(){
-    state.showGuide=!state.showGuide;
-    if(state.view!=='section') state.view='section';
-    render();
-  };
+  function toggleGuide(){
+    if(state.view !== 'section'){
+      go({view:'section', index:0, showGuide:true});
+    } else if(state.layout === 'one' && state.index !== 0){
+      go({index:0, showGuide:true});
+    } else {
+      state.showGuide=!state.showGuide;
+      render();
+    }
+  }
+  byId('btnGuide').onclick=toggleGuide;
   byId('btnPrint').onclick=function(){ window.print(); };
   byId('btnResume').onclick=function(){
     resumeStudy();
@@ -763,7 +771,7 @@
       if(progress.marks[q.n]) delete progress.marks[q.n]; else progress.marks[q.n]=true;
       save(); render(); toast(progress.marks[q.n]?'Marked for review':'Mark removed');
     }
-    else if(e.key==='g'||e.key==='G'){ state.showGuide=!state.showGuide; render(); }
+    else if(e.key==='g'||e.key==='G'){ toggleGuide(); }
     else if(/^[1-5]$/.test(e.key)){
       var L=String.fromCharCode(64+parseInt(e.key,10));
       if((q.o||[]).some(function(o){return o[0]===L;})){ markAnswered(q.n,L,L===q.a); render(); }

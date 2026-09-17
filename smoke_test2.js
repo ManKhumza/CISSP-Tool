@@ -124,6 +124,10 @@ try {
   check('sub-section view shows options', /class="opt"/.test(v));
   check('sub-section view shows nav', /btnNext/.test(v));
   check('sub-section tag shown', /3\.6/.test(v));
+  L.doc.keydown({ target:{tagName:'DIV'}, key:'ArrowRight' });
+  check('study guide is hidden after the first question', !/Must know/.test(els.content.innerHTML));
+  L.doc.keydown({ target:{tagName:'DIV'}, key:'ArrowLeft' });
+  check('study guide returns at the section beginning', /Must know/.test(els.content.innerHTML));
 } catch(e){ check('sub-section view rendered', false); console.error(e.message); }
 
 // read-as-document layout
