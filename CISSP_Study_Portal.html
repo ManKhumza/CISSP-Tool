@@ -232,7 +232,7 @@ kbd{font:11px/1 var(--mono);background:var(--surface-3);border:1px solid var(--l
 /* ============================================================
    Components
    ============================================================ */
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-sm)}
+.card{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-sm)}
 .pad{padding:20px 22px}
 .stack{display:grid;gap:14px}
 .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
@@ -483,7 +483,8 @@ dialog .dlg-body{padding:16px 18px 20px}
 .only-mobile{display:none}
 @media (max-width:1023px){
   .only-mobile{display:grid}
-  #sidebar{position:fixed;left:0;top:0;z-index:40;transform:translateX(-100%);
+  #sidebar{position:fixed;left:0;top:0;z-index:40;width:min(var(--sidebar-w),88vw);max-width:88vw;
+    transform:translateX(-100%);
     transition:transform .22s ease;box-shadow:var(--shadow-lg)}
   body.nav-open #sidebar{transform:none}
   #sbClose{display:grid}
@@ -493,18 +494,67 @@ dialog .dlg-body{padding:16px 18px 20px}
   .crumbs .cur{max-width:20ch}
 }
 @media (max-width:720px){
-  #content{padding:16px 13px 72px}
+  body{font-size:15px}
+  #content{padding:12px 10px calc(76px + env(safe-area-inset-bottom))}
+  .pad{padding:16px}
   .page-head h1{font-size:20px}
-  #topbar{padding:8px 12px;gap:6px}
-  .search-wrap{order:5;flex-basis:100%;max-width:none}
+  #topbar{padding:calc(7px + env(safe-area-inset-top)) 10px 7px;gap:6px}
+  .search-wrap{order:10;flex-basis:100%;max-width:none}
+  .seg[aria-label="Layout"],#btnKeys{display:none}
+  .icon-btn{width:40px;height:40px}
+  .tb-btn{min-height:40px}
+  .dom{min-height:48px}
+  #domainNav .sub{min-height:44px}
   .hide-sm{display:none}
   .gitem{font-size:12.8px}
   .auth-btn span{display:none}
   .recommend-main{grid-template-columns:1fr}
   .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kpi{padding:13px}
+  .kpi b{font-size:21px}
+  .home-actions{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .home-actions .btn{justify-content:center;min-height:44px;padding:8px 10px}
+  .home-actions .btn:first-child{grid-column:1/-1}
+  .recommend-main>.row{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .recommend-main>.row .btn{justify-content:center;min-height:44px;padding:8px}
+  .seclist{grid-template-columns:1fr}
+  .seccard{min-height:72px;padding:13px}
+  .domains-table{overflow:visible}
+  table.tbl,table.tbl tbody{display:block}
+  table.tbl thead{display:none}
+  table.tbl tr.clickable{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+    margin-bottom:10px;padding:13px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--surface)}
+  table.tbl tr.clickable:last-child{margin-bottom:0}
+  table.tbl tr.clickable td{display:block;padding:0;border:0;text-align:left}
+  table.tbl tr.clickable td:first-child{grid-column:1/-1;padding-right:56px}
+  table.tbl tr.clickable td[data-label]::before{content:attr(data-label);display:block;margin-bottom:1px;
+    font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-4)}
+  table.tbl tr.clickable td:nth-child(5){grid-column:1/-1}
+  table.tbl tr.clickable td:last-child{position:absolute;right:12px;top:10px}
+  .qbar{padding:9px 10px;gap:7px}
+  .qbar .grow{display:none}
+  .qbar .seg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%}
+  .qbar .seg button{justify-content:center;min-width:0;padding:8px 3px;font-size:10.5px}
+  .qbar .seg .muted{font-size:9.5px}
+  .qtext{font-size:16px;line-height:1.55}
+  .opt{min-height:52px;padding:12px 11px;gap:10px;font-size:14.5px}
+  .navbar{gap:9px}
+  .navbar>.row{width:100%}
+  .navbar>.row:first-child{display:grid;grid-template-columns:1fr 1fr}
+  .navbar>.row:first-child .btn{justify-content:center;min-height:44px;padding:8px}
+  .navbar>.row:first-child .btn:nth-child(3){grid-column:1/-1}
+  .navbar>.row:nth-child(2){display:grid;grid-template-columns:1fr 1fr}
+  .navbar>.row:nth-child(2) .btn{justify-content:center;min-height:44px;padding:8px}
+  .navbar>.row:nth-child(2) .btn:only-child{grid-column:1/-1}
+  .navbar .jump{width:100%;justify-content:flex-end}
+  .jump input{min-height:42px}
+  #toast{bottom:calc(14px + env(safe-area-inset-bottom));max-width:calc(100vw - 24px);text-align:center}
+  dialog{max-height:calc(100dvh - 24px)}
 }
 @media (max-width:380px){
   .kpis{grid-template-columns:1fr}
+  .home-actions,.recommend-main>.row{grid-template-columns:1fr}
+  .home-actions .btn:first-child{grid-column:auto}
 }
 
 /* ---------- print ---------- */
@@ -605,7 +655,7 @@ dialog .dlg-body{padding:16px 18px 20px}
       <button id="btnTheme" class="icon-btn" title="Theme" aria-label="Toggle dark mode">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
       </button>
-      <button id="btnInstall" class="tb-btn" hidden title="Install this app on your device">Install app</button>
+      <button id="btnInstall" class="tb-btn" hidden title="Install this app on your device">Install</button>
       <button id="btnGuide" class="tb-btn hide-sm">Guide</button>
       <button id="btnPrint" class="tb-btn hide-sm">Print</button>
       <button id="btnKeys" class="icon-btn" title="Keyboard shortcuts" aria-label="Keyboard shortcuts">
@@ -1101,9 +1151,9 @@ dialog .dlg-body{padding:16px 18px 20px}
       var st = stats(questionsOfDomain(d));
       return '<tr class="clickable" data-open="'+d.id+'">' +
         '<td><b>'+d.id+'. '+esc(d.name)+'</b></td>' +
-        '<td class="num">'+d.weight+'</td>' +
-        '<td class="num">'+(d.sections||[]).length+'</td>' +
-        '<td class="num">'+st.total+'</td>' +
+        '<td class="num" data-label="Weight">'+d.weight+'</td>' +
+        '<td class="num" data-label="Sections">'+(d.sections||[]).length+'</td>' +
+        '<td class="num" data-label="Questions">'+st.total+'</td>' +
         '<td style="min-width:130px"><div class="bar blue"><i style="width:'+st.pct+'%"></i></div>' +
           '<span class="muted small">'+st.answered+' answered · '+st.accuracy+'% correct</span></td>' +
         '<td style="text-align:right"><span class="btn sm">Open</span></td></tr>';
@@ -1135,7 +1185,7 @@ dialog .dlg-body{padding:16px 18px 20px}
             'official exam outline it tests. Every sub-section carries its own study guide — focus notes, must-know ' +
             'facts, deeper lesson notes and a key-term glossary.</p>' +
         '</div>' +
-        '<div class="row" style="margin-top:16px">' +
+        '<div class="row home-actions" style="margin-top:16px">' +
           '<button class="btn primary" data-start="first">Start studying</button>' +
           '<button class="btn" data-resume="1">Continue where I left off</button>' +
           '<button class="btn ghost" data-gloss="1">Browse the glossary</button>' +
@@ -1156,7 +1206,7 @@ dialog .dlg-body{padding:16px 18px 20px}
         '<div class="between" style="margin-bottom:12px">' +
           '<h2 style="font-size:17px">Domains &amp; progress</h2>' +
           '<span class="muted small">Click a row to open the domain</span></div>' +
-        '<div style="overflow-x:auto"><table class="tbl">' +
+        '<div class="domains-table"><table class="tbl">' +
           '<thead><tr><th>Domain</th><th class="num">Weight</th><th class="num">Sub-sections</th>' +
           '<th class="num">Questions</th><th>Progress</th><th></th></tr></thead>' +
           '<tbody>'+rows+'</tbody></table></div>' +
