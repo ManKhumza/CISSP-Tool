@@ -28,6 +28,24 @@ synced to the local SQLite database (`cissp_progress.db`) every two minutes and 
 Progress is also still stored in the browser, so the portal works offline with or without a
 server.
 
+## Phone and PWA use
+
+The portal is an installable Progressive Web App. On Android/Chrome, use **Install app** in
+the toolbar or the browser's install action. On iPhone/iPad, open the site in Safari, tap
+**Share**, then **Add to Home Screen**. The question bank and app shell are cached after the
+first successful visit, so study mode and on-device progress continue to work offline.
+
+The bundled Vercel configuration creates a static deployment:
+
+```bash
+npm run build:static
+vercel --prod
+```
+
+Static hosting stores progress on each device. Cross-device account sync still requires the
+Express server and its database (or a managed database replacing SQLite); the static build
+labels this mode **On-device** instead of showing a non-functional sign-in button.
+
 ## What's inside
 
 - **61 sub-sections** across the 8 domains. Click a sub-section and you get only the
@@ -63,7 +81,7 @@ server.
 | `defs.py` | Definition extractor (indexes the reference books) |
 | `enrich_guides.py` | Builds the per-sub-section term glossaries |
 | `build_web_data2.py` | Assembles `cissp-data.js` |
-| `extract_pdf.py`, `extract_books.py` | Text extraction from the source question PDF and the reference books |
+| `extract_pdf.py`, `extract_books.py` | Text extraction from the source question PDF and local reference books |
 | `smoke_test2.js` | Headless verification of data and UI |
 | `make_batches.py` | Builds the review batches used for question-by-question adjudication |
 | `validate_final.py`, `sample_sections_final.py`, `check_placement.py` | Quality inspection helpers |
@@ -107,6 +125,15 @@ node smoke_test2.js                 # verify
 
 `extract_books.py` re-creates the plain-text extracts of the reference study guide and exam
 companion; those extracts are intentionally not committed (they are licensed material).
+It also accepts an explicit input and output path for additional locally owned references:
+
+```bash
+python extract_books.py "path/to/reference.pdf" "_books/reference.txt"
+```
+
+The glossary also includes original, paraphrased definitions selected from *CISSP For
+Dummies*, 8th edition (Miller & Gregory, 2024). The raw book extract remains local and is
+excluded from version control.
 
 To run the text repair yourself, download the dictionary once:
 

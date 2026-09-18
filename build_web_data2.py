@@ -24,7 +24,7 @@ BASE = r"C:\Users\Khumza\Documents\Coding projects\CISSP"
 sys.path.insert(0, BASE)
 from subsection_guides import GUIDES
 from subsection_deep_notes import DEEP_NOTES
-from subsection_glossary_extra import OVERRIDE, EXTRA
+from subsection_glossary_extra import OVERRIDE, EXTRA, DUMMIES_EXTRA
 from dataio import load_data, questions_of, section_list
 
 OLD = load_data()
@@ -71,6 +71,8 @@ def build_glossary(sid, limit=40):
         push(t, meaning, "def", "curated", True)
     for t, meaning in (EXTRA.get(sid) or {}).items():
         push(t, meaning, "def", "curated", True)
+    for t, meaning in (DUMMIES_EXTRA.get(sid) or {}).items():
+        push(t, meaning, "def", "dummies8", True)
     for e in mined:
         push(e["t"], e["d"], e.get("k", "def"), e.get("src", ""), bool(e.get("c")),
              strict_len=True)
@@ -186,9 +188,14 @@ for d in OLD["domains"]:
         "general": {"count": len(gen), "questions": gen},
     })
 
+study_guide = json.loads(json.dumps(OLD["studyGuide"]))
+supplement = "CISSP For Dummies, 8th ed. (Miller & Gregory, 2024)"
+if supplement not in study_guide.get("resources", []):
+    study_guide.setdefault("resources", []).append(supplement)
+
 payload = {
     "meta": dict(OLD["meta"]),
-    "studyGuide": OLD["studyGuide"],
+    "studyGuide": study_guide,
     "domains": domains_out,
 }
 payload["meta"].update({

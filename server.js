@@ -76,13 +76,21 @@ function authenticateToken(req, res, next) {
 }
 
 // Auth routes
+app.get('/api/auth/status', (req, res) => {
+  res.json({ available: true });
+});
+
 app.post('/api/auth/register', async (req, res) => {
   try {
-    const { email, password } = req.body;
-    if (!email || !password) return res.status(400).json({ error: 'Email and password required' });
+    let { email, password } = req.body || {};
+    if (typeof email !== 'string' || typeof password !== 'string' || !email.trim() || !password) {
+      return res.status(400).json({ error: 'Email and password required' });
+    }
+    email = email.trim().toLowerCase();
+    if (!/^\S+@\S+\.\S+$/.test(email)) return res.status(400).json({ error: 'Enter a valid email address' });
     if (password.length < 8) return res.status(400).json({ error: 'Password must be at least 8 characters' });
 
-    const existing = db.prepare('SELECT id FROM users WHERE email = ?').get(email);
+    const existing = db.prepare('SELECT id FROM users WHERE lower(email) = ?').get(email);
     if (existing) return res.status(409).json({ error: 'Email already registered' });
 
     const passwordHash = await bcrypt.hash(password, 12);
@@ -99,10 +107,13 @@ app.post('/api/auth/register', async (req, res) => {
 
 app.post('/api/auth/login', async (req, res) => {
   try {
-    const { email, password } = req.body;
-    if (!email || !password) return res.status(400).json({ error: 'Email and password required' });
+    let { email, password } = req.body || {};
+    if (typeof email !== 'string' || typeof password !== 'string' || !email.trim() || !password) {
+      return res.status(400).json({ error: 'Email and password required' });
+    }
+    email = email.trim().toLowerCase();
 
-    const user = db.prepare('SELECT * FROM users WHERE email = ?').get(email);
+    const user = db.prepare('SELECT * FROM users WHERE lower(email) = ?').get(email);
     if (!user) return res.status(401).json({ error: 'Invalid credentials' });
 
     const valid = await bcrypt.compare(password, user.password_hash);
@@ -130,12 +141,22 @@ app.get('/api/progress', authenticateToken, (req, res) => {
 });
 
 app.post('/api/progress', authenticateToken, (req, res) => {
-  const { progress: progressData, sectionProgress: sectionProgressData } = req.body;
+  const { progress: progressData, sectionProgress: sectionProgressData } = req.body || {};
   const userId = req.user.id;
+
+  if (progressData !== undefined && !Array.isArray(progressData)) {
+    return res.status(400).json({ error: 'Progress must be an array' });
+  }
+  if (sectionProgressData !== undefined && !Array.isArray(sectionProgressData)) {
+    return res.status(400).json({ error: 'Section progress must be an array' });
+  }
 
   try {
     db.exec('BEGIN');
     if (progressData) {
+      // The client sends its full merged state. Replacing this user's rows makes
+      // reset, unmark and unreveal actions sync correctly as well as additions.
+      db.prepare('DELETE FROM progress WHERE user_id = ?').run(userId);
       const upsertProgress = db.prepare(`
         INSERT INTO progress (user_id, question_id, picked, correct, revealed, marked)
         VALUES (?, ?, ?, ?, ?, ?)
@@ -151,6 +172,7 @@ app.post('/api/progress', authenticateToken, (req, res) => {
       }
     }
     if (sectionProgressData) {
+      db.prepare('DELETE FROM section_progress WHERE user_id = ?').run(userId);
       const upsertSection = db.prepare(`
         INSERT INTO section_progress (user_id, section_id, domain_id, answered, correct, marked, last_question_index, show_guide, filter)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)

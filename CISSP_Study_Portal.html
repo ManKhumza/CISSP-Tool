@@ -5,7 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="CISSP study portal — 2,615 practice questions organised into the 61 official exam-outline sub-sections, each with its own study guide and key-term glossary.">
+<meta name="theme-color" content="#0f3f5c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CISSP Portal">
 <title>CISSP Study Portal</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f3f5c'/%3E%3Cpath d='M9 21V11h3.4c3.6 0 5.8 1.9 5.8 5s-2.2 5-5.8 5H9zm2.6-2.2h.7c2 0 3.2-1 3.2-2.8s-1.2-2.8-3.2-2.8h-.7v5.6zM21 11h2.5v10H21z' fill='%237fc4e8'/%3E%3C/svg%3E">
 <style>
 /* ============================================================
@@ -252,6 +258,16 @@ kbd{font:11px/1 var(--mono);background:var(--surface-3);border:1px solid var(--l
 .kpi b{display:block;font-size:23px;font-weight:700;color:var(--brand);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .kpi span{display:block;font-size:12px;color:var(--ink-3);margin-top:2px}
 .kpi .ksub{font-size:11.5px;color:var(--ink-4);margin-top:6px}
+.recommend{border-left:4px solid var(--accent);background:linear-gradient(120deg,var(--surface),var(--accent-soft))}
+.recommend-main{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center}
+.recommend-main h2{font-size:18px;margin:2px 0 5px}
+.focus-list{display:grid;gap:8px;margin-top:14px}
+.focus-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;
+  padding:9px 11px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--surface);
+  color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.focus-row:hover{border-color:var(--accent);box-shadow:var(--shadow-sm)}
+.focus-row b{display:block;font-size:12.8px;color:var(--ink)}
+.focus-row>span:first-child>span{font-size:11.5px;color:var(--ink-3)}
 
 table.tbl{width:100%;border-collapse:collapse;font-size:13.5px}
 table.tbl th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-4);
@@ -423,7 +439,45 @@ dialog .dlg-body{padding:16px 18px 20px}
   color:#fff;padding:10px 18px;border-radius:99px;font-size:13px;box-shadow:var(--shadow-lg);
   opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:80}
 #toast.show{opacity:1;transform:translate(-50%,0)}
+#toast.error{background:var(--bad)}
 #scrim{position:fixed;inset:0;background:rgba(10,20,30,.45);z-index:34;backdrop-filter:blur(2px)}
+
+/* authentication */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+  padding:20px;background:rgba(10,20,30,.58);backdrop-filter:blur(3px)}
+.modal.open{display:flex}
+.modal-content{position:relative;width:min(430px,100%);max-height:calc(100vh - 40px);overflow:auto;
+  background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow-lg);padding:22px}
+.modal-close{position:absolute;top:10px;right:10px;width:34px;height:34px;border:0;border-radius:50%;
+  background:transparent;color:var(--ink-3);font-size:25px;line-height:1;cursor:pointer}
+.modal-close:hover{background:var(--surface-3);color:var(--ink)}
+.auth-tabs{display:flex;gap:4px;margin:0 42px 20px 0;padding:3px;background:var(--surface-3);
+  border:1px solid var(--line);border-radius:var(--r-sm)}
+.auth-tab{flex:1;border:0;border-radius:6px;padding:8px 10px;background:transparent;color:var(--ink-3);
+  font:600 13px/1.3 var(--font);cursor:pointer}
+.auth-tab.active{background:var(--surface);color:var(--brand-2);box-shadow:var(--shadow-sm)}
+.auth-form{display:none;gap:14px}
+.auth-form.active{display:grid}
+.form-group{display:grid;gap:6px}
+.form-group label{font-size:12.5px;font-weight:650;color:var(--ink-2)}
+.form-group input{width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:var(--r-sm);
+  background:var(--surface);color:var(--ink);font:inherit}
+.form-group input:focus{outline:2px solid var(--accent);outline-offset:0;border-color:transparent}
+.auth-form .btn{justify-content:center;padding:10px 14px}
+.auth-error{min-height:1.4em;color:var(--bad);font-size:12.5px}
+.user-menu{position:relative}
+.auth-btn{max-width:210px}
+.auth-btn span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.user-dropdown{position:absolute;right:0;top:calc(100% + 7px);z-index:45;width:230px;padding:7px;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm);box-shadow:var(--shadow-lg)}
+.dropdown-email{display:block;padding:7px 9px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  color:var(--ink-3);font-size:11.5px}
+.user-dropdown hr{height:1px;margin:4px 0;border:0;background:var(--line)}
+.dropdown-item{display:block;width:100%;padding:9px;border:0;border-radius:6px;background:transparent;
+  color:var(--ink-2);font:500 12.5px/1.3 var(--font);text-align:left;cursor:pointer}
+.dropdown-item:hover{background:var(--surface-3);color:var(--ink)}
+.dropdown-item.danger{color:var(--bad)}
 
 /* ---------- responsive ---------- */
 .only-mobile{display:none}
@@ -433,7 +487,8 @@ dialog .dlg-body{padding:16px 18px 20px}
     transition:transform .22s ease;box-shadow:var(--shadow-lg)}
   body.nav-open #sidebar{transform:none}
   #sbClose{display:grid}
-  #main{width:100%}
+  #main{width:100%;max-width:100vw;overflow-x:hidden}
+  #topbar{width:100%;max-width:100vw}
   .qbar{top:0}
   .crumbs .cur{max-width:20ch}
 }
@@ -444,6 +499,12 @@ dialog .dlg-body{padding:16px 18px 20px}
   .search-wrap{order:5;flex-basis:100%;max-width:none}
   .hide-sm{display:none}
   .gitem{font-size:12.8px}
+  .auth-btn span{display:none}
+  .recommend-main{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:380px){
+  .kpis{grid-template-columns:1fr}
 }
 
 /* ---------- print ---------- */
@@ -544,6 +605,7 @@ dialog .dlg-body{padding:16px 18px 20px}
       <button id="btnTheme" class="icon-btn" title="Theme" aria-label="Toggle dark mode">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
       </button>
+      <button id="btnInstall" class="tb-btn" hidden title="Install this app on your device">Install app</button>
       <button id="btnGuide" class="tb-btn hide-sm">Guide</button>
       <button id="btnPrint" class="tb-btn hide-sm">Print</button>
       <button id="btnKeys" class="icon-btn" title="Keyboard shortcuts" aria-label="Keyboard shortcuts">
@@ -628,7 +690,10 @@ dialog .dlg-body{padding:16px 18px 20px}
   var memOnly = false;
   function saveProgress(){
     if(memOnly) return;
-    try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){ memOnly = true; }
+    try{
+      localStorage.setItem(KEY, JSON.stringify(progress));
+      if(window.Auth && typeof window.Auth.scheduleSync === 'function') window.Auth.scheduleSync();
+    }catch(e){ memOnly = true; }
   }
   function loadPrefs(){
     var d = {theme:null, font:0, terms:true};
@@ -703,6 +768,46 @@ dialog .dlg-body{padding:16px 18px 20px}
     });
     return {answered:a, correct:c, marks:m, total:t,
             pct: t? Math.round(a/t*100):0, accuracy: a? Math.round(c/a*100):0};
+  }
+  function studyRecommendation(){
+    var marked = ALL.filter(function(it){ return !!progress.marks[it.q.n]; });
+    var wrong = ALL.filter(function(it){ var a=progress.answers[it.q.n]; return a && !a.correct; });
+    var pool, kind, title, reason;
+    if(marked.length){
+      pool = marked; kind = 'marked'; title = 'Review a question you flagged';
+      reason = marked.length+' marked question'+(marked.length===1?' is':'s are')+' waiting for review.';
+    } else if(wrong.length){
+      pool = wrong.slice().sort(function(a,b){
+        return (progress.answers[a.q.n].ts||0) - (progress.answers[b.q.n].ts||0);
+      });
+      kind = 'incorrect'; title = 'Revisit a missed concept';
+      reason = wrong.length+' incorrect answer'+(wrong.length===1?' needs':'s need')+' another look.';
+    } else {
+      var ranked = DATA.domains.map(function(d){
+        var st=stats(questionsOfDomain(d));
+        return {d:d, st:st, score:st.pct - parseInt(d.weight,10)};
+      }).sort(function(a,b){ return a.score-b.score; });
+      var target = ranked[0] && ranked[0].d;
+      pool = ALL.filter(function(it){ return target && it.d.id===target.id && !progress.answers[it.q.n]; });
+      if(!pool.length) pool = ALL.filter(function(it){ return !progress.answers[it.q.n]; });
+      kind = 'unanswered'; title = overall().answered ? 'Keep your coverage balanced' : 'Start with a high-weight domain';
+      reason = target ? 'Domain '+target.id+' · '+target.name+' is the best next coverage target.' : 'Choose a fresh question.';
+    }
+    if(!pool.length) return null;
+    var it = kind === 'incorrect' ? pool[0] : pool[Math.floor(Math.random()*pool.length)];
+    return {it:it, kind:kind, title:title, reason:reason};
+  }
+  function weakSections(){
+    var rows=[];
+    DATA.domains.forEach(function(d){
+      (d.sections||[]).forEach(function(s){
+        var st=stats(s.questions);
+        if(st.answered >= 3 && st.accuracy < 100) rows.push({d:d, s:s, st:st});
+      });
+    });
+    return rows.sort(function(a,b){
+      return a.st.accuracy-b.st.accuracy || b.st.answered-a.st.answered;
+    }).slice(0,3);
   }
   function record(q, picked, correct){
     progress.answers[q.n] = {picked:picked, correct:correct, ts:Date.now()};
@@ -788,7 +893,8 @@ dialog .dlg-body{padding:16px 18px 20px}
     var g = findTerm(sec, term);
     if(!g) return;
     var pop = byId('pop');
-    var src = ({'osg10.txt':'ISC2 study guide','companion.txt':'Exam companion','curated':'Curated'})[g.src] ||
+    var src = ({'osg10.txt':'ISC2 study guide','companion.txt':'Exam companion',
+               'dummies8':'CISSP For Dummies, 8th ed.','curated':'Curated'})[g.src] ||
               (String(g.src||'').indexOf('bank') === 0 ? 'Question bank' : g.src || '');
     pop.innerHTML = '<b>'+esc(g.t)+'</b>'+esc(g.d)+
       (src ? '<span class="src">Source: '+esc(src)+'</span>' : '');
@@ -943,7 +1049,7 @@ dialog .dlg-body{padding:16px 18px 20px}
     var sec = sectionOf(domId, sid);
     state.sectionId = sec.id;
     openDomainNav(domId);
-    go({view:'section', domainId:domId, index:index||0, showGuide:true});
+    go({view:'section', domainId:domId, index:index||0, filter:'all', showGuide:true});
   }
   function openQuestion(qn){
     var it = ALL[INDEX[qn]]; if(!it) return;
@@ -990,7 +1096,7 @@ dialog .dlg-body{padding:16px 18px 20px}
 
   /* ---------------------------- home ---------------------------- */
   function viewHome(){
-    var sg = DATA.studyGuide || {}, o = overall();
+    var sg = DATA.studyGuide || {}, o = overall(), rec = studyRecommendation(), weak = weakSections();
     var rows = DATA.domains.map(function(d){
       var st = stats(questionsOfDomain(d));
       return '<tr class="clickable" data-open="'+d.id+'">' +
@@ -1007,6 +1113,18 @@ dialog .dlg-body{padding:16px 18px 20px}
     var tips = (sg.tips||[]).map(function(x){ return '<li>'+esc(x)+'</li>'; }).join('');
     var day = (sg.examDay||[]).map(function(x){ return '<li>'+esc(x)+'</li>'; }).join('');
     var res = (sg.resources||[]).map(function(x){ return '<li>'+esc(x)+'</li>'; }).join('');
+    var smart = rec ? '<section class="card pad recommend">' +
+      '<div class="recommend-main"><div><span class="eyebrow">Recommended next</span>' +
+      '<h2>'+esc(rec.title)+'</h2><p class="muted">'+esc(rec.reason)+'</p>' +
+      '<p class="small" style="margin-top:5px"><b>'+esc(rec.it.s.id==='general'?'Other topics':rec.it.s.id)+'</b> · '+
+        esc(rec.it.s.title)+' · Question '+rec.it.q.n+'</p></div>' +
+      '<div class="row"><button class="btn primary" data-recommend="'+rec.it.q.n+'">Study this question</button>' +
+      '<button class="btn" data-random="1">Random unanswered</button></div></div>' +
+      (weak.length ? '<div class="focus-list"><span class="eyebrow">Current focus areas</span>' + weak.map(function(x){
+        return '<button class="focus-row" data-focusdom="'+x.d.id+'" data-focussec="'+esc(x.s.id)+'">' +
+          '<span><b>'+esc(x.s.id)+' · '+esc(x.s.title)+'</b><span>'+x.st.answered+' attempted</span></span>' +
+          '<span class="pill '+(x.st.accuracy>=70?'ok':'')+'">'+x.st.accuracy+'% correct</span></button>';
+      }).join('')+'</div>' : '') + '</section>' : '';
 
     return '<div class="stack">' +
       '<section class="card pad">' +
@@ -1032,7 +1150,7 @@ dialog .dlg-body{padding:16px 18px 20px}
           '<div class="kpi"><b>'+o.marks.toLocaleString()+'</b><span>Marked for review</span>' +
             '<div class="ksub">Revisit these before exam day</div></div>' +
         '</div>' +
-      '</section>' +
+      '</section>' + smart +
 
       '<section class="card pad">' +
         '<div class="between" style="margin-bottom:12px">' +
@@ -1076,7 +1194,8 @@ dialog .dlg-body{padding:16px 18px 20px}
     var gl = g.glossary || [];
     var gloss = gl.map(function(x){
       var tag = x.k === 'ctx' ? '<span class="gtag" title="meaning in context from the study material">context</span>' : '';
-      var src = ({'osg10.txt':'ISC2 study guide','companion.txt':'Exam companion','curated':'Curated'})[x.src] ||
+      var src = ({'osg10.txt':'ISC2 study guide','companion.txt':'Exam companion',
+                 'dummies8':'CISSP For Dummies, 8th ed.','curated':'Curated'})[x.src] ||
                 (String(x.src||'').indexOf('bank') === 0 ? 'Question bank' : '');
       return '<div class="gitem"><dt>'+esc(x.t)+tag+
              (src ? '<span class="gsrc">'+esc(src)+'</span>' : '')+'</dt>' +
@@ -1278,6 +1397,7 @@ dialog .dlg-body{padding:16px 18px 20px}
           '</div>' +
           '<div class="row">' +
             (reveal ? '' : '<button class="btn" id="btnReveal">Show answer <kbd>s</kbd></button>') +
+            (rec && !rec.correct ? '<button class="btn" id="btnRetry">Try again</button>' : '') +
             '<button class="btn" id="btnMark">'+(marked?'Unmark':'Mark for review')+' <kbd>m</kbd></button>' +
           '</div>' +
           '<div class="jump"><label for="jumpInput">Go to</label>' +
@@ -1373,7 +1493,8 @@ dialog .dlg-body{padding:16px 18px 20px}
       return '<section class="letter-group" id="az-'+L+'"><h3>'+L+'</h3><dl class="glossary">' +
         groups[L].map(function(x){
           var tag = x.k === 'ctx' ? '<span class="gtag">context</span>' : '';
-          var src = ({'osg10.txt':'ISC2 study guide','companion.txt':'Exam companion','curated':'Curated'})[x.src] ||
+          var src = ({'osg10.txt':'ISC2 study guide','companion.txt':'Exam companion',
+                     'dummies8':'CISSP For Dummies, 8th ed.','curated':'Curated'})[x.src] ||
                     (String(x.src||'').indexOf('bank') === 0 ? 'Question bank' : '');
           return '<div class="gitem"><dt>'+esc(x.t)+tag+
             (src?'<span class="gsrc">'+esc(src)+'</span>':'')+
@@ -1386,7 +1507,7 @@ dialog .dlg-body{padding:16px 18px 20px}
       '<section class="card pad">' +
         '<div class="page-head"><span class="eyebrow">Revision</span><h1>Key terms &amp; meanings</h1>' +
         '<p class="lede">'+all.length.toLocaleString()+' terms defined across the 61 sub-sections, mined from the ' +
-        'ISC2 study guide, the exam companion and this question bank\'s own explanations. Terms tagged ' +
+        'ISC2 study guide, the exam companion, CISSP For Dummies (8th ed.) and this question bank\'s own explanations. Terms tagged ' +
         '<span class="gtag">context</span> are explained by the sentence that uses them.</p></div>' +
         '<div class="row" style="margin-top:14px">' +
           '<input id="glossFilter" type="search" placeholder="Filter terms…" value="'+esc(state.glossQuery||'')+'" ' +
@@ -1473,6 +1594,22 @@ dialog .dlg-body{padding:16px 18px 20px}
     });
     content.querySelectorAll('[data-resume]').forEach(function(el){
       el.addEventListener('click', resume);
+    });
+    content.querySelectorAll('[data-recommend]').forEach(function(el){
+      el.addEventListener('click', function(){ openQuestion(parseInt(el.dataset.recommend,10)); });
+    });
+    content.querySelectorAll('[data-random]').forEach(function(el){
+      el.addEventListener('click', function(){
+        var pool = ALL.filter(function(it){ return !progress.answers[it.q.n]; });
+        if(!pool.length){ toast('You have answered every question'); return; }
+        openQuestion(pool[Math.floor(Math.random()*pool.length)].q.n);
+      });
+    });
+    content.querySelectorAll('[data-focussec]').forEach(function(el){
+      el.addEventListener('click', function(){
+        openSection(parseInt(el.dataset.focusdom,10), el.dataset.focussec, 0);
+        setFilter('incorrect');
+      });
     });
     content.querySelectorAll('[data-studyall]').forEach(function(el){
       el.addEventListener('click', function(){
@@ -1578,6 +1715,13 @@ dialog .dlg-body{padding:16px 18px 20px}
       if(progress.marks[q.n]) delete progress.marks[q.n]; else progress.marks[q.n] = true;
       saveProgress(); render();
       toast(progress.marks[q.n] ? 'Marked for review' : 'Mark removed');
+    });
+    var bt = byId('btnRetry');
+    if(bt) bt.addEventListener('click', function(){
+      delete progress.answers[q.n];
+      delete progress.revealed[q.n];
+      saveProgress(); refreshSidebar(); render();
+      toast('Answer cleared — try it again');
     });
     var bnu = byId('btnNextUnanswered');
     if(bnu) bnu.addEventListener('click', nextUnanswered);
@@ -1775,7 +1919,7 @@ dialog .dlg-body{padding:16px 18px 20px}
   refreshSidebar();
   render();
 
-  // Expose internals so the auth/progress-sync module can read & write state.
+  // Expose the minimum state hooks needed by the auth/progress-sync module.
   window.__portal = {
     get progress(){ return progress; },
     set progress(v){ progress = v; },
@@ -1789,6 +1933,55 @@ dialog .dlg-body{padding:16px 18px 20px}
   if (typeof Auth !== 'undefined') {
     Auth.init();
   }
+})();
+</script>
+<script>
+
+/* ============================================================
+   Progressive Web App
+   ============================================================ */
+(function(){
+  var installPrompt = null;
+  var installBtn = document.getElementById('btnInstall');
+  var isStandalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches;
+  var isIos = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  function pwaToast(message){
+    var el = document.getElementById('toast');
+    if(!el) return;
+    el.textContent = message;
+    el.classList.add('show');
+    clearTimeout(pwaToast.timer);
+    pwaToast.timer = setTimeout(function(){ el.classList.remove('show'); }, 2600);
+  }
+
+  if('serviceWorker' in navigator && location.protocol.indexOf('http') === 0){
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('/sw.js').catch(function(err){
+        console.warn('Offline support could not be enabled:', err);
+      });
+    });
+  }
+
+  window.addEventListener('beforeinstallprompt', function(e){
+    e.preventDefault();
+    installPrompt = e;
+    installBtn.hidden = false;
+  });
+  if(isIos && !isStandalone) installBtn.hidden = false;
+
+  installBtn.addEventListener('click', async function(){
+    if(installPrompt){
+      installPrompt.prompt();
+      await installPrompt.userChoice;
+      installPrompt = null;
+      installBtn.hidden = true;
+    } else if(isIos){
+      alert('To install: tap Share, then choose “Add to Home Screen”.');
+    }
+  });
+  window.addEventListener('appinstalled', function(){ installBtn.hidden = true; });
+  window.addEventListener('offline', function(){ pwaToast('Offline — your progress is still saved on this device'); });
+  window.addEventListener('online', function(){ pwaToast('Back online'); });
 })();
 </script>
 </body>

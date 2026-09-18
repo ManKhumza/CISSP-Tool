@@ -473,3 +473,117 @@ EXTRA = {
             "unacceptable to the organization.",
     },
 }
+
+# Concepts selected from the glossary and domain chapters in CISSP For Dummies,
+# 8th ed. (2024).  These definitions are original paraphrases rather than copied
+# book text.  They live separately so the generated portal can identify the
+# supplemental source and the enrichment remains reproducible.
+DUMMIES_EXTRA = {
+    "1.11": {
+        "fourth-party risk":
+            "Risk introduced by a supplier's own subcontractors and service providers. The "
+            "customer may depend on these organizations without having a direct contract or "
+            "clear visibility into their controls.",
+        "silicon root of trust":
+            "A hardware trust anchor built into a chip that uses protected keys or measurements "
+            "to verify firmware and the early boot process before higher system layers run.",
+        "physically unclonable function (PUF)":
+            "A circuit whose small manufacturing variations produce a device-specific response, "
+            "allowing hardware to derive a unique identity without storing an ordinary key.",
+    },
+    "2.1": {
+        "controlled unclassified information (CUI)":
+            "US government information that is not classified but still requires safeguarding "
+            "or dissemination controls under law, regulation, or government-wide policy.",
+        "data catalog":
+            "A searchable inventory of data assets and their metadata, including ownership, "
+            "classification, lineage, location, and permitted uses.",
+    },
+    "2.4": {
+        "data debt":
+            "The accumulated cost and risk created by retaining obsolete or unnecessary data, "
+            "usually because lifecycle, quality, ownership, or disposal practices are weak.",
+    },
+    "3.1": {
+        "Building Security In Maturity Model (BSIMM)":
+            "An observational framework for comparing a software security program with the "
+            "activities seen in other organizations and identifying practical maturity gaps.",
+        "fail securely":
+            "A design principle requiring a component to enter a protected state when it fails, "
+            "instead of granting access or silently bypassing a security check.",
+    },
+    "4.1": {
+        "east-west traffic":
+            "Traffic moving between workloads, services, or systems inside a data center or "
+            "cloud environment. It needs internal visibility because attackers use it for "
+            "lateral movement.",
+        "north-south traffic":
+            "Traffic entering or leaving an internal environment, traditionally inspected at "
+            "the network perimeter by firewalls and other gateway controls.",
+        "microsegmentation":
+            "Fine-grained isolation of individual workloads or small groups of systems, using "
+            "policy close to each workload to restrict east-west communication and enforce "
+            "least privilege.",
+        "edge network":
+            "Compute and network capacity placed near users, sensors, or devices to reduce "
+            "latency and backhaul, while remaining connected to core or cloud services.",
+    },
+    "5.5": {
+        "just-in-time (JIT) access":
+            "Temporary access granted only when a task requires it, with narrow scope and "
+            "automatic expiry so standing privilege is minimized.",
+        "ephemeral account":
+            "A one-time account created dynamically with the permissions needed for a specific "
+            "task and automatically removed when that task or time window ends.",
+        "temporary privilege elevation":
+            "Adding elevated rights to an existing identity for an approved, limited period and "
+            "removing them automatically when the period expires.",
+        "key vault":
+            "A protected service that stores credentials or cryptographic keys centrally and "
+            "releases them only to authorized identities under logged policy controls.",
+    },
+    "6.2": {
+        "breach and attack simulation (BAS)":
+            "Automated, repeatable emulation of attacker techniques used to verify whether "
+            "preventive and detective controls actually stop or expose the tested behavior.",
+        "authenticated vulnerability scan":
+            "A scan performed with approved system credentials, giving the scanner visibility "
+            "into configuration, patch, and software details that an external scan cannot see.",
+        "misuse case testing":
+            "Testing that deliberately performs unintended or hostile actions to discover how a "
+            "system behaves outside its normal use cases and where controls fail.",
+        "fault injection":
+            "Deliberately introducing errors, resource failures, or abnormal conditions to test "
+            "resilience, error handling, and whether a system fails securely.",
+    },
+    "7.2": {
+        "extended detection and response (XDR)":
+            "A detection platform that correlates telemetry across endpoints, identity, email, "
+            "network, and cloud sources to investigate and respond to threats as one incident.",
+        "indicator of compromise (IOC)":
+            "An observable artifact associated with malicious activity, such as a file hash, "
+            "domain, address, registry value, or unusual process behavior.",
+        "dwell time":
+            "The period between an attacker's initial compromise and detection or removal; "
+            "shorter dwell time limits opportunities for persistence and lateral movement.",
+    },
+    "7.3": {
+        "configuration drift":
+            "The gradual divergence of a live system from its approved baseline because of "
+            "untracked changes, inconsistent deployment, or manual intervention.",
+        "configuration management database (CMDB)":
+            "A repository of configuration items and their relationships, used to understand "
+            "dependencies, assess change impact, and compare actual state with approved state.",
+    },
+    "8.4": {
+        "software bill of materials (SBOM)":
+            "A structured inventory of the third-party, open-source, and commercial components "
+            "inside software, used to identify exposure when a component vulnerability emerges.",
+        "software composition analysis (SCA)":
+            "Tooling that identifies third-party and open-source components, versions, licenses, "
+            "and known vulnerabilities in an application or build pipeline.",
+        "software supply chain":
+            "The people, processes, services, tools, source code, dependencies, and build systems "
+            "involved in producing and delivering software.",
+    },
+}

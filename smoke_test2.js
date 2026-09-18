@@ -9,7 +9,9 @@ const vm = require('vm');
 const DIR = 'C:\\Users\\Khumza\\Documents\\Coding projects\\CISSP';
 const html = fs.readFileSync(path.join(DIR, 'CISSP_Study_Portal.html'), 'utf8');
 const scripts = [...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/g)];
-const appSrc = scripts[scripts.length - 1][1];
+const appScript = scripts.find(s => s[1].includes('window.__portal'));
+if (!appScript) throw new Error('Portal application script not found');
+const appSrc = appScript[1];
 
 /* ---------------- DOM stub ---------------- */
 function makeEl(id){
@@ -83,14 +85,18 @@ check('question bank loaded', !!DATA);
 check('61 sub-sections declared', DATA.meta.subsections === 61);
 
 /* ---------------- data integrity ---------------- */
-let total = 0, sections = 0, glossTerms = 0, glossSections = 0, deepSections = 0, numbers = [];
+let total = 0, sections = 0, glossTerms = 0, glossSections = 0, deepSections = 0,
+    supplementalTerms = 0, numbers = [];
 DATA.domains.forEach(d => {
   d.sections.forEach(s => {
     sections++; total += s.questions.length;
     const gl = (s.guide && s.guide.glossary) || [];
     glossTerms += gl.length; if(gl.length) glossSections++;
     if(((s.guide && s.guide.deepNotes) || []).length >= 3) deepSections++;
-    gl.forEach(x => { if(!x.t || !x.d || x.d.length < 20) fails++; });
+    gl.forEach(x => {
+      if(!x.t || !x.d || x.d.length < 20) fails++;
+      if(x.src === 'dummies8') supplementalTerms++;
+    });
     s.questions.forEach(q => {
       numbers.push(q.n);
       if(!q.o || q.o.length < 2) fails++;
@@ -104,6 +110,7 @@ check('61 sections with guides and questions', sections === 61);
 check('every section has deeper lesson notes', deepSections === 61);
 check('every section has a glossary', glossSections === 61);
 check('glossary is substantial (' + glossTerms + ' terms)', glossTerms >= 1000);
+check('supplemental 2024 reference terms are present (' + supplementalTerms + ')', supplementalTerms >= 25);
 check('glossary entries are well formed', fails === 0);
 check('question numbering is consecutive', numbers.length === DATA.meta.total && numbers.every((n,i) => n === i+1));
 
@@ -115,6 +122,8 @@ const home = els.content.innerHTML;
 check('home view renders', home.length > 2500);
 check('home shows headline', /CISSP Study Portal|CISSP certification/i.test(home));
 check('home shows KPI tiles', /class="kpi"/.test(home));
+check('home shows an adaptive recommendation', /Recommended next/.test(home) && /data-recommend=/.test(home));
+check('home offers random unanswered practice', /data-random="1"/.test(home));
 check('home shows domain table', /<table class="tbl">/.test(home));
 check('home shows study plan', /Study strategy|How to use this portal/.test(home));
 check('sidebar lists domains', /data-dom="/.test(els.domainNav.innerHTML));
@@ -137,6 +146,16 @@ try {
   check('section view has navigation buttons', /btnPrev/.test(v) && /btnNext/.test(v));
   check('question number rendered', /Q\d+/.test(v));
   check('glossary term links present', /class="termref"/.test(v));
+  const qn = parseInt((v.match(/class="qno">Q(\d+)/) || [])[1], 10);
+  if (qn) {
+    sandbox.window.__portal.progress.answers[qn] = { picked:'?', correct:false, ts:Date.now() };
+    sandbox.window.__portal.render();
+    check('incorrect answers offer a single-question retry', /id="btnRetry"/.test(els.content.innerHTML));
+    delete sandbox.window.__portal.progress.answers[qn];
+    sandbox.window.__portal.render();
+  } else {
+    check('incorrect answers offer a single-question retry', false);
+  }
 } catch(e){ check('section view renders', false); console.error(e && e.message); }
 
 /* ---------------- document view ---------------- */
@@ -187,6 +206,7 @@ try {
   check('glossary has A–Z jump bar', /data-az="/.test(v));
   check('glossary terms link to their sub-section', /data-gsec="/.test(v));
   check('glossary filter input present', /id="glossFilter"/.test(v));
+  check('supplemental reference attribution renders', /CISSP For Dummies, 8th ed\./.test(v));
 } catch(e){ check('glossary view renders', false); console.error(e && e.message); }
 
 /* ---------------- search ---------------- */
@@ -227,6 +247,8 @@ check('print stylesheet present', /@media print/.test(html));
 check('skip link present', /class="skip"/.test(html));
 check('reduced-motion respected', /prefers-reduced-motion/.test(html));
 check('aria landmarks present', /aria-label="Study navigation"/.test(html) && /aria-label="Breadcrumb"/.test(html));
+check('PWA manifest linked', /rel="manifest" href="\/manifest\.webmanifest"/.test(html));
+check('service worker registration present', /serviceWorker\.register\('\/sw\.js'\)/.test(html));
 
 console.log(fails ? `\n${fails} CHECK(S) FAILED` : '\nALL CHECKS PASSED');
 process.exit(fails ? 1 : 0);

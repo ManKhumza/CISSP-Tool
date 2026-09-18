@@ -7,7 +7,10 @@ const Auth = (function() {
   let token = null;
   let user = null;
   let syncInterval = null;
+  let syncTimer = null;
   let pendingSync = false;
+  let toastTimer = null;
+  let backendAvailable = false;
 
   // DOM elements
   let authModal = null;
@@ -31,11 +34,25 @@ const Auth = (function() {
     createAuthUI();
     bindEvents();
 
-    if (token) {
-      validateToken();
-    } else {
-      showAuthState(false);
+    detectBackend();
+  }
+
+  async function detectBackend() {
+    try {
+      const res = await fetch(`${API_BASE}/auth/status`, { headers: { Accept: 'application/json' } });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      backendAvailable = data.available === true;
+    } catch (e) {
+      backendAvailable = false;
     }
+    if (!backendAvailable) {
+      if (authButton) authButton.style.display = 'none';
+      const localMode = document.getElementById('localMode');
+      if (localMode) localMode.style.display = 'inline-flex';
+      return;
+    }
+    if (token) validateToken(); else showAuthState(false);
   }
 
   // Create auth UI elements
@@ -44,11 +61,14 @@ const Auth = (function() {
     authModal = document.createElement('div');
     authModal.id = 'authModal';
     authModal.className = 'modal';
+    authModal.setAttribute('role', 'dialog');
+    authModal.setAttribute('aria-modal', 'true');
+    authModal.setAttribute('aria-label', 'Account access');
     authModal.innerHTML = `
       <div class="modal-content auth-modal">
         <div class="auth-tabs">
-          <button class="auth-tab active" data-tab="login">Sign In</button>
-          <button class="auth-tab" data-tab="register">Create Account</button>
+          <button type="button" class="auth-tab active" data-tab="login">Sign In</button>
+          <button type="button" class="auth-tab" data-tab="register">Create Account</button>
         </div>
         <form id="loginForm" class="auth-form active">
           <div class="form-group">
@@ -78,7 +98,7 @@ const Auth = (function() {
           <button type="submit" class="btn primary">Create Account</button>
           <p class="auth-error" id="registerError"></p>
         </form>
-        <button class="modal-close" aria-label="Close">&times;</button>
+        <button type="button" class="modal-close" aria-label="Close">&times;</button>
       </div>
     `;
     document.body.appendChild(authModal);
@@ -90,6 +110,7 @@ const Auth = (function() {
       userMenu.id = 'userMenu';
       userMenu.className = 'user-menu';
       userMenu.innerHTML = `
+        <span id="localMode" class="tb-btn auth-btn" style="display:none;cursor:default" title="Progress is stored on this device">On-device</span>
         <button id="authButton" class="tb-btn auth-btn" style="display: none;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           <span id="userEmail"></span>
@@ -97,8 +118,8 @@ const Auth = (function() {
         <div id="userDropdown" class="user-dropdown" style="display: none;">
           <span id="dropdownEmail" class="dropdown-email"></span>
           <hr>
-          <button id="syncBtn" class="dropdown-item">Sync Progress Now</button>
-          <button id="logoutBtn" class="dropdown-item danger">Sign Out</button>
+          <button type="button" id="syncBtn" class="dropdown-item">Sync Progress Now</button>
+          <button type="button" id="logoutBtn" class="dropdown-item danger">Sign Out</button>
         </div>
       `;
       // Insert before the theme toggle or at the end of topbar
@@ -138,9 +159,6 @@ const Auth = (function() {
   function bindEvents() {
     document.getElementById('loginForm').addEventListener('submit', handleLogin);
     document.getElementById('registerForm').addEventListener('submit', handleRegister);
-    document.querySelector('.modal-close').addEventListener('click', closeModal);
-    authModal.addEventListener('click', e => { if (e.target === authModal) closeModal(); });
-    
     if (logoutBtn) logoutBtn.addEventListener('click', logout);
     document.getElementById('syncBtn')?.addEventListener('click', syncProgress);
     
@@ -160,6 +178,9 @@ const Auth = (function() {
         const menu = userMenu;
         if (!menu || !menu.contains(e.target)) userDropdown.style.display = 'none';
       }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && authModal.classList.contains('open')) closeModal();
     });
   }
 
@@ -190,6 +211,8 @@ const Auth = (function() {
     const password = document.getElementById('loginPassword').value;
     const errorEl = document.getElementById('loginError');
 
+    const submit = loginForm.querySelector('[type="submit"]');
+    submit.disabled = true;
     try {
       const data = await api('/auth/login', {
         method: 'POST',
@@ -201,6 +224,8 @@ const Auth = (function() {
       showToast('Welcome back!');
     } catch (err) {
       errorEl.textContent = err.message;
+    } finally {
+      submit.disabled = false;
     }
   }
 
@@ -216,6 +241,8 @@ const Auth = (function() {
       return;
     }
 
+    const submit = registerForm.querySelector('[type="submit"]');
+    submit.disabled = true;
     try {
       const data = await api('/auth/register', {
         method: 'POST',
@@ -226,6 +253,8 @@ const Auth = (function() {
       showToast('Account created!');
     } catch (err) {
       errorEl.textContent = err.message;
+    } finally {
+      submit.disabled = false;
     }
   }
 
@@ -266,13 +295,17 @@ const Auth = (function() {
 
   function logout(sync = true) {
     if (sync && token) {
-      syncProgress().catch(console.error);
+      syncProgress(false).catch(console.error);
     }
     token = null;
     user = null;
     localStorage.removeItem('cissp_token');
     localStorage.removeItem('cissp_user');
     stopSyncInterval();
+    if (syncTimer) {
+      clearTimeout(syncTimer);
+      syncTimer = null;
+    }
     showAuthState(false);
     closeModal();
     showToast('Signed out');
@@ -289,10 +322,16 @@ const Auth = (function() {
     if (!prog) return { progress: [], sectionProgress: [] };
     
     const progressData = [];
-    for (const [qid, ans] of Object.entries(prog.answers || {})) {
+    const questionIds = new Set([
+      ...Object.keys(prog.answers || {}),
+      ...Object.keys(prog.revealed || {}),
+      ...Object.keys(prog.marks || {})
+    ]);
+    for (const qid of questionIds) {
+      const ans = prog.answers?.[qid] || {};
       progressData.push({
         questionId: parseInt(qid),
-        picked: ans.picked,
+        picked: ans.picked || null,
         correct: ans.correct ? 1 : 0,
         revealed: prog.revealed?.[qid] ? 1 : 0,
         marked: prog.marks?.[qid] ? 1 : 0
@@ -328,7 +367,11 @@ const Auth = (function() {
         const qid = sp.question_id;
         // Only adopt the server's answer when this client has not answered yet.
         if (sp.picked && !p.progress.answers[qid]) {
-          p.progress.answers[qid] = { picked: sp.picked, correct: !!sp.correct };
+          p.progress.answers[qid] = {
+            picked: sp.picked,
+            correct: !!sp.correct,
+            ts: Date.parse(sp.answered_at) || Date.now()
+          };
           changed = true;
         }
         if (sp.revealed && !p.progress.revealed[qid]) { p.progress.revealed[qid] = true; changed = true; }
@@ -366,19 +409,21 @@ const Auth = (function() {
     }
   }
 
-  async function syncProgress() {
-    if (pendingSync || !token) return;
+  async function syncProgress(pullFirst = true) {
+    if (pendingSync || !token || !backendAvailable) return;
     pendingSync = true;
     const syncBtn = document.getElementById('syncBtn');
     if (syncBtn) syncBtn.disabled = true;
 
     try {
-      // Pull the server's current state so progress follows across devices.
-      const serverState = await api('/progress');
-      if (serverState.progress || serverState.sectionProgress) {
-        applyServerProgress(serverState);
+      if (pullFirst) {
+        // Pull the server's current state so progress follows across devices.
+        const serverState = await api('/progress');
+        if (serverState.progress || serverState.sectionProgress) {
+          applyServerProgress(serverState);
+        }
       }
-      // Push the merged local state (server wins on conflicts).
+      // Push the merged local state.
       const localData = collectLocalProgress();
       await api('/progress', {
         method: 'POST',
@@ -392,6 +437,16 @@ const Auth = (function() {
       pendingSync = false;
       if (syncBtn) syncBtn.disabled = false;
     }
+  }
+
+  function scheduleSync() {
+    if (!token) return;
+    if (syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(() => {
+      syncTimer = null;
+      // A local save is authoritative, including removals made by Reset/unmark.
+      syncProgress(false);
+    }, 1500);
   }
 
   function startSyncInterval() {
@@ -433,16 +488,16 @@ const Auth = (function() {
   }
 
   function showToast(message, type = 'success') {
-    // Reuse existing toast if available
-    if (typeof toast === 'function') {
-      toast(message);
-    } else {
-      const el = document.createElement('div');
-      el.className = `toast ${type}`;
-      el.textContent = message;
-      document.body.appendChild(el);
-      setTimeout(() => el.remove(), 3000);
-    }
+    const el = document.getElementById('toast');
+    if (!el) return;
+    el.textContent = message;
+    el.classList.toggle('error', type === 'error');
+    el.classList.add('show');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      el.classList.remove('show');
+      el.classList.remove('error');
+    }, 2600);
   }
 
   // Public API
@@ -451,6 +506,7 @@ const Auth = (function() {
     getUser: () => user,
     isLoggedIn: () => !!token,
     sync: syncProgress,
+    scheduleSync,
     logout,
     openModal: (tab) => openModal(tab)
   };
