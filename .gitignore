@@ -53,3 +53,4 @@ dist/
 cissp_progress.db
 cissp_progress.db-*
 .env
+.vercel
